@@ -1,0 +1,3372 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>المبتدأ والخبر (المفرد وجمع المؤنث السالم وجمع التكسير) | الصف الرابع الابتدائي | الأستاذ توفيق كرم الصريحي</title>
+    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;800;900&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --primary: #0e5249;      
+            --primary-light: #14a394; 
+            --secondary: #0d8a7c;    
+            --success: #10b981;      
+            --danger: #ef4444;       
+            --warning: #ea7a1e;      
+            --dark: #1e293b;         
+            --light: #f8fafc;
+            --card-bg: #ffffff;
+        }
+
+        * {
+            box-sizing: border-box;
+            font-family: 'Cairo', Tahoma, Geneva, Verdana, sans-serif;
+            margin: 0;
+            padding: 0;
+            user-select: none;
+            -webkit-tap-highlight-color: transparent;
+        }
+
+        body {
+            background-color: #f0f4f8;
+            background-image: radial-gradient(#cbd5e1 1.5px, transparent 1.5px);
+            background-size: 25px 25px;
+            color: var(--dark);
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            overflow-x: hidden;
+        }
+
+        .hidden { display: none !important; }
+        
+        .header-main {
+            background: linear-gradient(135deg, #062b29, var(--primary), var(--secondary));
+            color: white;
+            padding: 30px 20px 90px 20px; 
+            text-align: center;
+            position: relative;
+            margin-bottom: 20px;
+        }
+
+        .header-content {
+            position: relative;
+            z-index: 2;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        .title-line1 {
+            font-size: clamp(1.1rem, 4vw, 1.5rem); 
+            font-weight: 700;
+            color: #e6f6f3;
+            margin-bottom: 5px;
+            letter-spacing: 1px;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            text-shadow: 1px 2px 4px rgba(0,0,0,0.3);
+        }
+
+        .title-line2 {
+            font-size: clamp(1.5rem, 5.2vw, 2.6rem); 
+            font-weight: 900;
+            background: linear-gradient(to right, #ffe2c2, #f59e42);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            margin-bottom: 15px;
+            filter: drop-shadow(2px 4px 6px rgba(0,0,0,0.5));
+            line-height: 1.3;
+        }
+
+        .header-main h2 { font-size: clamp(1rem, 3vw, 1.3rem); font-weight: 600; color: #fff7ed; margin-bottom: 8px; text-shadow: 1px 1px 2px rgba(0,0,0,0.3);}
+        .header-main p { font-size: clamp(0.9rem, 2.5vw, 1.1rem); font-weight: 600; background: rgba(0,0,0,0.3); display: inline-block; padding: 6px 20px; border-radius: 30px; border: 1px solid rgba(255,255,255,0.15); box-shadow: 0 4px 6px rgba(0,0,0,0.1);}
+
+        .header-wave {
+            position: absolute;
+            bottom: -1px;
+            left: 0;
+            width: 100%;
+            height: auto;
+            z-index: 1;
+        }
+
+        .btn {
+            background: linear-gradient(to bottom, var(--primary-light), var(--primary));
+            color: white;
+            border: none;
+            padding: 12px 20px;
+            border-radius: 12px;
+            font-size: 1.1rem;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.2s cubic-bezier(0.4, 0, 0.2, 1);
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            gap: 10px;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+            border-bottom: 3px solid rgba(0,0,0,0.3);
+        }
+        .btn:hover { transform: translateY(-2px); box-shadow: 0 6px 12px rgba(0,0,0,0.2); }
+        .btn:active { transform: translateY(2px); border-bottom: 0px; margin-top: 3px; }
+        .btn-correct { filter: brightness(1.2); pointer-events: none; border-bottom-width: 0; transform: translateY(2px);}
+        .btn-wrong { filter: brightness(0.8); pointer-events: none; border-bottom-width: 0; transform: translateY(2px);}
+
+        #home-screen {
+            flex: 1;
+            padding: 20px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 20px;
+        }
+
+        .grid-menu {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+            gap: 25px;
+            width: 100%;
+            max-width: 1200px;
+            padding-bottom: 80px;
+        }
+
+        .menu-card {
+            background: var(--card-bg);
+            border-radius: 20px;
+            padding: 30px 20px;
+            text-align: center;
+            box-shadow: 0 10px 15px -3px rgba(0,0,0,0.05), 0 4px 6px -2px rgba(0,0,0,0.025);
+            cursor: pointer;
+            transition: all 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+            border: 2px solid transparent;
+            position: relative;
+            overflow: hidden;
+        }
+        .menu-card::before {
+            content: ""; position: absolute; top: 0; left: 0; right: 0; height: 6px;
+            background: linear-gradient(90deg, var(--primary), var(--secondary));
+            opacity: 0; transition: opacity 0.3s;
+        }
+        .menu-card:hover { transform: translateY(-8px); box-shadow: 0 20px 25px -5px rgba(0,0,0,0.1); border-color: rgba(234, 122, 30, 0.25); }
+        .menu-card:hover::before { opacity: 1; }
+        
+        .menu-card .icon-container {
+            width: 80px; height: 80px;
+            margin: 0 auto 15px auto;
+            background: linear-gradient(135deg, #e6f6f3, #ffe2c2);
+            border-radius: 50%;
+            display: flex; align-items: center; justify-content: center;
+            box-shadow: inset 0 3px 6px rgba(255,255,255,0.8), 0 4px 8px rgba(0,0,0,0.05);
+            transition: transform 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+        }
+        .menu-card .icon-container svg {
+            width: 40px; height: 40px; stroke: #0e5249; fill: none;
+            stroke-width: 2; stroke-linecap: round; stroke-linejoin: round;
+        }
+        .menu-card:hover .icon-container { transform: scale(1.1) rotate(10deg); }
+        .menu-card h3 { font-size: 1.3rem; color: var(--dark); font-weight: 800; margin-bottom: 8px;}
+        .menu-card p { font-size: 0.95rem; color: #64748b; font-weight: 600;}
+
+        #game-screen {
+            flex: 1;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .game-nav {
+            background: white;
+            padding: 15px 25px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.05);
+            border-bottom-left-radius: 20px;
+            border-bottom-right-radius: 20px;
+            margin-bottom: 20px;
+            font-weight: bold;
+            font-size: clamp(0.9rem, 3vw, 1.2rem);
+        }
+        .back-btn { background: #e2e8f0; color: var(--dark); border-bottom: 3px solid #cbd5e1; padding: 8px 15px;}
+        #game-progress { background: #14a394; color: white; padding: 6px 15px; border-radius: 20px;}
+        
+        .game-container {
+            flex: 1;
+            padding: 0 20px 40px 20px;
+            max-width: 900px;
+            margin: 0 auto;
+            width: 100%;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .question-box {
+            background: white;
+            padding: 20px 25px;
+            border-radius: 16px;
+            text-align: center;
+            font-size: clamp(1.1rem, 3.6vw, 1.5rem);
+            font-weight: 800;
+            color: #0e5249;
+            margin-bottom: 25px;
+            box-shadow: 0 10px 15px -3px rgba(0,0,0,0.05);
+            border-right: 8px solid #0d8a7c;
+            line-height: 1.7;
+        }
+
+        .shake { animation: shake 0.5s cubic-bezier(.36,.07,.19,.97) both; }
+        @keyframes shake {
+            10%, 90% { transform: translate3d(-2px, 0, 0); }
+            20%, 80% { transform: translate3d(4px, 0, 0); }
+            30%, 50%, 70% { transform: translate3d(-6px, 0, 0); }
+            40%, 60% { transform: translate3d(6px, 0, 0); }
+        }
+
+        .options-grid { display: flex; flex-direction: column; gap: 15px; }
+        .options-grid .btn { padding: 18px; font-size: clamp(1rem, 3.2vw, 1.3rem); text-align: right; justify-content: flex-start; border-radius: 12px;}
+
+        .tf-grid { display: flex; flex-wrap: wrap; gap: 20px; justify-content: center; }
+
+        .bubbles-area {
+            position: relative; height: 400px;
+            background: linear-gradient(to bottom, #062b29, #0e5249);
+            border-radius: 16px; overflow: hidden;
+            border: 4px solid #14a394; margin-top: 10px;
+            box-shadow: inset 0 0 20px rgba(0,0,0,0.5);
+        }
+        .bubble {
+            position: absolute;
+            background: radial-gradient(circle at 30% 30%, rgba(255,255,255,0.9), rgba(255,237,213,0.92));
+            color: #0e5249;
+            border: 2px solid #ffffff;
+            padding: 10px 5px;
+            border-radius: 30px;
+            font-weight: 800; font-size: clamp(0.8rem, 1.9vw, 1rem);
+            box-shadow: 0 10px 15px rgba(0,0,0,0.2), inset -4px -4px 10px rgba(0,0,0,0.1);
+            cursor: pointer;
+            display: flex; align-items: center; justify-content: center;
+            text-align: center;
+            width: 22%;
+            transition: transform 0.2s, background 0.2s;
+            z-index: 5;
+        }
+        .bubble:hover { transform: scale(1.05); }
+        .bubble::after {
+            content: ''; position: absolute; top: 10%; left: 15%;
+            width: 20%; height: 20%; background: rgba(255,255,255,0.8);
+            border-radius: 50%; filter: blur(2px);
+        }
+
+        .shooting-area {
+            position: relative; height: 400px; background: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="100%" height="100%"><rect fill="%23ecfdf5" width="100%" height="100%"/><circle fill="%23bbf7d0" cx="20%" cy="30%" r="50"/><circle fill="%23bbf7d0" cx="80%" cy="60%" r="70"/><circle fill="%23bbf7d0" cx="50%" cy="80%" r="40"/></svg>') no-repeat center center;
+            background-size: cover; border-radius: 16px; overflow: hidden;
+            border: 4px solid #14a394; margin-top: 10px; box-shadow: inset 0 0 20px rgba(0,0,0,0.1);
+        }
+        .target-bird {
+            position: absolute; background: white; color: var(--dark);
+            padding: 10px 20px; border-radius: 30px; font-weight: 800; font-size: clamp(0.85rem, 2.7vw, 1.05rem);
+            box-shadow: 0 8px 15px rgba(0,0,0,0.15); cursor: crosshair;
+            border: 3px solid var(--warning); white-space: nowrap; transition: background 0.2s;
+            display: flex; align-items: center; gap: 8px;
+        }
+        .target-bird:hover { transform: scale(1.05); background: #fffbeb; }
+
+        /* تحدي العباقرة */
+        .genius-box { border: 3px solid var(--warning) !important; background: linear-gradient(135deg, #fffbeb, #ffffff); }
+        .genius-timer-wrap { width: 100%; height: 16px; background: #e2e8f0; border-radius: 10px; overflow: hidden; margin-bottom: 22px; box-shadow: inset 0 2px 4px rgba(0,0,0,0.1); }
+        .genius-timer-bar { height: 100%; background: linear-gradient(to right, #10b981, var(--warning), var(--danger)); width: 100%; transition: width 0.1s linear; border-radius: 10px; }
+        .genius-hint { text-align: center; margin-top: 15px; color: var(--warning); font-weight: bold; font-size: 1.1rem; display: flex; align-items: center; justify-content: center; gap: 8px; }
+
+        .overlay {
+            position: fixed; top: 0; left: 0; right: 0; bottom: 0;
+            background: rgba(15, 23, 42, 0.8); backdrop-filter: blur(4px);
+            display: flex; justify-content: center; align-items: center;
+            z-index: 1000; opacity: 0; pointer-events: none; transition: opacity 0.3s ease;
+        }
+        .overlay.active { opacity: 1; pointer-events: all; }
+        .modal {
+            background: white; padding: 40px; border-radius: 25px;
+            text-align: center; max-width: 90%; width: 400px;
+            transform: scale(0.7) translateY(50px); transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+            box-shadow: 0 25px 50px -12px rgba(0,0,0,0.25);
+        }
+        .overlay.active .modal { transform: scale(1) translateY(0); }
+        .modal-icon { display: flex; justify-content: center; margin-bottom: 20px; }
+
+        .errors-list::-webkit-scrollbar { width: 8px; }
+        .errors-list::-webkit-scrollbar-track { background: #f1f5f9; border-radius: 8px; }
+        .errors-list::-webkit-scrollbar-thumb { background: #cbd5e1; border-radius: 8px; }
+        .errors-list::-webkit-scrollbar-thumb:hover { background: #94a3b8; }
+
+        .footer-main {
+            background: var(--dark); color: #cbd5e1;
+            text-align: center; padding: 25px 20px; margin-top: auto;
+            border-top: 4px solid var(--primary);
+        }
+        .footer-main p { margin: 5px 0; font-size: 1.1rem; font-weight: 600;}
+        .footer-main .designer { font-size: 1rem; color: #94a3b8; font-weight: 400;}
+
+        .whatsapp-float {
+            position: fixed; bottom: 25px; left: 25px;
+            background: #25d366; color: white;
+            width: 65px; height: 65px; border-radius: 50%;
+            display: flex; justify-content: center; align-items: center;
+            text-decoration: none; box-shadow: 0 8px 15px rgba(37, 211, 102, 0.4);
+            z-index: 100; transition: all 0.3s;
+        }
+        .whatsapp-float:hover { transform: scale(1.15) rotate(-5deg); box-shadow: 0 12px 20px rgba(37, 211, 102, 0.6); }
+        .whatsapp-float svg { width: 35px; height: 35px; fill: currentColor; }
+
+        .send-result-box {
+            margin-top: 25px; background: #f0fdf4; border: 2px dashed #25d366;
+            border-radius: 15px; padding: 20px;
+        }
+        .send-result-box h3 { color: #128c7e; margin-bottom: 12px; font-size: 1.2rem; }
+        .name-input {
+            width: 100%; padding: 14px; border-radius: 10px; border: 2px solid #cbd5e1;
+            font-size: 1.05rem; font-family: 'Cairo', sans-serif; text-align: center; margin-bottom: 12px;
+        }
+        .name-input:focus { outline: none; border-color: #25d366; }
+        .whatsapp-send-btn {
+            width: 100%; background: linear-gradient(to bottom, #25d366, #128c7e);
+            border-bottom: 3px solid #0d6b5f;
+        }
+        .name-warning { color: var(--danger); font-size: 0.9rem; margin-top: 8px; font-weight: bold; }
+
+        .confetti {
+            position: fixed; top: -10px; width: 12px; height: 12px; z-index: 9999;
+            animation: fall linear forwards; border-radius: 3px;
+        }
+        @keyframes fall { to { transform: translateY(110vh) rotate(720deg); opacity: 0; } }
+            .round-badge { display:inline-block; margin-top:12px; padding:5px 14px; border-radius:999px; background:#fff7ed; color:#c2410c; border:1px solid #fdba74; font-weight:800; font-size:.9rem; }
+        .bubble span { line-height:1.35; }
+    </style>
+</head>
+<body>
+
+    <header class="header-main" id="main-header">
+        <div class="header-content">
+            <div style="display: flex; align-items: center; justify-content: center; gap: 40px; flex-wrap: wrap;">
+                <img src="logo.jpg" alt="الأستاذ توفيق كرم الصريحي" style="width: 180px; height: 180px; border-radius: 30px; border: 4px solid #f59e42; box-shadow: 0 8px 16px rgba(0,0,0,0.4); background-color: white; object-fit: cover; object-position: top; flex-shrink: 0;" onerror="this.style.display='none'">
+                <div style="display: flex; flex-direction: column; align-items: center; text-align: center;">
+                    <h1 class="title-line1">
+                        دَرْسٌ
+                        <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="#ffe2c2" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"></circle><circle cx="12" cy="12" r="6"></circle><circle cx="12" cy="12" r="2"></circle></svg>
+                        لُعْبَة
+                    </h1>
+                    <h1 class="title-line2">مَعَ الأُسْتَاذِ تَوْفِيق كَرَم الصَّرِيحِي</h1>
+                    <p class="platform-badge" style="display:inline-block; margin:8px auto 4px; padding:6px 22px; border-radius:999px; background:rgba(255,255,255,0.14); border:2px solid #f59e0b; color:#fde3c4; font-weight:900; font-size:1.3rem; letter-spacing:0.5px;">✒️ المبتدأ والخبر (المفرد وجمع المؤنث السالم وجمع التكسير)</p>
+                    <h2>الصَّفُّ الرَّابِعُ الابْتِدَائِيُّ - الوحدة الثانية</h2>
+                    <p style="margin-top: 10px;">القواعد النحوية • 🎲 كل لعبة 20 سؤالًا تتغير عشوائيًّا من بنك 50 سؤالًا</p>
+                </div>
+            </div>
+        </div>
+        <svg class="header-wave" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320">
+            <path fill="#f0f4f8" fill-opacity="1" d="M0,192L48,197.3C96,203,192,213,288,229.3C384,245,480,267,576,250.7C672,235,768,181,864,170.7C960,160,1056,192,1152,208C1248,224,1344,224,1392,224L1440,224L1440,320L1392,320C1344,320,1248,320,1152,320C1056,320,960,320,864,320C768,320,672,320,576,320C480,320,384,320,288,320C192,320,96,320,48,320L0,320Z"></path>
+        </svg>
+    </header>
+
+    <div id="home-screen">
+        <div class="grid-menu" id="menu-grid"></div>
+    </div>
+
+    <div id="game-screen" class="hidden">
+        <div class="game-nav">
+            <button class="btn back-btn" onclick="returnToMenu()">
+                <svg width="20" height="20" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M19 12H5M12 19l-7-7 7-7"/></svg>
+                رجوع
+            </button>
+            <strong id="game-title">عنوان اللعبة</strong>
+            <span id="game-progress">1 / 20</span>
+        </div>
+        <div class="game-container" id="game-container"></div>
+    </div>
+
+    <div class="overlay" id="feedback-modal">
+        <div class="modal">
+            <div class="modal-icon" id="feedback-icon"></div>
+            <h2 id="feedback-title" style="font-size: 2.5rem; font-weight: 900;">إجابة صحيحة!</h2>
+        </div>
+    </div>
+
+    <footer class="footer-main" id="main-footer">
+        <p>جميع الحقوق محفوظة &copy; | الأستاذ توفيق كرم الصريحي</p>
+        <p class="designer">للتواصل: 01039179352</p>
+    </footer>
+
+    <a href="https://wa.me/201039179352" class="whatsapp-float" target="_blank" title="تواصل معنا">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+            <path d="M12.031 0C5.385 0 0 5.385 0 12.031c0 2.656.843 5.12 2.26 7.15L.626 24l5.01-1.61c1.983 1.25 4.27 1.91 6.395 1.91 6.646 0 12.03-5.385 12.03-12.031S18.677 0 12.031 0zm6.544 17.202c-.273.766-1.58 1.464-2.185 1.503-.56.035-1.28.23-4.085-.86-3.39-1.32-5.59-4.78-5.736-4.97-.145-.19-1.37-1.82-1.37-3.475 0-1.655.857-2.47 1.164-2.8.307-.33.67-.413.89-.413.22 0 .44 0 .633.01.205.01.482-.08.736.53.264.634.904 2.203.984 2.366.08.163.133.353.033.553-.1.2-.153.326-.307.506-.154.18-.32.38-.453.506-.153.153-.314.316-.134.626.18.31.8 1.32 1.71 2.13.176.157.363.31.558.45 1.05.76 1.83 1.05 2.13 1.18.3.13.474.11.652-.09.18-.205.766-.893.97-1.2.204-.307.41-.256.69-.153.28.103 1.77.836 2.074.99.304.153.506.23.582.356.076.126.076.73-.197 1.496z"/>
+        </svg>
+    </a>
+
+<script>
+    const LESSON_FULL_NAME = "المبتدأ والخبر (المفرد وجمع المؤنث السالم وجمع التكسير) - الوحدة الثانية - الصف الرابع الابتدائي";
+    const LESSON_KEY = "elserehy-prim4-6";
+    const TEACHER_WHATSAPP = "201039179352";
+    const QUESTIONS_PER_ROUND = 20;
+    const allGamesData = [
+ {
+  "id": "g1_shooting",
+  "title": "التنشين والاصطياد: صوّب علامة الرفع",
+  "type": "shooting",
+  "desc": "اصطد علامة رفع الكلمة الملونة أو نوعها",
+  "icon": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 24 24\"><circle cx=\"12\" cy=\"12\" r=\"10\"></circle><circle cx=\"12\" cy=\"12\" r=\"6\"></circle><circle cx=\"12\" cy=\"12\" r=\"2\"></circle></svg>",
+  "questions": [
+   {
+    "q": "علامة رفع (التلميذُ) في «التلميذُ مجتهدٌ»:",
+    "options": [
+     "الألف",
+     "الواو",
+     "الضمة",
+     "الفتحة"
+    ],
+    "ans": 2
+   },
+   {
+    "q": "علامة رفع (الفتياتُ) في «الفتياتُ مضيئاتٌ»:",
+    "options": [
+     "الألف",
+     "الضمة",
+     "الواو",
+     "الكسرة"
+    ],
+    "ans": 1
+   },
+   {
+    "q": "علامة رفع (عظامٌ) في «الأجدادُ عظامٌ»:",
+    "options": [
+     "الضمة",
+     "الواو",
+     "الفتحة",
+     "الألف"
+    ],
+    "ans": 0
+   },
+   {
+    "q": "نوع (المعلماتُ) في «المعلماتُ مجتهداتٌ»:",
+    "options": [
+     "جمع تكسير",
+     "مفرد",
+     "مثنى",
+     "جمع مؤنث سالم"
+    ],
+    "ans": 3
+   },
+   {
+    "q": "نوع (أبطالٌ) في «جنودُ مصرَ أبطالٌ»:",
+    "options": [
+     "جمع تكسير",
+     "جمع مؤنث سالم",
+     "مفرد",
+     "جمع مذكر سالم"
+    ],
+    "ans": 0
+   },
+   {
+    "q": "نوع (السماءُ) في «السماءُ ممطرةٌ»:",
+    "options": [
+     "مثنى",
+     "جمع مؤنث سالم",
+     "جمع تكسير",
+     "مفرد"
+    ],
+    "ans": 3
+   },
+   {
+    "q": "نوع (المهندساتُ) في «المهندساتُ ماهراتٌ»:",
+    "options": [
+     "مثنى",
+     "جمع تكسير",
+     "جمع مؤنث سالم",
+     "مفرد"
+    ],
+    "ans": 2
+   },
+   {
+    "q": "نوع (تلاميذُ) في «تلاميذُ الفصل جددٌ»:",
+    "options": [
+     "جمع تكسير",
+     "جمع مذكر سالم",
+     "جمع مؤنث سالم",
+     "مفرد"
+    ],
+    "ans": 0
+   },
+   {
+    "q": "نوع (جُدُدٌ) في «تلاميذُ الفصل جُدُدٌ»:",
+    "options": [
+     "جمع مؤنث سالم",
+     "مثنى",
+     "مفرد",
+     "جمع تكسير"
+    ],
+    "ans": 3
+   },
+   {
+    "q": "المبتدأ في «الكتبُ مفيدةٌ»:",
+    "options": [
+     "الكتب",
+     "مفيدة"
+    ],
+    "ans": 0
+   },
+   {
+    "q": "الخبر في «الشوارعُ نظيفةٌ»:",
+    "options": [
+     "نظيفة",
+     "الشوارع"
+    ],
+    "ans": 0
+   },
+   {
+    "q": "المبتدأ في «الطالباتُ متفوقاتٌ»:",
+    "options": [
+     "متفوقات",
+     "الطالبات"
+    ],
+    "ans": 1
+   },
+   {
+    "q": "الخبر في «الأزهارُ متفتحةٌ»:",
+    "options": [
+     "الأزهار",
+     "متفتحة"
+    ],
+    "ans": 1
+   },
+   {
+    "q": "علامة رفع (متفوقاتٌ) في «الطالباتُ متفوقاتٌ»:",
+    "options": [
+     "الواو",
+     "الكسرة",
+     "الألف",
+     "الضمة"
+    ],
+    "ans": 3
+   },
+   {
+    "q": "علامة رفع (الأزهارُ):",
+    "options": [
+     "الواو",
+     "الألف",
+     "الضمة",
+     "الفتحة"
+    ],
+    "ans": 2
+   },
+   {
+    "q": "نوع (الأزهارُ):",
+    "options": [
+     "جمع مؤنث سالم",
+     "مثنى",
+     "جمع تكسير",
+     "مفرد"
+    ],
+    "ans": 2
+   },
+   {
+    "q": "نوع (الممرضاتُ):",
+    "options": [
+     "مفرد",
+     "جمع تكسير",
+     "جمع مؤنث سالم",
+     "مثنى"
+    ],
+    "ans": 2
+   },
+   {
+    "q": "نوع (العمالُ):",
+    "options": [
+     "مفرد",
+     "جمع مذكر سالم",
+     "مثنى",
+     "جمع تكسير"
+    ],
+    "ans": 3
+   },
+   {
+    "q": "نوع (الحديقةُ):",
+    "options": [
+     "جمع مؤنث سالم",
+     "مثنى",
+     "جمع تكسير",
+     "مفرد"
+    ],
+    "ans": 3
+   },
+   {
+    "q": "نوع (الأمهاتُ):",
+    "options": [
+     "جمع تكسير",
+     "جمع مؤنث سالم",
+     "مفرد",
+     "مثنى"
+    ],
+    "ans": 1
+   },
+   {
+    "q": "نوع (العلماءُ):",
+    "options": [
+     "مفرد",
+     "جمع تكسير",
+     "جمع مذكر سالم",
+     "مثنى"
+    ],
+    "ans": 1
+   },
+   {
+    "q": "علامة رفع (العلماءُ) في «العلماءُ عظماءُ»:",
+    "options": [
+     "الضمة",
+     "الألف",
+     "الواو",
+     "الفتحة"
+    ],
+    "ans": 0
+   },
+   {
+    "q": "علامة رفع (الأمهاتُ) في «الأمهاتُ رحيماتٌ»:",
+    "options": [
+     "الضمة",
+     "الكسرة",
+     "الألف",
+     "الواو"
+    ],
+    "ans": 0
+   },
+   {
+    "q": "علامة رفع (الشمسُ) في «الشمسُ ساطعةٌ»:",
+    "options": [
+     "الواو",
+     "الفتحة",
+     "الضمة",
+     "الألف"
+    ],
+    "ans": 2
+   },
+   {
+    "q": "الخبر في «الأشجارُ عاليةٌ»:",
+    "options": [
+     "الأشجار",
+     "عالية"
+    ],
+    "ans": 1
+   },
+   {
+    "q": "المبتدأ في «البيوتُ واسعةٌ»:",
+    "options": [
+     "واسعة",
+     "البيوت"
+    ],
+    "ans": 1
+   },
+   {
+    "q": "المبتدأ في «الفلاحاتُ نشيطاتٌ»:",
+    "options": [
+     "الفلاحات",
+     "نشيطات"
+    ],
+    "ans": 0
+   },
+   {
+    "q": "الخبر في «الفلاحاتُ نشيطاتٌ»:",
+    "options": [
+     "الفلاحات",
+     "نشيطات"
+    ],
+    "ans": 1
+   },
+   {
+    "q": "الخبر في «الأطفالُ سعداءُ»:",
+    "options": [
+     "الأطفال",
+     "سعداء"
+    ],
+    "ans": 1
+   },
+   {
+    "q": "نوع (سعداءُ):",
+    "options": [
+     "مفرد",
+     "جمع تكسير",
+     "جمع مؤنث سالم",
+     "جمع مذكر سالم"
+    ],
+    "ans": 1
+   },
+   {
+    "q": "نوع (نشيطاتٌ):",
+    "options": [
+     "مثنى",
+     "جمع مؤنث سالم",
+     "مفرد",
+     "جمع تكسير"
+    ],
+    "ans": 1
+   },
+   {
+    "q": "نوع (رحيمةٌ) في «الأمُّ رحيمةٌ»:",
+    "options": [
+     "مفرد",
+     "مثنى",
+     "جمع مؤنث سالم",
+     "جمع تكسير"
+    ],
+    "ans": 0
+   },
+   {
+    "q": "الضبط الصحيح:",
+    "options": [
+     "الكتبِ مفيدةٍ",
+     "الكتبُ مفيدةً",
+     "الكتبَ مفيدةٌ",
+     "الكتبُ مفيدةٌ"
+    ],
+    "ans": 3
+   },
+   {
+    "q": "الضبط الصحيح:",
+    "options": [
+     "الطالباتُ متفوقاتٍ",
+     "الطالباتُ متفوقاتٌ",
+     "الطالباتِ متفوقاتٌ",
+     "الطالباتَ متفوقاتٌ"
+    ],
+    "ans": 1
+   },
+   {
+    "q": "الضبط الصحيح:",
+    "options": [
+     "الأصدقاءُ أوفياءَ",
+     "الأصدقاءُ أوفياءُ",
+     "الأصدقاءَ أوفياءُ",
+     "الأصدقاءِ أوفياءِ"
+    ],
+    "ans": 1
+   },
+   {
+    "q": "الضبط الصحيح:",
+    "options": [
+     "الفتاةُ ذكيةً",
+     "الفتاةُ ذكيةٌ",
+     "الفتاةَ ذكيةٌ",
+     "الفتاةِ ذكيةٍ"
+    ],
+    "ans": 1
+   },
+   {
+    "q": "علامة رفع (أوفياءُ) في «الأصدقاءُ أوفياءُ»:",
+    "options": [
+     "الواو",
+     "الضمة",
+     "الألف",
+     "الفتحة"
+    ],
+    "ans": 1
+   },
+   {
+    "q": "علامة رفع (الطبيباتُ) في «الطبيباتُ ماهراتٌ»:",
+    "options": [
+     "الكسرة",
+     "الضمة",
+     "الألف",
+     "الواو"
+    ],
+    "ans": 1
+   },
+   {
+    "q": "الخبر جمع تكسير في:",
+    "options": [
+     "الرجالُ قويٌّ",
+     "البناتُ قوياتٌ",
+     "الولدُ قويٌّ",
+     "الرجالُ أقوياءُ"
+    ],
+    "ans": 3
+   },
+   {
+    "q": "الخبر جمع مؤنث سالم في:",
+    "options": [
+     "الأولادُ مؤدبون",
+     "البنتُ مؤدبةٌ",
+     "الأبناءُ أدباءُ",
+     "البناتُ مؤدباتٌ"
+    ],
+    "ans": 3
+   },
+   {
+    "q": "الخبر مفرد في:",
+    "options": [
+     "الحياةُ جميلةٌ",
+     "الأشجارُ ظلالٌ",
+     "البناتُ مبدعاتٌ",
+     "الحقولُ خضراواتٌ"
+    ],
+    "ans": 0
+   },
+   {
+    "q": "المبتدأ جمع تكسير في:",
+    "options": [
+     "الشجرةُ مثمرةٌ",
+     "الأشجارُ مثمرةٌ",
+     "النخلةُ مثمرةٌ",
+     "الشجراتُ مثمراتٌ"
+    ],
+    "ans": 1
+   },
+   {
+    "q": "المبتدأ جمع مؤنث سالم في:",
+    "options": [
+     "الوردُ ملونٌ",
+     "الأزهارُ ملونةٌ",
+     "الزهرةُ ملونةٌ",
+     "الزهراتُ ملونةٌ"
+    ],
+    "ans": 3
+   },
+   {
+    "q": "المبتدأ مفرد في:",
+    "options": [
+     "الأنهارُ جاريةٌ",
+     "الطيورُ مهاجرةٌ",
+     "النهرُ جارٍ",
+     "الفراشاتُ ملونةٌ"
+    ],
+    "ans": 2
+   },
+   {
+    "q": "علامة رفع (الطيورُ):",
+    "options": [
+     "الفتحة",
+     "الضمة",
+     "الواو",
+     "الألف"
+    ],
+    "ans": 1
+   },
+   {
+    "q": "علامة رفع (الفراشاتُ):",
+    "options": [
+     "الضمة",
+     "الواو",
+     "الكسرة",
+     "الألف"
+    ],
+    "ans": 0
+   },
+   {
+    "q": "علامة رفع (النهرُ):",
+    "options": [
+     "الضمة",
+     "الفتحة",
+     "الألف",
+     "الواو"
+    ],
+    "ans": 0
+   },
+   {
+    "q": "علامة رفع (الجنودُ):",
+    "options": [
+     "الواو",
+     "الألف",
+     "الضمة",
+     "الفتحة"
+    ],
+    "ans": 2
+   },
+   {
+    "q": "علامة رفع (الجنديةُ):",
+    "options": [
+     "الضمة",
+     "الواو",
+     "الألف",
+     "الفتحة"
+    ],
+    "ans": 0
+   },
+   {
+    "q": "علامة رفع (الجنديّاتُ):",
+    "options": [
+     "الضمة",
+     "الألف",
+     "الكسرة",
+     "الواو"
+    ],
+    "ans": 0
+   }
+  ]
+ },
+ {
+  "id": "g2_true_false",
+  "title": "صح أم خطأ",
+  "type": "true_false",
+  "desc": "اختبر فهمك لعلامة رفع المبتدأ والخبر",
+  "icon": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 24 24\"><path d=\"M22 11.08V12a10 10 0 1 1-5.93-9.14\"></path><polyline points=\"22 4 12 14.01 9 11.01\"></polyline></svg>",
+  "questions": [
+   {
+    "q": "المبتدأ والخبر مرفوعان.",
+    "options": [
+     "صح",
+     "خطأ"
+    ],
+    "ans": 0
+   },
+   {
+    "q": "علامة رفع المبتدأ والخبر في حالة المفرد هي الضمة.",
+    "options": [
+     "صح",
+     "خطأ"
+    ],
+    "ans": 0
+   },
+   {
+    "q": "علامة رفع المبتدأ والخبر جمع المؤنث السالم هي الضمة.",
+    "options": [
+     "صح",
+     "خطأ"
+    ],
+    "ans": 0
+   },
+   {
+    "q": "علامة رفع المبتدأ والخبر جمع التكسير هي الضمة.",
+    "options": [
+     "صح",
+     "خطأ"
+    ],
+    "ans": 0
+   },
+   {
+    "q": "علامة رفع جمع المؤنث السالم الواو.",
+    "options": [
+     "صح",
+     "خطأ"
+    ],
+    "ans": 1
+   },
+   {
+    "q": "علامة رفع جمع التكسير الألف.",
+    "options": [
+     "صح",
+     "خطأ"
+    ],
+    "ans": 1
+   },
+   {
+    "q": "في «الفتياتُ مضيئاتٌ» المبتدأ جمع مؤنث سالم مرفوع بالضمة.",
+    "options": [
+     "صح",
+     "خطأ"
+    ],
+    "ans": 0
+   },
+   {
+    "q": "في «الأجدادُ عظامٌ» الخبر جمع تكسير مرفوع بالضمة.",
+    "options": [
+     "صح",
+     "خطأ"
+    ],
+    "ans": 0
+   },
+   {
+    "q": "في «السماءُ ممطرةٌ» المبتدأ مفرد مرفوع بالفتحة.",
+    "options": [
+     "صح",
+     "خطأ"
+    ],
+    "ans": 1
+   },
+   {
+    "q": "«المعلماتُ مجتهداتٌ» ضبطها صحيح.",
+    "options": [
+     "صح",
+     "خطأ"
+    ],
+    "ans": 0
+   },
+   {
+    "q": "«المعلماتَ مجتهداتٌ» ضبطها صحيح.",
+    "options": [
+     "صح",
+     "خطأ"
+    ],
+    "ans": 1
+   },
+   {
+    "q": "«الطلابُ أذكياءُ» المبتدأ والخبر جمعا تكسير.",
+    "options": [
+     "صح",
+     "خطأ"
+    ],
+    "ans": 0
+   },
+   {
+    "q": "«الطلابُ أذكياءُ» علامة رفع المبتدأ الواو.",
+    "options": [
+     "صح",
+     "خطأ"
+    ],
+    "ans": 1
+   },
+   {
+    "q": "«العمالُ مهرةٌ» علامة رفع الخبر الضمة.",
+    "options": [
+     "صح",
+     "خطأ"
+    ],
+    "ans": 0
+   },
+   {
+    "q": "جمع المؤنث السالم ينتهي بـ(ات).",
+    "options": [
+     "صح",
+     "خطأ"
+    ],
+    "ans": 0
+   },
+   {
+    "q": "جمع التكسير تتغير فيه صورة المفرد.",
+    "options": [
+     "صح",
+     "خطأ"
+    ],
+    "ans": 0
+   },
+   {
+    "q": "كلمة (الكتب) جمع مؤنث سالم.",
+    "options": [
+     "صح",
+     "خطأ"
+    ],
+    "ans": 1
+   },
+   {
+    "q": "كلمة (الأمهات) جمع مؤنث سالم.",
+    "options": [
+     "صح",
+     "خطأ"
+    ],
+    "ans": 0
+   },
+   {
+    "q": "كلمة (الأبطال) جمع تكسير.",
+    "options": [
+     "صح",
+     "خطأ"
+    ],
+    "ans": 0
+   },
+   {
+    "q": "في «جنودُ مصرَ أبطالٌ» المبتدأ (جنود).",
+    "options": [
+     "صح",
+     "خطأ"
+    ],
+    "ans": 0
+   },
+   {
+    "q": "في «جنودُ مصرَ أبطالٌ» الخبر (مصر).",
+    "options": [
+     "صح",
+     "خطأ"
+    ],
+    "ans": 1
+   },
+   {
+    "q": "في «المهندساتُ ماهراتٌ» الخبر (ماهرات) جمع مؤنث سالم.",
+    "options": [
+     "صح",
+     "خطأ"
+    ],
+    "ans": 0
+   },
+   {
+    "q": "في «تلاميذُ الفصلِ جُدُدٌ» الخبر (جدد) جمع تكسير مرفوع بالضمة.",
+    "options": [
+     "صح",
+     "خطأ"
+    ],
+    "ans": 0
+   },
+   {
+    "q": "في «الأشجارُ عاليةٌ» المبتدأ جمع تكسير والخبر مفرد.",
+    "options": [
+     "صح",
+     "خطأ"
+    ],
+    "ans": 0
+   },
+   {
+    "q": "علامة رفع المفرد وجمع المؤنث وجمع التكسير واحدة.",
+    "options": [
+     "صح",
+     "خطأ"
+    ],
+    "ans": 0
+   },
+   {
+    "q": "الصواب في «الطالباتِ متفوقاتٌ» هو «الطالباتُ متفوقاتٌ».",
+    "options": [
+     "صح",
+     "خطأ"
+    ],
+    "ans": 0
+   },
+   {
+    "q": "الصواب في «الكتبُ مفيدةً» هو «الكتبُ مفيدةٌ».",
+    "options": [
+     "صح",
+     "خطأ"
+    ],
+    "ans": 0
+   },
+   {
+    "q": "في «البناتُ مؤدباتٌ» الكلمتان مرفوعتان بالضمة.",
+    "options": [
+     "صح",
+     "خطأ"
+    ],
+    "ans": 0
+   },
+   {
+    "q": "في «الأصدقاءُ أوفياءُ» علامة رفع الخبر الكسرة.",
+    "options": [
+     "صح",
+     "خطأ"
+    ],
+    "ans": 1
+   },
+   {
+    "q": "جمع (ممرضة) جمع مؤنث سالم هو (ممرضون).",
+    "options": [
+     "صح",
+     "خطأ"
+    ],
+    "ans": 1
+   },
+   {
+    "q": "مفرد (عظماء) هو (عظيم).",
+    "options": [
+     "صح",
+     "خطأ"
+    ],
+    "ans": 0
+   },
+   {
+    "q": "«الفلاحاتُ نشيطاتٌ» جملة اسمية.",
+    "options": [
+     "صح",
+     "خطأ"
+    ],
+    "ans": 0
+   },
+   {
+    "q": "«تعمل الفلاحاتُ بنشاط» جملة اسمية.",
+    "options": [
+     "صح",
+     "خطأ"
+    ],
+    "ans": 1
+   },
+   {
+    "q": "الخبر قد يكون مفردًا والمبتدأ جمع تكسير مثل «البيوتُ واسعةٌ».",
+    "options": [
+     "صح",
+     "خطأ"
+    ],
+    "ans": 0
+   },
+   {
+    "q": "في «الطبيباتُ رحيماتٌ» علامة رفع المبتدأ الضمة الظاهرة.",
+    "options": [
+     "صح",
+     "خطأ"
+    ],
+    "ans": 0
+   },
+   {
+    "q": "جمع التكسير قد يدل على مذكر أو مؤنث.",
+    "options": [
+     "صح",
+     "خطأ"
+    ],
+    "ans": 0
+   },
+   {
+    "q": "«العلماءُ عظماءُ» المبتدأ مفرد.",
+    "options": [
+     "صح",
+     "خطأ"
+    ],
+    "ans": 1
+   },
+   {
+    "q": "«الوردةُ جميلةٌ» المبتدأ جمع تكسير.",
+    "options": [
+     "صح",
+     "خطأ"
+    ],
+    "ans": 1
+   },
+   {
+    "q": "«الزهراتُ ملونةٌ» المبتدأ جمع تكسير.",
+    "options": [
+     "صح",
+     "خطأ"
+    ],
+    "ans": 1
+   },
+   {
+    "q": "«الأزهارُ ملونةٌ» المبتدأ جمع تكسير.",
+    "options": [
+     "صح",
+     "خطأ"
+    ],
+    "ans": 0
+   },
+   {
+    "q": "في «الحقولُ واسعةٌ» علامة رفع المبتدأ الضمة.",
+    "options": [
+     "صح",
+     "خطأ"
+    ],
+    "ans": 0
+   },
+   {
+    "q": "في «الأمهاتُ حنوناتٌ» الخبر جمع مؤنث سالم.",
+    "options": [
+     "صح",
+     "خطأ"
+    ],
+    "ans": 0
+   },
+   {
+    "q": "في «الشوارعُ مزدحمةٌ» المبتدأ مفرد.",
+    "options": [
+     "صح",
+     "خطأ"
+    ],
+    "ans": 1
+   },
+   {
+    "q": "في «الشوارعُ مزدحمةٌ» علامة رفع الخبر الضمة.",
+    "options": [
+     "صح",
+     "خطأ"
+    ],
+    "ans": 0
+   },
+   {
+    "q": "جمع (كتاب) هو (كتب) وهو جمع تكسير.",
+    "options": [
+     "صح",
+     "خطأ"
+    ],
+    "ans": 0
+   },
+   {
+    "q": "جمع (فتاة) جمع مؤنث سالم هو (فتيات) أو (فتَيات).",
+    "options": [
+     "صح",
+     "خطأ"
+    ],
+    "ans": 0
+   },
+   {
+    "q": "«النجومُ لامعةٌ» المبتدأ مرفوع بالواو.",
+    "options": [
+     "صح",
+     "خطأ"
+    ],
+    "ans": 1
+   },
+   {
+    "q": "«الجنودُ شجعانٌ» الخبر جمع تكسير.",
+    "options": [
+     "صح",
+     "خطأ"
+    ],
+    "ans": 0
+   },
+   {
+    "q": "«المسافراتُ سعيداتٌ» المبتدأ جمع مؤنث سالم مرفوع بالضمة.",
+    "options": [
+     "صح",
+     "خطأ"
+    ],
+    "ans": 0
+   },
+   {
+    "q": "حين يكون المبتدأ جمع مؤنث سالم يُرفع بالكسرة.",
+    "options": [
+     "صح",
+     "خطأ"
+    ],
+    "ans": 1
+   }
+  ]
+ },
+ {
+  "id": "g3_mcq",
+  "title": "اختيار من متعدد: المبتدأ والخبر",
+  "type": "mcq",
+  "desc": "اختر الإجابة الصحيحة",
+  "icon": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 24 24\"><path d=\"M2 3h6a4 4 0 0 1 4 4v14a3 3 0 0 0-3-3H2z\"></path><path d=\"M22 3h-6a4 4 0 0 0-4 4v14a3 3 0 0 1 3-3h7z\"></path></svg>",
+  "questions": [
+   {
+    "q": "علامة رفع المبتدأ والخبر في حالة المفرد وجمع المؤنث السالم وجمع التكسير:",
+    "options": [
+     "الألف",
+     "الفتحة",
+     "الضمة",
+     "الواو"
+    ],
+    "ans": 2
+   },
+   {
+    "q": "«الأخواتُ نشيطاتٌ» علامة رفع المبتدأ:",
+    "options": [
+     "الواو",
+     "الألف",
+     "الفتحة",
+     "الضمة"
+    ],
+    "ans": 3
+   },
+   {
+    "q": "«الأولادُ ........ » أكمل بخبر جمع تكسير:",
+    "options": [
+     "ذكيٌّ",
+     "أذكياءُ",
+     "أذكياءَ",
+     "ذكيّاتٌ"
+    ],
+    "ans": 1
+   },
+   {
+    "q": "«البناتُ ........ » أكمل بخبر جمع مؤنث سالم:",
+    "options": [
+     "ذكيّةٌ",
+     "ذكيّاتٍ",
+     "أذكياءُ",
+     "ذكيّاتٌ"
+    ],
+    "ans": 3
+   },
+   {
+    "q": "«الطفلةُ ........ » أكمل بخبر مفرد:",
+    "options": [
+     "ذكيّاتٌ",
+     "أذكياءُ",
+     "ذكيّةٌ",
+     "ذكيّةً"
+    ],
+    "ans": 2
+   },
+   {
+    "q": "اختر المبتدأ الصحيح: «(المزارعات - المزارعاتَ - المزارعاتِ) مجتهداتٌ»:",
+    "options": [
+     "المزارعاتُ",
+     "المزارعاتٍ",
+     "المزارعاتَ",
+     "المزارعاتِ"
+    ],
+    "ans": 0
+   },
+   {
+    "q": "اختر المبتدأ الصحيح: «(القارئَ - القارئُ - القارئِ) جالسٌ في المكتبة»:",
+    "options": [
+     "القارئُ",
+     "القارئَ",
+     "القارئِ",
+     "القارئٌ"
+    ],
+    "ans": 0
+   },
+   {
+    "q": "اختر المبتدأ الصحيح: «(المعلماتُ - المعلماتِ - المعلماتَ) رحيماتٌ»:",
+    "options": [
+     "المعلماتَ",
+     "المعلماتُ",
+     "المعلماتٌ",
+     "المعلماتِ"
+    ],
+    "ans": 1
+   },
+   {
+    "q": "اختر المبتدأ الصحيح: «(الأطفالَ - الأطفالُ - الأطفالِ) سعداءُ بالرحلة»:",
+    "options": [
+     "الأطفالِ",
+     "الأطفالَ",
+     "الأطفالُ",
+     "الأطفالٌ"
+    ],
+    "ans": 2
+   },
+   {
+    "q": "اختر المبتدأ الصحيح: «(الأبوابِ - الأبوابُ - الأبوابَ) مفتوحةٌ»:",
+    "options": [
+     "الأبوابُ",
+     "الأبوابَ",
+     "الأبوابٌ",
+     "الأبوابِ"
+    ],
+    "ans": 0
+   },
+   {
+    "q": "«أبناءُ مصرَ كرماءُ» نوع المبتدأ:",
+    "options": [
+     "مثنى",
+     "مفرد",
+     "جمع مؤنث سالم",
+     "جمع تكسير"
+    ],
+    "ans": 3
+   },
+   {
+    "q": "«الفصولُ مرتبةٌ» نوع المبتدأ ونوع الخبر:",
+    "options": [
+     "مفرد - جمع تكسير",
+     "جمع تكسير - مفرد",
+     "مثنى - مفرد",
+     "جمع مؤنث - مفرد"
+    ],
+    "ans": 1
+   },
+   {
+    "q": "«الممرضاتُ رحيماتٌ» نوع المبتدأ والخبر:",
+    "options": [
+     "مثنى فيهما",
+     "جمع تكسير فيهما",
+     "مفرد فيهما",
+     "جمع مؤنث سالم فيهما"
+    ],
+    "ans": 3
+   },
+   {
+    "q": "«الصحفُ منتشرةٌ» علامة رفع الخبر:",
+    "options": [
+     "الألف",
+     "الكسرة",
+     "الواو",
+     "الضمة"
+    ],
+    "ans": 3
+   },
+   {
+    "q": "«عاملاتُ المصنعِ متعاوناتٌ» المبتدأ:",
+    "options": [
+     "عاملات",
+     "متعاونات",
+     "المصنع",
+     "لا يوجد"
+    ],
+    "ans": 0
+   },
+   {
+    "q": "«عاملاتُ المصنعِ متعاوناتٌ» الخبر:",
+    "options": [
+     "المصنع",
+     "عاملات",
+     "لا يوجد",
+     "متعاونات"
+    ],
+    "ans": 3
+   },
+   {
+    "q": "صوّب الخطأ: «الأخواتَ نشيطاتٌ»:",
+    "options": [
+     "الأخواتُ نشيطاتٌ",
+     "الأخواتٌ نشيطاتُ",
+     "الأخواتِ نشيطاتٌ",
+     "الأخواتُ نشيطاتٍ"
+    ],
+    "ans": 0
+   },
+   {
+    "q": "صوّب الخطأ: «الكتبُ ممتعةً»:",
+    "options": [
+     "الكتبَ ممتعةٌ",
+     "الكتبُ ممتعةٌ",
+     "الكتبِ ممتعةٍ",
+     "الكتبُ ممتعةٍ"
+    ],
+    "ans": 1
+   },
+   {
+    "q": "صوّب الخطأ: «الأصدقاءِ سعداءُ»:",
+    "options": [
+     "الأصدقاءِ سعداءِ",
+     "الأصدقاءُ سعداءَ",
+     "الأصدقاءَ سعداءُ",
+     "الأصدقاءُ سعداءُ"
+    ],
+    "ans": 3
+   },
+   {
+    "q": "صوّب الخطأ: «الجاراتُ متفاهماتٍ»:",
+    "options": [
+     "الجاراتُ متفاهماتَ",
+     "الجاراتُ متفاهماتٌ",
+     "الجاراتَ متفاهماتٌ",
+     "الجاراتِ متفاهماتٌ"
+    ],
+    "ans": 1
+   },
+   {
+    "q": "«........ ناضجةٌ» أكمل بمبتدأ جمع مؤنث سالم:",
+    "options": [
+     "الخضراواتُ",
+     "الثمرةُ",
+     "الثمارُ",
+     "الخضارُ"
+    ],
+    "ans": 0
+   },
+   {
+    "q": "«........ ناضجةٌ» أكمل بمبتدأ جمع تكسير:",
+    "options": [
+     "الثمراتُ",
+     "الثمرةُ",
+     "الثمارُ",
+     "الخضراواتُ"
+    ],
+    "ans": 2
+   },
+   {
+    "q": "«........ ناضجةٌ» أكمل بمبتدأ مفرد:",
+    "options": [
+     "الثمرةُ",
+     "الثمارُ",
+     "الخضراواتُ",
+     "الثمراتُ"
+    ],
+    "ans": 0
+   },
+   {
+    "q": "«المدارسُ ........ » أكمل بخبر مناسب:",
+    "options": [
+     "متطورةً",
+     "متطوران",
+     "متطورون",
+     "متطورةٌ"
+    ],
+    "ans": 3
+   },
+   {
+    "q": "«الطيورُ ........ » أكمل بخبر مناسب:",
+    "options": [
+     "مغردةً",
+     "مغردون",
+     "مغردةٌ",
+     "مغردتان"
+    ],
+    "ans": 2
+   },
+   {
+    "q": "«الفتياتُ ........ » أكمل بخبر جمع مؤنث سالم:",
+    "options": [
+     "فائزةً",
+     "فائزاتٌ",
+     "فائزون",
+     "فائزاتٍ"
+    ],
+    "ans": 1
+   },
+   {
+    "q": "الجملة التي مبتدؤها جمع مؤنث سالم:",
+    "options": [
+     "المعلماتُ مخلصاتٌ",
+     "المعلمتان مخلصتان",
+     "المعلمُ مخلصٌ",
+     "المعلمونَ مخلصون"
+    ],
+    "ans": 0
+   },
+   {
+    "q": "الجملة التي مبتدؤها جمع تكسير:",
+    "options": [
+     "الطالباتُ متفوقاتٌ",
+     "الطلابُ متفوقون",
+     "الطالبُ متفوقٌ",
+     "الطالبانِ متفوقان"
+    ],
+    "ans": 1
+   },
+   {
+    "q": "الجملة التي مبتدؤها مفرد:",
+    "options": [
+     "الطالباتُ متفوقاتٌ",
+     "الطلابُ متفوقون",
+     "الطالبانِ متفوقان",
+     "الطالبةُ متفوقةٌ"
+    ],
+    "ans": 3
+   },
+   {
+    "q": "إعراب (الفتياتُ) في «الفتياتُ مضيئاتٌ»:",
+    "options": [
+     "مبتدأ مرفوع بالواو",
+     "مبتدأ منصوب بالكسرة",
+     "خبر مرفوع بالضمة",
+     "مبتدأ مرفوع وعلامة رفعه الضمة"
+    ],
+    "ans": 3
+   },
+   {
+    "q": "إعراب (عظامٌ) في «الأجدادُ عظامٌ»:",
+    "options": [
+     "مبتدأ مرفوع",
+     "خبر منصوب",
+     "خبر مرفوع بالواو",
+     "خبر مرفوع وعلامة رفعه الضمة"
+    ],
+    "ans": 3
+   },
+   {
+    "q": "إعراب (المعلماتُ) في «المعلماتُ مجتهداتٌ»:",
+    "options": [
+     "خبر مرفوع",
+     "مبتدأ مرفوع بالواو",
+     "مفعول به",
+     "مبتدأ مرفوع وعلامة رفعه الضمة"
+    ],
+    "ans": 3
+   },
+   {
+    "q": "مفرد (الأجداد):",
+    "options": [
+     "الجدة",
+     "الجد",
+     "الأجدّ",
+     "الجدان"
+    ],
+    "ans": 1
+   },
+   {
+    "q": "مفرد (المعلمات):",
+    "options": [
+     "المعلمون",
+     "المعلمة",
+     "المعلم",
+     "المعلمتان"
+    ],
+    "ans": 1
+   },
+   {
+    "q": "جمع (فتاة) جمع مؤنث سالم:",
+    "options": [
+     "فتوات",
+     "فتاتان",
+     "فتيان",
+     "فتيات"
+    ],
+    "ans": 3
+   },
+   {
+    "q": "«........ مطيعون لآبائهم» أكمل بمبتدأ جمع تكسير:",
+    "options": [
+     "الأبناءُ",
+     "الابنتانِ",
+     "الابنُ",
+     "البناتُ"
+    ],
+    "ans": 0
+   },
+   {
+    "q": "الخبر في «طيورُ الحديقةِ مغردةٌ»:",
+    "options": [
+     "الحديقة",
+     "مغردة",
+     "طيور",
+     "لا يوجد"
+    ],
+    "ans": 1
+   },
+   {
+    "q": "المبتدأ في «طيورُ الحديقةِ مغردةٌ»:",
+    "options": [
+     "مغردة",
+     "طيور",
+     "لا يوجد",
+     "الحديقة"
+    ],
+    "ans": 1
+   },
+   {
+    "q": "«الأيامُ سريعةٌ» نوع المبتدأ:",
+    "options": [
+     "جمع مؤنث سالم",
+     "مفرد",
+     "جمع تكسير",
+     "مثنى"
+    ],
+    "ans": 2
+   },
+   {
+    "q": "«الساعاتُ ثمينةٌ» نوع المبتدأ:",
+    "options": [
+     "جمع تكسير",
+     "مثنى",
+     "جمع مؤنث سالم",
+     "مفرد"
+    ],
+    "ans": 2
+   },
+   {
+    "q": "«الحياةُ أملٌ» نوع المبتدأ:",
+    "options": [
+     "جمع تكسير",
+     "مثنى",
+     "مفرد",
+     "جمع مؤنث سالم"
+    ],
+    "ans": 2
+   },
+   {
+    "q": "الخبر الذي علامة رفعه الضمة الظاهرة في: «النخيلُ ........»:",
+    "options": [
+     "طويلون",
+     "طويلٌ",
+     "طويلان",
+     "طويلًا"
+    ],
+    "ans": 1
+   },
+   {
+    "q": "الجملة الصحيحة الضبط:",
+    "options": [
+     "الحقولُ خضراءُ",
+     "الحقولَ خضراءُ",
+     "الحقولِ خضراءِ",
+     "الحقولُ خضراءَ"
+    ],
+    "ans": 0
+   },
+   {
+    "q": "«البحارُ واسعةٌ» حوّل المبتدأ إلى المفرد:",
+    "options": [
+     "البحرانِ واسعان",
+     "البحارُ واسعٌ",
+     "البحرُ واسعٌ",
+     "البحرَ واسعًا"
+    ],
+    "ans": 2
+   },
+   {
+    "q": "«الطالبةُ مجتهدةٌ» حوّلها إلى جمع المؤنث السالم:",
+    "options": [
+     "الطالبةُ مجتهداتٌ",
+     "الطالباتَ مجتهداتٍ",
+     "الطالباتُ مجتهداتٌ",
+     "الطلابُ مجتهدون"
+    ],
+    "ans": 2
+   },
+   {
+    "q": "«القصةُ ممتعةٌ» حوّل المبتدأ إلى جمع تكسير:",
+    "options": [
+     "القصاتُ ممتعةٌ",
+     "القصتانِ ممتعتان",
+     "القصصُ ممتعةٌ",
+     "القصصَ ممتعةً"
+    ],
+    "ans": 2
+   },
+   {
+    "q": "«الدرسُ سهلٌ» حوّل المبتدأ إلى جمع تكسير:",
+    "options": [
+     "الدرساتُ سهلةٌ",
+     "الدروسَ سهلةً",
+     "الدرسانِ سهلان",
+     "الدروسُ سهلةٌ"
+    ],
+    "ans": 3
+   },
+   {
+    "q": "علامة رفع الخبر في «المكتباتُ عامرةٌ بالكتب»:",
+    "options": [
+     "الألف",
+     "الواو",
+     "الضمة",
+     "الكسرة"
+    ],
+    "ans": 2
+   },
+   {
+    "q": "«........ صغيرةٌ» المبتدأ المناسب:",
+    "options": [
+     "القطّانِ",
+     "القططَ",
+     "القططُ",
+     "القطُّ"
+    ],
+    "ans": 2
+   },
+   {
+    "q": "«الحدائقُ واسعةٌ» نوع المبتدأ وعلامة رفعه:",
+    "options": [
+     "جمع تكسير - الضمة",
+     "مفرد - الضمة",
+     "جمع تكسير - الواو",
+     "جمع مؤنث سالم - الضمة"
+    ],
+    "ans": 0
+   }
+  ]
+ },
+ {
+  "id": "g4_genius",
+  "title": "تحدي العباقرة",
+  "type": "genius",
+  "desc": "تطبيقات أعمق على المبتدأ والخبر - سباق مع الوقت!",
+  "icon": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 24 24\"><polygon points=\"13 2 3 14 12 14 11 22 21 10 12 10 13 2\"></polygon></svg>",
+  "questions": [
+   {
+    "q": "«أبناءُ مصرَ كرماءُ» المبتدأ ونوعه:",
+    "options": [
+     "أبناء - جمع مذكر سالم",
+     "كرماء - جمع تكسير",
+     "مصر - مفرد",
+     "أبناء - جمع تكسير"
+    ],
+    "ans": 3
+   },
+   {
+    "q": "«أبناءُ مصرَ كرماءُ» الخبر ونوعه:",
+    "options": [
+     "كرماء - جمع مؤنث",
+     "كرماء - جمع تكسير",
+     "أبناء - جمع تكسير",
+     "مصر - مفرد"
+    ],
+    "ans": 1
+   },
+   {
+    "q": "اختر الجملة التي جاء مبتدؤها وخبرها جمعي تكسير:",
+    "options": [
+     "البناتُ نشيطاتٌ",
+     "الفلاحُ نشيطٌ",
+     "الحقولُ خضراءُ",
+     "الرجالُ أقوياءُ"
+    ],
+    "ans": 3
+   },
+   {
+    "q": "اختر الجملة التي جاء مبتدؤها وخبرها جمعي مؤنث سالمين:",
+    "options": [
+     "الأطباءُ مهرةٌ",
+     "الأطباءُ ماهرون",
+     "الطبيبةُ ماهرةٌ",
+     "الطبيباتُ ماهراتٌ"
+    ],
+    "ans": 3
+   },
+   {
+    "q": "اختر الجملة التي جاء مبتدؤها جمع تكسير وخبرها مفرد:",
+    "options": [
+     "الشارعانِ نظيفان",
+     "الشارعُ نظيفٌ",
+     "الشوارعُ نظافاتٌ",
+     "الشوارعُ نظيفةٌ"
+    ],
+    "ans": 3
+   },
+   {
+    "q": "الكلمة المرفوعة بالضمة وهي جمع مؤنث سالم في «الأمهاتُ صانعاتُ الأجيال»:",
+    "options": [
+     "الأمهات فقط",
+     "الأجيال",
+     "لا يوجد",
+     "الأمهات وصانعات"
+    ],
+    "ans": 3
+   },
+   {
+    "q": "في «الجنودُ حماةُ الوطن» الخبر:",
+    "options": [
+     "الوطن",
+     "حماة",
+     "لا يوجد",
+     "الجنود"
+    ],
+    "ans": 1
+   },
+   {
+    "q": "في «الجنودُ حماةُ الوطن» نوع (الجنود):",
+    "options": [
+     "جمع مؤنث سالم",
+     "جمع مذكر سالم",
+     "جمع تكسير",
+     "مفرد"
+    ],
+    "ans": 2
+   },
+   {
+    "q": "اختر الكلمة التي تصلح مبتدأً لـ«........ مسرعاتٌ»:",
+    "options": [
+     "السيّاراتُ",
+     "السيارةُ",
+     "السياراتٌ",
+     "السياراتِ"
+    ],
+    "ans": 0
+   },
+   {
+    "q": "اختر الكلمة التي تصلح خبرًا لـ«الرياحُ ........»:",
+    "options": [
+     "شديداتٍ",
+     "شديدين",
+     "شديدةً",
+     "شديدةٌ"
+    ],
+    "ans": 3
+   },
+   {
+    "q": "«القصصُ جميلةٌ» علامة رفع المبتدأ:",
+    "options": [
+     "الواو",
+     "الضمة",
+     "الكسرة",
+     "الألف"
+    ],
+    "ans": 1
+   },
+   {
+    "q": "«الفتياتُ متعاوناتٌ في العمل» حوّل المبتدأ إلى المفرد:",
+    "options": [
+     "الفتاةَ متعاونةً",
+     "الفتاةُ متعاوناتٌ",
+     "الفتيانُ متعاونون",
+     "الفتاةُ متعاونةٌ"
+    ],
+    "ans": 3
+   },
+   {
+    "q": "«الكتابُ صديقٌ» حوّلها إلى الجمع:",
+    "options": [
+     "الكتابات أصدقاء",
+     "الكتبَ أصدقاءَ",
+     "الكتبُ أصدقاءُ",
+     "الكتبُ صديقان"
+    ],
+    "ans": 2
+   },
+   {
+    "q": "«الوردةُ ذابلةٌ» حوّلها إلى جمع المؤنث السالم:",
+    "options": [
+     "الوردتانِ ذابلتان",
+     "الورداتِ ذابلاتٍ",
+     "الورداتُ ذابلاتٌ",
+     "الورودُ ذابلون"
+    ],
+    "ans": 2
+   },
+   {
+    "q": "الخطأ في «الفلاحاتَ نشيطاتٌ» نوعه:",
+    "options": [
+     "لا يوجد خطأ",
+     "ضبط المبتدأ بالفتحة وهو مرفوع",
+     "ضبط الخبر",
+     "الجملة فعلية"
+    ],
+    "ans": 1
+   },
+   {
+    "q": "«المدنُ مزدحمةٌ والقرى هادئةٌ» عدد المبتدآت الجمع:",
+    "options": [
+     "واحد",
+     "ثلاثة",
+     "لا يوجد",
+     "اثنان"
+    ],
+    "ans": 3
+   },
+   {
+    "q": "«المدنُ مزدحمةٌ» مفرد (المدن):",
+    "options": [
+     "المدن",
+     "المدينة",
+     "المدنية",
+     "المدينتان"
+    ],
+    "ans": 1
+   },
+   {
+    "q": "«الأشجارُ ظلالٌ للمسافرين» الخبر:",
+    "options": [
+     "للمسافرين",
+     "المسافرين",
+     "ظلال",
+     "الأشجار"
+    ],
+    "ans": 2
+   },
+   {
+    "q": "«الأشجارُ ظلالٌ للمسافرين» نوع الخبر:",
+    "options": [
+     "جمع مذكر سالم",
+     "مفرد",
+     "جمع تكسير",
+     "جمع مؤنث سالم"
+    ],
+    "ans": 2
+   },
+   {
+    "q": "«الجداتُ حكيماتٌ» إعراب الخبر:",
+    "options": [
+     "خبر مرفوع وعلامة رفعه الضمة",
+     "خبر منصوب بالكسرة",
+     "مبتدأ مرفوع",
+     "خبر مرفوع بالواو"
+    ],
+    "ans": 0
+   },
+   {
+    "q": "أيّ الجمل الآتية خطأ في الضبط؟",
+    "options": [
+     "الأبوابُ مفتوحةٌ",
+     "النوافذُ مغلقةٌ",
+     "الأبوابَ مفتوحةٌ",
+     "الغرفُ واسعةٌ"
+    ],
+    "ans": 2
+   },
+   {
+    "q": "أيّ الجمل الآتية صحيحة الضبط؟",
+    "options": [
+     "الأمهاتَ صابراتٌ",
+     "الأمهاتُ صابراتٌ",
+     "الأمهاتُ صابراتٍ",
+     "الأمهاتِ صابراتٍ"
+    ],
+    "ans": 1
+   },
+   {
+    "q": "«........ مشمسةٌ» أكمل بمبتدأ مفرد مؤنث:",
+    "options": [
+     "الحديقاتُ",
+     "الحديقةُ",
+     "الحدائقُ",
+     "الحديقتانِ"
+    ],
+    "ans": 1
+   },
+   {
+    "q": "«المهندسات ماهرات» نوع المبتدأ:",
+    "options": [
+     "جمع مذكر سالم",
+     "مفرد",
+     "جمع مؤنث سالم",
+     "جمع تكسير"
+    ],
+    "ans": 2
+   },
+   {
+    "q": "علامة رفع المفرد وجمع التكسير وجمع المؤنث السالم:",
+    "options": [
+     "الفتحة",
+     "الواو",
+     "الألف",
+     "الضمة"
+    ],
+    "ans": 3
+   },
+   {
+    "q": "«الدراجاتُ سريعةٌ» نوع المبتدأ وعلامة رفعه:",
+    "options": [
+     "مفرد - الضمة",
+     "جمع تكسير - الضمة",
+     "جمع مؤنث - الكسرة",
+     "جمع مؤنث سالم - الضمة"
+    ],
+    "ans": 3
+   },
+   {
+    "q": "«الأقلامُ ملونةٌ» نوع المبتدأ وعلامة رفعه:",
+    "options": [
+     "جمع تكسير - الضمة",
+     "جمع تكسير - الواو",
+     "جمع مؤنث سالم - الضمة",
+     "مفرد - الضمة"
+    ],
+    "ans": 0
+   },
+   {
+    "q": "«اللوحةُ رائعةٌ» نوع المبتدأ وعلامة رفعه:",
+    "options": [
+     "مفرد - الفتحة",
+     "جمع تكسير - الضمة",
+     "مفرد - الضمة",
+     "جمع مؤنث سالم - الضمة"
+    ],
+    "ans": 2
+   },
+   {
+    "q": "«حاول أحمدُ تقليد معلّقٍ رياضيٍّ» هل هي جملة اسمية؟",
+    "options": [
+     "نعم، مبتدؤها أحمد",
+     "نعم، خبرها معلق",
+     "لا، جملة حرفية",
+     "لا، جملة فعلية"
+    ],
+    "ans": 3
+   },
+   {
+    "q": "«الأصدقاءُ في الحديقة» المبتدأ ونوعه:",
+    "options": [
+     "الحديقة - مفرد",
+     "الأصدقاء - جمع تكسير",
+     "في - حرف",
+     "الأصدقاء - جمع مؤنث"
+    ],
+    "ans": 1
+   },
+   {
+    "q": "الجملة التي مبتدؤها جمع مؤنث سالم وخبرها جمع مؤنث سالم:",
+    "options": [
+     "الزهراتُ متفتحاتٌ",
+     "الزهرةُ متفتحةٌ",
+     "الأزهارُ متفتحةٌ",
+     "الزهورُ متفتحةٌ"
+    ],
+    "ans": 0
+   },
+   {
+    "q": "«........ نشيطاتٌ» مبتدأ مناسب:",
+    "options": [
+     "العمالُ",
+     "العاملاتُ",
+     "العاملُ",
+     "العاملانِ"
+    ],
+    "ans": 1
+   },
+   {
+    "q": "«........ نشيطون» مبتدأ مناسب جمع تكسير:",
+    "options": [
+     "العمالُ",
+     "العاملاتُ",
+     "العاملتانِ",
+     "العاملةُ"
+    ],
+    "ans": 0
+   },
+   {
+    "q": "«العمالُ ........ » خبر جمع تكسير مناسب:",
+    "options": [
+     "ماهراتٌ",
+     "ماهرةٌ",
+     "مهرةً",
+     "مهرةٌ"
+    ],
+    "ans": 3
+   },
+   {
+    "q": "«الخيولُ ........ » خبر مفرد مناسب:",
+    "options": [
+     "سريعتان",
+     "سريعةٌ",
+     "سريعاتٍ",
+     "سريعون"
+    ],
+    "ans": 1
+   },
+   {
+    "q": "«الغيومُ ........ » خبر مناسب:",
+    "options": [
+     "كثيفةً",
+     "كثيفون",
+     "كثيفةٌ",
+     "كثيفان"
+    ],
+    "ans": 2
+   },
+   {
+    "q": "اختر خبر «الفتياتُ ........»:",
+    "options": [
+     "رسّامةٌ",
+     "رسّامون",
+     "رسّاماتٍ",
+     "رسّاماتٌ"
+    ],
+    "ans": 3
+   },
+   {
+    "q": "مفرد (الشوارع):",
+    "options": [
+     "الشارعة",
+     "الشارع",
+     "الشارعان",
+     "الشوارعي"
+    ],
+    "ans": 1
+   },
+   {
+    "q": "مفرد (الجدات):",
+    "options": [
+     "الجد",
+     "الجدتان",
+     "الأجداد",
+     "الجدة"
+    ],
+    "ans": 3
+   },
+   {
+    "q": "مفرد (الأجداد):",
+    "options": [
+     "الجدات",
+     "الجدة",
+     "الجد",
+     "الجدان"
+    ],
+    "ans": 2
+   },
+   {
+    "q": "«القلوبُ طاهرةٌ» علامة رفع الخبر:",
+    "options": [
+     "الألف",
+     "الضمة",
+     "الواو",
+     "الكسرة"
+    ],
+    "ans": 1
+   },
+   {
+    "q": "«قلوبُ الأطفالِ طاهرةٌ» المبتدأ:",
+    "options": [
+     "قلوب",
+     "الأطفال",
+     "لا يوجد",
+     "طاهرة"
+    ],
+    "ans": 0
+   },
+   {
+    "q": "«........ صادقاتٌ في عملهن»:",
+    "options": [
+     "المعلمونَ",
+     "المعلمُ",
+     "المعلمَ",
+     "المعلماتُ"
+    ],
+    "ans": 3
+   },
+   {
+    "q": "«........ صادقون في عملهم» بمبتدأ جمع تكسير:",
+    "options": [
+     "النساءُ",
+     "الرجالُ",
+     "الرجلُ",
+     "المرأةُ"
+    ],
+    "ans": 1
+   },
+   {
+    "q": "كلمة جمع تكسير لمؤنث:",
+    "options": [
+     "صادقات",
+     "رجال",
+     "نساء",
+     "أمهات"
+    ],
+    "ans": 2
+   },
+   {
+    "q": "كلمة جمع مؤنث سالم:",
+    "options": [
+     "جنود",
+     "أولاد",
+     "أمهات",
+     "نساء"
+    ],
+    "ans": 2
+   },
+   {
+    "q": "«النساءُ ........ » خبر مناسب:",
+    "options": [
+     "عاملون",
+     "عاملةً",
+     "عاملاتٌ",
+     "عاملان"
+    ],
+    "ans": 2
+   },
+   {
+    "q": "«الطائراتُ في السماءِ» نوع المبتدأ:",
+    "options": [
+     "جمع تكسير",
+     "جمع مؤنث سالم",
+     "مثنى",
+     "مفرد"
+    ],
+    "ans": 1
+   },
+   {
+    "q": "«الطيورُ في السماءِ» نوع المبتدأ:",
+    "options": [
+     "جمع تكسير",
+     "مثنى",
+     "مفرد",
+     "جمع مؤنث سالم"
+    ],
+    "ans": 0
+   },
+   {
+    "q": "«الطائرُ في السماءِ» نوع المبتدأ:",
+    "options": [
+     "مفرد",
+     "جمع تكسير",
+     "مثنى",
+     "جمع مؤنث سالم"
+    ],
+    "ans": 0
+   }
+  ]
+ },
+ {
+  "id": "g5_bubbles",
+  "title": "الفقاعات المتساقطة: نوع الكلمة وعلامة رفعها",
+  "type": "bubbles",
+  "desc": "اضغط الفقاعة الصحيحة قبل أن تسقط",
+  "icon": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 24 24\"><path d=\"M21.21 15.89A10 10 0 1 1 8 2.83\"></path><path d=\"M22 12A10 10 0 0 0 12 2v10z\"></path></svg>",
+  "questions": [
+   {
+    "q": "نوع (المزارعاتُ):",
+    "options": [
+     "جمع مؤنث سالم",
+     "مثنى",
+     "جمع تكسير",
+     "مفرد"
+    ],
+    "ans": 0
+   },
+   {
+    "q": "نوع (المزارعُ):",
+    "options": [
+     "جمع مؤنث سالم",
+     "مثنى",
+     "جمع تكسير",
+     "مفرد"
+    ],
+    "ans": 3
+   },
+   {
+    "q": "نوع (الزرّاعُ):",
+    "options": [
+     "جمع تكسير",
+     "جمع مؤنث سالم",
+     "مثنى",
+     "مفرد"
+    ],
+    "ans": 0
+   },
+   {
+    "q": "نوع (الكراسيُّ):",
+    "options": [
+     "جمع مؤنث سالم",
+     "مفرد",
+     "مثنى",
+     "جمع تكسير"
+    ],
+    "ans": 3
+   },
+   {
+    "q": "نوع (الطاولاتُ):",
+    "options": [
+     "جمع مؤنث سالم",
+     "مفرد",
+     "مثنى",
+     "جمع تكسير"
+    ],
+    "ans": 0
+   },
+   {
+    "q": "نوع (الطاولةُ):",
+    "options": [
+     "جمع تكسير",
+     "مثنى",
+     "جمع مؤنث سالم",
+     "مفرد"
+    ],
+    "ans": 3
+   },
+   {
+    "q": "نوع (المصابيحُ):",
+    "options": [
+     "جمع مؤنث سالم",
+     "جمع تكسير",
+     "مفرد",
+     "مثنى"
+    ],
+    "ans": 1
+   },
+   {
+    "q": "نوع (السيّاراتُ):",
+    "options": [
+     "جمع تكسير",
+     "مفرد",
+     "مثنى",
+     "جمع مؤنث سالم"
+    ],
+    "ans": 3
+   },
+   {
+    "q": "نوع (الشجرةُ):",
+    "options": [
+     "مثنى",
+     "جمع تكسير",
+     "مفرد",
+     "جمع مؤنث سالم"
+    ],
+    "ans": 2
+   },
+   {
+    "q": "نوع (الثمارُ):",
+    "options": [
+     "جمع مؤنث سالم",
+     "جمع تكسير",
+     "مفرد",
+     "مثنى"
+    ],
+    "ans": 1
+   },
+   {
+    "q": "علامة رفع (المزارعاتُ):",
+    "options": [
+     "الكسرة",
+     "الضمة",
+     "الألف",
+     "الواو"
+    ],
+    "ans": 1
+   },
+   {
+    "q": "علامة رفع (الثمارُ):",
+    "options": [
+     "الواو",
+     "الضمة",
+     "الفتحة",
+     "الألف"
+    ],
+    "ans": 1
+   },
+   {
+    "q": "علامة رفع (الشجرةُ):",
+    "options": [
+     "الضمة",
+     "الألف",
+     "الواو",
+     "الفتحة"
+    ],
+    "ans": 0
+   },
+   {
+    "q": "علامة رفع (الكراسيُّ):",
+    "options": [
+     "الألف",
+     "الفتحة",
+     "الضمة",
+     "الواو"
+    ],
+    "ans": 2
+   },
+   {
+    "q": "علامة رفع (السيّاراتُ):",
+    "options": [
+     "الواو",
+     "الضمة",
+     "الكسرة",
+     "الألف"
+    ],
+    "ans": 1
+   },
+   {
+    "q": "حكم المبتدأ:",
+    "options": [
+     "منصوب",
+     "مرفوع",
+     "مجرور"
+    ],
+    "ans": 1
+   },
+   {
+    "q": "حكم الخبر:",
+    "options": [
+     "مرفوع",
+     "منصوب",
+     "مجرور"
+    ],
+    "ans": 0
+   },
+   {
+    "q": "الضبط الصحيح:",
+    "options": [
+     "الثمارَ ناضجةٌ",
+     "الثمارُ ناضجةٌ",
+     "الثمارِ ناضجةٍ"
+    ],
+    "ans": 1
+   },
+   {
+    "q": "الضبط الصحيح:",
+    "options": [
+     "البناتُ مهذباتٍ",
+     "البناتُ مهذباتٌ",
+     "البناتِ مهذباتٌ"
+    ],
+    "ans": 1
+   },
+   {
+    "q": "الضبط الصحيح:",
+    "options": [
+     "الغرفةَ نظيفةٌ",
+     "الغرفةُ نظيفةٌ",
+     "الغرفةُ نظيفةً"
+    ],
+    "ans": 1
+   },
+   {
+    "q": "الضبط الصحيح:",
+    "options": [
+     "الأبطالُ شجعانًا",
+     "الأبطالُ شجعانٌ",
+     "الأبطالَ شجعانٌ"
+    ],
+    "ans": 1
+   },
+   {
+    "q": "الضبط الصحيح:",
+    "options": [
+     "المسافراتُ عائداتٍ",
+     "المسافراتُ عائداتٌ",
+     "المسافراتِ عائداتٌ"
+    ],
+    "ans": 1
+   },
+   {
+    "q": "خبر مناسب: «الطالباتُ ........»:",
+    "options": [
+     "ناجحون",
+     "ناجحاتٍ",
+     "ناجحاتٌ"
+    ],
+    "ans": 2
+   },
+   {
+    "q": "خبر مناسب: «الطلابُ ........» (جمع تكسير):",
+    "options": [
+     "نجيباتٌ",
+     "نجباءُ",
+     "نجيبةٌ"
+    ],
+    "ans": 1
+   },
+   {
+    "q": "خبر مناسب: «الطالبةُ ........»:",
+    "options": [
+     "ناجحون",
+     "ناجحاتٌ",
+     "ناجحةٌ"
+    ],
+    "ans": 2
+   },
+   {
+    "q": "مبتدأ مناسب: «........ مضيئةٌ» (جمع تكسير):",
+    "options": [
+     "النجمةُ",
+     "النجماتُ",
+     "النجومُ"
+    ],
+    "ans": 2
+   },
+   {
+    "q": "مبتدأ مناسب: «........ مضيئاتٌ»:",
+    "options": [
+     "النجماتُ",
+     "النجومُ",
+     "النجمُ"
+    ],
+    "ans": 0
+   },
+   {
+    "q": "مبتدأ مناسب: «........ مضيءٌ»:",
+    "options": [
+     "النجماتُ",
+     "النجومُ",
+     "النجمُ"
+    ],
+    "ans": 2
+   },
+   {
+    "q": "مفرد (البيوت):",
+    "options": [
+     "البيت",
+     "البيتان",
+     "البيوت"
+    ],
+    "ans": 0
+   },
+   {
+    "q": "مفرد (الأمهات):",
+    "options": [
+     "الأم",
+     "الأمة",
+     "الأمهان"
+    ],
+    "ans": 0
+   },
+   {
+    "q": "مفرد (الأبطال):",
+    "options": [
+     "البطل",
+     "البطولة",
+     "البطلان"
+    ],
+    "ans": 0
+   },
+   {
+    "q": "جمع (حديقة) جمع تكسير:",
+    "options": [
+     "حديقات",
+     "حدائق",
+     "حديقتان"
+    ],
+    "ans": 1
+   },
+   {
+    "q": "جمع (حديقة) جمع مؤنث سالم:",
+    "options": [
+     "حديقتان",
+     "حديقات",
+     "حدائق"
+    ],
+    "ans": 1
+   },
+   {
+    "q": "جمع (مدينة) جمع تكسير:",
+    "options": [
+     "مدينات",
+     "مدن",
+     "مدينتان"
+    ],
+    "ans": 1
+   },
+   {
+    "q": "جمع (سفينة) جمع تكسير:",
+    "options": [
+     "سفن",
+     "سفينتان",
+     "سفينات"
+    ],
+    "ans": 0
+   },
+   {
+    "q": "جمع (طبيبة):",
+    "options": [
+     "طبيبتان",
+     "أطباء",
+     "طبيبات"
+    ],
+    "ans": 2
+   },
+   {
+    "q": "جمع (طبيب) جمع تكسير:",
+    "options": [
+     "طبيبات",
+     "طبيبون",
+     "أطباء"
+    ],
+    "ans": 2
+   },
+   {
+    "q": "«المدارسُ ........» :",
+    "options": [
+     "متطورين",
+     "متطوراتٍ",
+     "متطورةٌ"
+    ],
+    "ans": 2
+   },
+   {
+    "q": "«الأسرُ ........»:",
+    "options": [
+     "سعيدون",
+     "سعيدين",
+     "سعيدةٌ"
+    ],
+    "ans": 2
+   },
+   {
+    "q": "«الجاراتُ ........»:",
+    "options": [
+     "متعاونين",
+     "متعاوناتٌ",
+     "متعاونون"
+    ],
+    "ans": 1
+   },
+   {
+    "q": "(الأمهاتُ) في «الأمهاتُ رحيماتٌ»:",
+    "options": [
+     "خبر",
+     "مبتدأ"
+    ],
+    "ans": 1
+   },
+   {
+    "q": "(رحيماتٌ) في «الأمهاتُ رحيماتٌ»:",
+    "options": [
+     "خبر",
+     "مبتدأ"
+    ],
+    "ans": 0
+   },
+   {
+    "q": "(الأطفالُ) في «الأطفالُ سعداءُ»:",
+    "options": [
+     "مبتدأ",
+     "خبر"
+    ],
+    "ans": 0
+   },
+   {
+    "q": "(سعداءُ) في «الأطفالُ سعداءُ»:",
+    "options": [
+     "خبر",
+     "مبتدأ"
+    ],
+    "ans": 0
+   },
+   {
+    "q": "(البحارُ) في «البحارُ عميقةٌ»:",
+    "options": [
+     "خبر",
+     "مبتدأ"
+    ],
+    "ans": 1
+   },
+   {
+    "q": "(عميقةٌ) في «البحارُ عميقةٌ»:",
+    "options": [
+     "مبتدأ",
+     "خبر"
+    ],
+    "ans": 1
+   },
+   {
+    "q": "(الحياةُ) في «الحياةُ جميلةٌ»:",
+    "options": [
+     "مبتدأ",
+     "خبر"
+    ],
+    "ans": 0
+   },
+   {
+    "q": "(جميلةٌ) في «الحياةُ جميلةٌ»:",
+    "options": [
+     "خبر",
+     "مبتدأ"
+    ],
+    "ans": 0
+   },
+   {
+    "q": "(النباتاتُ) في «النباتاتُ مفيدةٌ»:",
+    "options": [
+     "خبر",
+     "مبتدأ"
+    ],
+    "ans": 1
+   },
+   {
+    "q": "(مفيدةٌ) في «النباتاتُ مفيدةٌ»:",
+    "options": [
+     "مبتدأ",
+     "خبر"
+    ],
+    "ans": 1
+   }
+  ]
+ }
+];
+    const AudioContext = window.AudioContext || window.webkitAudioContext;
+    let audioCtx = null;
+
+    function initAudio() {
+        if (!audioCtx) { audioCtx = new AudioContext(); }
+        if (audioCtx.state === 'suspended') { audioCtx.resume(); }
+    }
+
+    function playTone(freq, type, duration, vol = 0.1) {
+        if (!audioCtx) return;
+        const osc = audioCtx.createOscillator();
+        const gain = audioCtx.createGain();
+        osc.type = type;
+        osc.frequency.setValueAtTime(freq, audioCtx.currentTime);
+        gain.gain.setValueAtTime(vol, audioCtx.currentTime);
+        gain.gain.exponentialRampToValueAtTime(0.01, audioCtx.currentTime + duration);
+        osc.connect(gain);
+        gain.connect(audioCtx.destination);
+        osc.start();
+        osc.stop(audioCtx.currentTime + duration);
+    }
+
+    function playCorrect() {
+        initAudio();
+        playTone(523.25, 'sine', 0.15, 0.15);
+        setTimeout(() => playTone(659.25, 'sine', 0.15, 0.15), 100);
+        setTimeout(() => playTone(783.99, 'sine', 0.25, 0.15), 200);
+        spawnConfetti();
+    }
+
+    function playWrong() {
+        initAudio();
+        playTone(200, 'sawtooth', 0.3, 0.1);
+    }
+
+    function spawnConfetti() {
+        const colors = ['#14a394', '#f59e42', '#10b981', '#ef4444', '#0d8a7c', '#f59e0b'];
+        for (let i = 0; i < 25; i++) {
+            const conf = document.createElement('div');
+            conf.className = 'confetti';
+            conf.style.left = Math.random() * 100 + 'vw';
+            conf.style.background = colors[Math.floor(Math.random() * colors.length)];
+            conf.style.animationDuration = (Math.random() * 1.5 + 1.5) + 's';
+            document.body.appendChild(conf);
+            setTimeout(() => conf.remove(), 3000);
+        }
+    }
+
+    function shuffleArray(arr) {
+        return arr.map(a => ({sort: Math.random(), value: a}))
+            .sort((a, b) => a.sort - b.sort)
+            .map(a => a.value);
+    }
+
+    function showFeedback(isCorrect, callback) {
+        const modal = document.getElementById('feedback-modal');
+        const icon = document.getElementById('feedback-icon');
+        const title = document.getElementById('feedback-title');
+        
+        if (isCorrect) {
+            playCorrect();
+            icon.innerHTML = `<svg xmlns="http://www.w3.org/2000/svg" width="80" height="80" viewBox="0 0 24 24" fill="none" stroke="var(--success)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path><polyline points="22 4 12 14.01 9 11.01"></polyline></svg>`;
+            title.textContent = 'إجابة صحيحة، أحسنت!';
+            title.style.color = 'var(--success)';
+        } else {
+            playWrong();
+            icon.innerHTML = `<svg xmlns="http://www.w3.org/2000/svg" width="80" height="80" viewBox="0 0 24 24" fill="none" stroke="var(--danger)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"></circle><line x1="15" y1="9" x2="9" y2="15"></line><line x1="9" y1="9" x2="15" y2="15"></line></svg>`;
+            title.textContent = 'إجابة خاطئة!';
+            title.style.color = 'var(--danger)';
+        }
+
+        modal.classList.add('active');
+        setTimeout(() => {
+            modal.classList.remove('active');
+            if (callback) callback();
+        }, 1300);
+    }
+
+    let currentGame = null;
+    let currentQuestions = [];
+    let qIndex = 0;
+    let animInterval = null;
+    let wrongAnswers = [];
+
+    function initApp() {
+        const menuGrid = document.getElementById('menu-grid');
+        menuGrid.innerHTML = '';
+        allGamesData.forEach(game => {
+            const card = document.createElement('div');
+            card.className = 'menu-card';
+            card.innerHTML = `
+                <div class="icon-container">${game.icon}</div>
+                <h3>${game.title}</h3>
+                <p>${game.desc}</p>
+                <span class="round-badge">🎲 ${Math.min(QUESTIONS_PER_ROUND, game.questions.length)} سؤالًا عشوائيًّا من ${game.questions.length}</span>
+            `;
+            card.onclick = () => startGame(game);
+            menuGrid.appendChild(card);
+        });
+        
+        document.body.addEventListener('touchstart', initAudio, { once: true });
+        document.body.addEventListener('click', initAudio, { once: true });
+    }
+
+    function returnToMenu() {
+        clearInterval(animInterval);
+        document.getElementById('game-screen').classList.add('hidden');
+        document.getElementById('home-screen').classList.remove('hidden');
+        document.getElementById('main-header').classList.remove('hidden');
+        document.getElementById('main-footer').classList.remove('hidden');
+    }
+
+    function updateProgress() {
+        document.getElementById('game-progress').innerText = `${qIndex + 1} / ${currentQuestions.length}`;
+    }
+
+    function sendResultToTeacher(score, total) {
+        const nameInput = document.getElementById('student-name-input');
+        const warning = document.getElementById('name-warning');
+        const name = nameInput.value.trim();
+        if (!name) {
+            warning.style.display = 'block';
+            nameInput.focus();
+            nameInput.classList.add('shake');
+            setTimeout(() => nameInput.classList.remove('shake'), 500);
+            return;
+        }
+        warning.style.display = 'none';
+        const message = "مرحبًا أستاذ توفيق الصريحي 🌟\n" +
+            "الطالب/ـة: " + name + "\n" +
+            "الدرس: " + LESSON_FULL_NAME + "\n" +
+            "اللعبة: " + currentGame.title + "\n" +
+            "النتيجة: " + score + " من " + total;
+        const url = "https://wa.me/" + TEACHER_WHATSAPP + "?text=" + encodeURIComponent(message);
+        window.open(url, '_blank');
+    }
+
+    function gameComplete() {
+        const gc = document.getElementById('game-container');
+        playCorrect();
+        setTimeout(playCorrect, 300);
+
+        let score = currentQuestions.length - wrongAnswers.length;
+        let summaryHTML = '';
+
+        if (wrongAnswers.length > 0) {
+            summaryHTML += `
+            <div style="margin-top: 25px; text-align: right; background: #f8fafc; padding: 20px; border-radius: 15px; border: 2px solid #e2e8f0; max-height: 350px; overflow-y: auto;" class="errors-list">
+                <h3 style="color: var(--danger); margin-bottom: 15px; text-align: center; font-size: 1.4rem;">الأسئلة التي أخطأت فيها 📝</h3>
+                <ul style="list-style: none; padding: 0; display: flex; flex-direction: column; gap: 15px;">`;
+            
+            wrongAnswers.forEach((item, index) => {
+                summaryHTML += `
+                <li style="background: white; padding: 15px; border-radius: 10px; box-shadow: 0 2px 4px rgba(0,0,0,0.05); border-right: 5px solid var(--danger);">
+                    <div style="font-weight: bold; color: var(--primary); margin-bottom: 8px; font-size: 1.1rem;">${index + 1}. ${item.question}</div>
+                    <div style="color: #64748b; font-size: 1rem; margin-bottom: 5px;">إجابتك: <span style="color: var(--danger); text-decoration: line-through;">${item.selected}</span></div>
+                    <div style="color: var(--success); font-weight: bold; font-size: 1.1rem;">الإجابة الصحيحة: ${item.correct}</div>
+                </li>`;
+            });
+            summaryHTML += `</ul></div>`;
+        } else {
+            summaryHTML += `<p style="color: var(--success); font-size: 1.5rem; font-weight: bold; margin-top: 20px;">أداء مثالي! لم تخطئ في أي سؤال 🌟</p>`;
+        }
+
+        gc.innerHTML = `
+            <div style="text-align:center; padding: 40px 20px; background: white; border-radius: 20px; box-shadow: 0 10px 25px rgba(0,0,0,0.1);">
+                <div style="display:flex; justify-content:center; margin-bottom: 20px;">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="100" height="100" viewBox="0 0 24 24" fill="none" stroke="var(--warning)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M7 21h10"/><path d="M12 17v4"/><path d="M12 3v14"/><path d="M5 7h14"/><path d="M12 3l-4 4 4 4 4-4-4-4z"/></svg>
+                </div>
+                <h2 style="color: var(--primary); margin-bottom: 10px; font-size:2rem; font-weight:800;">انتهت اللعبة!</h2>
+                <p style="font-size: 1.4rem; margin-bottom: 10px; color:#64748b; font-weight:bold;">نتيجتك: ${score} من ${currentQuestions.length}</p>
+                ${summaryHTML}
+                <div class="send-result-box">
+                    <h3>📤 أرسل نتيجتك للأستاذ توفيق الصريحي</h3>
+                    <input type="text" id="student-name-input" class="name-input" placeholder="اكتب اسمك هنا ✍️">
+                    <button class="btn whatsapp-send-btn" onclick="sendResultToTeacher(${score}, ${currentQuestions.length})">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="currentColor"><path d="M12.031 0C5.385 0 0 5.385 0 12.031c0 2.656.843 5.12 2.26 7.15L.626 24l5.01-1.61c1.983 1.25 4.27 1.91 6.395 1.91 6.646 0 12.03-5.385 12.03-12.031S18.677 0 12.031 0zm6.544 17.202c-.273.766-1.58 1.464-2.185 1.503-.56.035-1.28.23-4.085-.86-3.39-1.32-5.59-4.78-5.736-4.97-.145-.19-1.37-1.82-1.37-3.475 0-1.655.857-2.47 1.164-2.8.307-.33.67-.413.89-.413.22 0 .44 0 .633.01.205.01.482-.08.736.53.264.634.904 2.203.984 2.366.08.163.133.353.033.553-.1.2-.153.326-.307.506-.154.18-.32.38-.453.506-.153.153-.314.316-.134.626.18.31.8 1.32 1.71 2.13.176.157.363.31.558.45 1.05.76 1.83 1.05 2.13 1.18.3.13.474.11.652-.09.18-.205.766-.893.97-1.2.204-.307.41-.256.69-.153.28.103 1.77.836 2.074.99.304.153.506.23.582.356.076.126.076.73-.197 1.496z"/></svg>
+                        إرسال النتيجة عبر واتساب
+                    </button>
+                    <p id="name-warning" class="name-warning" style="display:none;">من فضلك اكتب اسمك أولاً ✍️</p>
+                </div>
+                <button class="btn" style="font-size:1.2rem; padding:15px 30px; margin-top: 20px;" onclick="returnToMenu()">العودة للقائمة الرئيسية</button>
+            </div>
+        `;
+    }
+
+    // اختيار 20 سؤالًا عشوائيًّا من بنك الأسئلة، مع تفضيل الأسئلة التي لم تظهر في المرة السابقة
+    function pickRound(gameData) {
+        const all = gameData.questions.map((q, i) => ({ q, i }));
+        const n = Math.min(QUESTIONS_PER_ROUND, all.length);
+        const key = LESSON_KEY + '-' + gameData.id;
+        let last = [];
+        try { last = JSON.parse(localStorage.getItem(key) || '[]'); } catch (e) { last = []; }
+        const lastSet = new Set(last);
+        const fresh = shuffleArray(all.filter(x => !lastSet.has(x.i)));
+        const used = shuffleArray(all.filter(x => lastSet.has(x.i)));
+        const chosen = shuffleArray(fresh.concat(used).slice(0, n));
+        try { localStorage.setItem(key, JSON.stringify(chosen.map(x => x.i))); } catch (e) {}
+        return chosen.map(x => x.q);
+    }
+
+    function startGame(gameData) {
+        initAudio();
+        currentGame = gameData;
+        currentQuestions = pickRound(gameData);
+        qIndex = 0;
+        wrongAnswers = [];
+        
+        document.getElementById('home-screen').classList.add('hidden');
+        document.getElementById('main-header').classList.add('hidden');
+        document.getElementById('main-footer').classList.add('hidden');
+        document.getElementById('game-screen').classList.remove('hidden');
+        document.getElementById('game-title').innerText = gameData.title;
+        
+        renderNextState();
+    }
+
+    function renderNextState() {
+        if (qIndex >= currentQuestions.length) {
+            gameComplete();
+            return;
+        }
+
+        const gc = document.getElementById('game-container');
+        gc.innerHTML = '';
+        updateProgress();
+
+        if (currentGame.type === 'mcq') {
+            renderMCQ(gc);
+        } else if (currentGame.type === 'bubbles') {
+            renderBubbles(gc);
+        } else if (currentGame.type === 'shooting') {
+            renderShooting(gc);
+        } else if (currentGame.type === 'true_false') {
+            renderTrueFalse(gc);
+        } else if (currentGame.type === 'genius') {
+            renderGenius(gc);
+        }
+    }
+
+    // 1. اختيارات (MCQ)
+    function renderMCQ(container) {
+        const qData = currentQuestions[qIndex];
+        const correctText = qData.options[qData.ans];
+        const shuffledOptions = shuffleArray([...qData.options]);
+
+        const btnContainer = document.createElement('div');
+        btnContainer.className = 'options-grid';
+        
+        let isAnswered = false;
+
+        shuffledOptions.forEach(opt => {
+            const btn = document.createElement('button');
+            btn.className = 'btn';
+            btn.innerText = opt;
+            btn.onclick = () => {
+                if(isAnswered) return;
+                isAnswered = true;
+
+                if (opt === correctText) {
+                    btn.classList.add('btn-correct');
+                    showFeedback(true, () => { qIndex++; renderNextState(); });
+                } else {
+                    btn.classList.add('btn-wrong');
+                    wrongAnswers.push({ question: qData.q, correct: correctText, selected: opt });
+                    showFeedback(false, () => { qIndex++; renderNextState(); });
+                }
+            };
+            btnContainer.appendChild(btn);
+        });
+
+        const qBox = document.createElement('div');
+        qBox.className = 'question-box';
+        qBox.innerText = qData.q;
+        
+        container.appendChild(qBox);
+        container.appendChild(btnContainer);
+    }
+
+    // 2. صح أم خطأ
+    function renderTrueFalse(container) {
+        const qData = currentQuestions[qIndex];
+        const correctText = qData.options[qData.ans];
+
+        const qBox = document.createElement('div');
+        qBox.className = 'question-box';
+        qBox.innerText = qData.q;
+        
+        const tfContainer = document.createElement('div');
+        tfContainer.className = 'tf-grid';
+        
+        let isAnswered = false;
+
+        const fixedOptions = ["صح", "خطأ"];
+
+        fixedOptions.forEach(opt => {
+            const btn = document.createElement('button');
+            btn.className = 'btn';
+            btn.style.flex = '1';
+            btn.style.minWidth = '200px';
+            btn.style.fontSize = '2rem';
+            btn.style.padding = '30px';
+            btn.style.justifyContent = 'center';
+            
+            if(opt === "صح") {
+                btn.style.background = "linear-gradient(to bottom, #10b981, #059669)";
+                btn.style.borderBottomColor = "#047857";
+            } else {
+                btn.style.background = "linear-gradient(to bottom, #ef4444, #dc2626)";
+                btn.style.borderBottomColor = "#b91c1c";
+            }
+
+            btn.innerText = opt;
+            
+            btn.onclick = () => {
+                if(isAnswered) return;
+                isAnswered = true;
+
+                if (opt === correctText) {
+                    btn.classList.add('btn-correct');
+                    showFeedback(true, () => { qIndex++; renderNextState(); });
+                } else {
+                    btn.classList.add('btn-wrong');
+                    wrongAnswers.push({ question: qData.q, correct: correctText, selected: opt });
+                    showFeedback(false, () => { qIndex++; renderNextState(); });
+                }
+            };
+            tfContainer.appendChild(btn);
+        });
+
+        container.appendChild(qBox);
+        container.appendChild(tfContainer);
+    }
+
+    // 3. الفقاعات المتساقطة
+    function renderBubbles(container) {
+        clearInterval(animInterval);
+        const qData = currentQuestions[qIndex];
+        const correctText = qData.options[qData.ans];
+        const shuffledOptions = shuffleArray([...qData.options]);
+
+        const qBox = document.createElement('div');
+        qBox.className = 'question-box';
+        qBox.innerText = qData.q;
+        
+        const area = document.createElement('div');
+        area.className = 'bubbles-area';
+
+        let bubbles = [];
+        let isAnswered = false;
+
+        shuffledOptions.forEach((opt, index) => {
+            const bubble = document.createElement('div');
+            bubble.className = 'bubble';
+            bubble.innerHTML = `<span>${opt}</span>`;
+            
+            let leftPos = 2 + (index * 24); 
+            bubble.style.left = leftPos + '%';
+            
+            let topPos = -100 - (Math.random() * 80);
+            bubble.style.top = topPos + 'px';
+            
+            /* سرعة سقوط أعلى قليلاً */
+            let speed = 0.55 + Math.random() * 0.45; 
+
+            bubble.onclick = () => {
+                if (isAnswered) return;
+                isAnswered = true;
+                clearInterval(animInterval);
+                if (opt === correctText) {
+                    bubble.style.background = 'var(--success)';
+                    bubble.style.color = 'white';
+                    showFeedback(true, () => { qIndex++; renderNextState(); });
+                } else {
+                    bubble.style.background = 'var(--danger)';
+                    bubble.style.color = 'white';
+                    wrongAnswers.push({ question: qData.q, correct: correctText, selected: opt });
+                    showFeedback(false, () => { qIndex++; renderNextState(); });
+                }
+            };
+
+            area.appendChild(bubble);
+            bubbles.push({ el: bubble, top: topPos, speed: speed, isCorrect: opt === correctText, active: true });
+        });
+
+        container.appendChild(qBox);
+        container.appendChild(area);
+        
+        let hint = document.createElement('div');
+        hint.style.textAlign = 'center';
+        hint.style.marginTop = '15px';
+        hint.style.color = 'var(--primary)';
+        hint.style.fontWeight = 'bold';
+        hint.style.fontSize = '1.1rem';
+        hint.innerHTML = `💡 اضغط على الفقاعة التي تحمل الإجابة الصحيحة قبل أن تسقط!`;
+        container.appendChild(hint);
+
+        let areaHeight = 400;
+
+        animInterval = setInterval(() => {
+            if (isAnswered) return;
+            bubbles.forEach(b => {
+                if (!b.active) return;
+                b.top += b.speed;
+                b.el.style.top = b.top + 'px';
+                b.el.style.transform = `translateX(${Math.sin(b.top / 20) * 5}px)`;
+
+                if (b.top > areaHeight) {
+                    b.active = false;
+                    b.el.style.display = 'none';
+                    if (b.isCorrect && !isAnswered) {
+                        isAnswered = true;
+                        clearInterval(animInterval);
+                        wrongAnswers.push({ question: qData.q, correct: correctText, selected: "سقطت دون اختيار" });
+                        showFeedback(false, () => { qIndex++; renderNextState(); });
+                    }
+                }
+            });
+        }, 20);
+    }
+
+    // 4. التنشين والاصطياد
+    function renderShooting(container) {
+        clearInterval(animInterval);
+        const qData = currentQuestions[qIndex];
+        const correctText = qData.options[qData.ans];
+        const shuffledOptions = shuffleArray([...qData.options]);
+
+        const qBox = document.createElement('div');
+        qBox.className = 'question-box';
+        qBox.innerText = qData.q;
+        
+        const area = document.createElement('div');
+        area.className = 'shooting-area';
+
+        let isAnswered = false;
+        const birds = [];
+
+        shuffledOptions.forEach((opt, index) => {
+            const bird = document.createElement('div');
+            bird.className = 'target-bird';
+            
+            bird.innerHTML = `<svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"></circle><circle cx="12" cy="12" r="6"></circle><circle cx="12" cy="12" r="2"></circle></svg> <span>${opt}</span>`;
+            
+            let topPos = 15 + (index * 20); 
+            bird.style.top = topPos + '%';
+            
+            let pos = (index % 2 === 0) ? -200 : window.innerWidth;
+            let speed = (Math.random() * 2.5 + 1.5) * ((index % 2 === 0) ? 1 : -1);
+            
+            bird.style.left = pos + 'px';
+
+            bird.onclick = () => {
+                if(isAnswered) return;
+                isAnswered = true;
+
+                if (opt === correctText) {
+                    bird.style.background = 'var(--success)';
+                    bird.style.color = 'white';
+                    bird.style.borderColor = 'white';
+                    showFeedback(true, () => { qIndex++; renderNextState(); });
+                } else {
+                    bird.style.background = 'var(--danger)';
+                    bird.style.color = 'white';
+                    bird.style.borderColor = 'white';
+                    wrongAnswers.push({ question: qData.q, correct: correctText, selected: opt });
+                    showFeedback(false, () => { qIndex++; renderNextState(); });
+                }
+            };
+
+            area.appendChild(bird);
+            birds.push({ el: bird, pos: pos, speed: speed });
+        });
+
+        animInterval = setInterval(() => {
+            if (isAnswered) { clearInterval(animInterval); return; }
+            const w = area.clientWidth || window.innerWidth;
+            birds.forEach(b => {
+                b.pos += b.speed;
+                if (b.pos > w + 50) b.pos = -250;
+                if (b.pos < -250) b.pos = w + 50;
+                b.el.style.left = b.pos + 'px';
+            });
+        }, 20);
+
+        container.appendChild(qBox);
+        container.appendChild(area);
+        
+        let hint = document.createElement('div');
+        hint.style.textAlign = 'center';
+        hint.style.marginTop = '15px';
+        hint.style.color = 'var(--primary)';
+        hint.style.fontWeight = 'bold';
+        hint.style.fontSize = '1.1rem';
+        hint.style.display = 'flex';
+        hint.style.alignItems = 'center';
+        hint.style.justifyContent = 'center';
+        hint.style.gap = '8px';
+        hint.innerHTML = `<svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"></circle><circle cx="12" cy="12" r="6"></circle><circle cx="12" cy="12" r="2"></circle></svg> اضغط على الإجابة الصحيحة وهي تتحرك!`;
+        container.appendChild(hint);
+    }
+
+    // 5. تحدي العباقرة (سباق مع الوقت)
+    function renderGenius(container) {
+        clearInterval(animInterval);
+        const qData = currentQuestions[qIndex];
+        const correctText = qData.options[qData.ans];
+        const shuffledOptions = shuffleArray([...qData.options]);
+
+        const qBox = document.createElement('div');
+        qBox.className = 'question-box genius-box';
+        qBox.innerHTML = `⚡ ${qData.q}`;
+
+        const timerWrap = document.createElement('div');
+        timerWrap.className = 'genius-timer-wrap';
+        const timerBar = document.createElement('div');
+        timerBar.className = 'genius-timer-bar';
+        timerWrap.appendChild(timerBar);
+
+        const btnContainer = document.createElement('div');
+        btnContainer.className = 'options-grid';
+
+        let isAnswered = false;
+        let timeLeft = 12000;
+        const totalTime = timeLeft;
+
+        function finish(isCorrect, selectedText) {
+            if (isAnswered) return;
+            isAnswered = true;
+            clearInterval(animInterval);
+            if (isCorrect) {
+                showFeedback(true, () => { qIndex++; renderNextState(); });
+            } else {
+                wrongAnswers.push({ question: qData.q, correct: correctText, selected: selectedText || "انتهى الوقت! ⏱️" });
+                showFeedback(false, () => { qIndex++; renderNextState(); });
+            }
+        }
+
+        shuffledOptions.forEach(opt => {
+            const btn = document.createElement('button');
+            btn.className = 'btn';
+            btn.innerText = opt;
+            btn.onclick = () => {
+                if (isAnswered) return;
+                if (opt === correctText) {
+                    btn.classList.add('btn-correct');
+                    finish(true);
+                } else {
+                    btn.classList.add('btn-wrong');
+                    finish(false, opt);
+                }
+            };
+            btnContainer.appendChild(btn);
+        });
+
+        container.appendChild(qBox);
+        container.appendChild(timerWrap);
+        container.appendChild(btnContainer);
+
+        let hint = document.createElement('div');
+        hint.className = 'genius-hint';
+        hint.innerHTML = `<svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"></polygon></svg> سباق مع الوقت! أجب بسرعة قبل نفاد الثواني`;
+        container.appendChild(hint);
+
+        animInterval = setInterval(() => {
+            if (isAnswered) return;
+            timeLeft -= 100;
+            let pct = Math.max(0, (timeLeft / totalTime) * 100);
+            timerBar.style.width = pct + '%';
+            if (timeLeft <= 0) {
+                clearInterval(animInterval);
+                finish(false, null);
+            }
+        }, 100);
+    }
+
+    window.onload = initApp;
+</script>
+</body>
+</html>

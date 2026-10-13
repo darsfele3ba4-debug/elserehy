@@ -1,0 +1,3383 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>المفعول لأجله | الصف الخامس الابتدائي | الأستاذ توفيق كرم الصريحي</title>
+    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;800;900&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --primary: #0e5249;      
+            --primary-light: #14a394; 
+            --secondary: #0d8a7c;    
+            --success: #10b981;      
+            --danger: #ef4444;       
+            --warning: #ea7a1e;      
+            --dark: #1e293b;         
+            --light: #f8fafc;
+            --card-bg: #ffffff;
+        }
+
+        * {
+            box-sizing: border-box;
+            font-family: 'Cairo', Tahoma, Geneva, Verdana, sans-serif;
+            margin: 0;
+            padding: 0;
+            user-select: none;
+            -webkit-tap-highlight-color: transparent;
+        }
+
+        body {
+            background-color: #f0f4f8;
+            background-image: radial-gradient(#cbd5e1 1.5px, transparent 1.5px);
+            background-size: 25px 25px;
+            color: var(--dark);
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            overflow-x: hidden;
+        }
+
+        .hidden { display: none !important; }
+        
+        .header-main {
+            background: linear-gradient(135deg, #062b29, var(--primary), var(--secondary));
+            color: white;
+            padding: 30px 20px 90px 20px; 
+            text-align: center;
+            position: relative;
+            margin-bottom: 20px;
+        }
+
+        .header-content {
+            position: relative;
+            z-index: 2;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        .title-line1 {
+            font-size: clamp(1.1rem, 4vw, 1.5rem); 
+            font-weight: 700;
+            color: #e6f6f3;
+            margin-bottom: 5px;
+            letter-spacing: 1px;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            text-shadow: 1px 2px 4px rgba(0,0,0,0.3);
+        }
+
+        .title-line2 {
+            font-size: clamp(1.5rem, 5.2vw, 2.6rem); 
+            font-weight: 900;
+            background: linear-gradient(to right, #ffe2c2, #f59e42);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            margin-bottom: 15px;
+            filter: drop-shadow(2px 4px 6px rgba(0,0,0,0.5));
+            line-height: 1.3;
+        }
+
+        .header-main h2 { font-size: clamp(1rem, 3vw, 1.3rem); font-weight: 600; color: #fff7ed; margin-bottom: 8px; text-shadow: 1px 1px 2px rgba(0,0,0,0.3);}
+        .header-main p { font-size: clamp(0.9rem, 2.5vw, 1.1rem); font-weight: 600; background: rgba(0,0,0,0.3); display: inline-block; padding: 6px 20px; border-radius: 30px; border: 1px solid rgba(255,255,255,0.15); box-shadow: 0 4px 6px rgba(0,0,0,0.1);}
+
+        .header-wave {
+            position: absolute;
+            bottom: -1px;
+            left: 0;
+            width: 100%;
+            height: auto;
+            z-index: 1;
+        }
+
+        .btn {
+            background: linear-gradient(to bottom, var(--primary-light), var(--primary));
+            color: white;
+            border: none;
+            padding: 12px 20px;
+            border-radius: 12px;
+            font-size: 1.1rem;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.2s cubic-bezier(0.4, 0, 0.2, 1);
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            gap: 10px;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+            border-bottom: 3px solid rgba(0,0,0,0.3);
+        }
+        .btn:hover { transform: translateY(-2px); box-shadow: 0 6px 12px rgba(0,0,0,0.2); }
+        .btn:active { transform: translateY(2px); border-bottom: 0px; margin-top: 3px; }
+        .btn-correct { filter: brightness(1.2); pointer-events: none; border-bottom-width: 0; transform: translateY(2px);}
+        .btn-wrong { filter: brightness(0.8); pointer-events: none; border-bottom-width: 0; transform: translateY(2px);}
+
+        #home-screen {
+            flex: 1;
+            padding: 20px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 20px;
+        }
+
+        .grid-menu {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+            gap: 25px;
+            width: 100%;
+            max-width: 1200px;
+            padding-bottom: 80px;
+        }
+
+        .menu-card {
+            background: var(--card-bg);
+            border-radius: 20px;
+            padding: 30px 20px;
+            text-align: center;
+            box-shadow: 0 10px 15px -3px rgba(0,0,0,0.05), 0 4px 6px -2px rgba(0,0,0,0.025);
+            cursor: pointer;
+            transition: all 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+            border: 2px solid transparent;
+            position: relative;
+            overflow: hidden;
+        }
+        .menu-card::before {
+            content: ""; position: absolute; top: 0; left: 0; right: 0; height: 6px;
+            background: linear-gradient(90deg, var(--primary), var(--secondary));
+            opacity: 0; transition: opacity 0.3s;
+        }
+        .menu-card:hover { transform: translateY(-8px); box-shadow: 0 20px 25px -5px rgba(0,0,0,0.1); border-color: rgba(234, 122, 30, 0.25); }
+        .menu-card:hover::before { opacity: 1; }
+        
+        .menu-card .icon-container {
+            width: 80px; height: 80px;
+            margin: 0 auto 15px auto;
+            background: linear-gradient(135deg, #e6f6f3, #ffe2c2);
+            border-radius: 50%;
+            display: flex; align-items: center; justify-content: center;
+            box-shadow: inset 0 3px 6px rgba(255,255,255,0.8), 0 4px 8px rgba(0,0,0,0.05);
+            transition: transform 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+        }
+        .menu-card .icon-container svg {
+            width: 40px; height: 40px; stroke: #0e5249; fill: none;
+            stroke-width: 2; stroke-linecap: round; stroke-linejoin: round;
+        }
+        .menu-card:hover .icon-container { transform: scale(1.1) rotate(10deg); }
+        .menu-card h3 { font-size: 1.3rem; color: var(--dark); font-weight: 800; margin-bottom: 8px;}
+        .menu-card p { font-size: 0.95rem; color: #64748b; font-weight: 600;}
+
+        #game-screen {
+            flex: 1;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .game-nav {
+            background: white;
+            padding: 15px 25px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.05);
+            border-bottom-left-radius: 20px;
+            border-bottom-right-radius: 20px;
+            margin-bottom: 20px;
+            font-weight: bold;
+            font-size: clamp(0.9rem, 3vw, 1.2rem);
+        }
+        .back-btn { background: #e2e8f0; color: var(--dark); border-bottom: 3px solid #cbd5e1; padding: 8px 15px;}
+        #game-progress { background: #14a394; color: white; padding: 6px 15px; border-radius: 20px;}
+        
+        .game-container {
+            flex: 1;
+            padding: 0 20px 40px 20px;
+            max-width: 900px;
+            margin: 0 auto;
+            width: 100%;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .question-box {
+            background: white;
+            padding: 20px 25px;
+            border-radius: 16px;
+            text-align: center;
+            font-size: clamp(1.1rem, 3.6vw, 1.5rem);
+            font-weight: 800;
+            color: #0e5249;
+            margin-bottom: 25px;
+            box-shadow: 0 10px 15px -3px rgba(0,0,0,0.05);
+            border-right: 8px solid #0d8a7c;
+            line-height: 1.7;
+        }
+
+        .shake { animation: shake 0.5s cubic-bezier(.36,.07,.19,.97) both; }
+        @keyframes shake {
+            10%, 90% { transform: translate3d(-2px, 0, 0); }
+            20%, 80% { transform: translate3d(4px, 0, 0); }
+            30%, 50%, 70% { transform: translate3d(-6px, 0, 0); }
+            40%, 60% { transform: translate3d(6px, 0, 0); }
+        }
+
+        .options-grid { display: flex; flex-direction: column; gap: 15px; }
+        .options-grid .btn { padding: 18px; font-size: clamp(1rem, 3.2vw, 1.3rem); text-align: right; justify-content: flex-start; border-radius: 12px;}
+
+        .tf-grid { display: flex; flex-wrap: wrap; gap: 20px; justify-content: center; }
+
+        .bubbles-area {
+            position: relative; height: 400px;
+            background: linear-gradient(to bottom, #062b29, #0e5249);
+            border-radius: 16px; overflow: hidden;
+            border: 4px solid #14a394; margin-top: 10px;
+            box-shadow: inset 0 0 20px rgba(0,0,0,0.5);
+        }
+        .bubble {
+            position: absolute;
+            background: radial-gradient(circle at 30% 30%, rgba(255,255,255,0.9), rgba(255,237,213,0.92));
+            color: #0e5249;
+            border: 2px solid #ffffff;
+            padding: 10px 5px;
+            border-radius: 30px;
+            font-weight: 800; font-size: clamp(0.8rem, 1.9vw, 1rem);
+            box-shadow: 0 10px 15px rgba(0,0,0,0.2), inset -4px -4px 10px rgba(0,0,0,0.1);
+            cursor: pointer;
+            display: flex; align-items: center; justify-content: center;
+            text-align: center;
+            width: 22%;
+            transition: transform 0.2s, background 0.2s;
+            z-index: 5;
+        }
+        .bubble:hover { transform: scale(1.05); }
+        .bubble::after {
+            content: ''; position: absolute; top: 10%; left: 15%;
+            width: 20%; height: 20%; background: rgba(255,255,255,0.8);
+            border-radius: 50%; filter: blur(2px);
+        }
+
+        .shooting-area {
+            position: relative; height: 400px; background: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="100%" height="100%"><rect fill="%23ecfdf5" width="100%" height="100%"/><circle fill="%23bbf7d0" cx="20%" cy="30%" r="50"/><circle fill="%23bbf7d0" cx="80%" cy="60%" r="70"/><circle fill="%23bbf7d0" cx="50%" cy="80%" r="40"/></svg>') no-repeat center center;
+            background-size: cover; border-radius: 16px; overflow: hidden;
+            border: 4px solid #14a394; margin-top: 10px; box-shadow: inset 0 0 20px rgba(0,0,0,0.1);
+        }
+        .target-bird {
+            position: absolute; background: white; color: var(--dark);
+            padding: 10px 20px; border-radius: 30px; font-weight: 800; font-size: clamp(0.85rem, 2.7vw, 1.05rem);
+            box-shadow: 0 8px 15px rgba(0,0,0,0.15); cursor: crosshair;
+            border: 3px solid var(--warning); white-space: nowrap; transition: background 0.2s;
+            display: flex; align-items: center; gap: 8px;
+        }
+        .target-bird:hover { transform: scale(1.05); background: #fffbeb; }
+
+        /* تحدي العباقرة */
+        .genius-box { border: 3px solid var(--warning) !important; background: linear-gradient(135deg, #fffbeb, #ffffff); }
+        .genius-timer-wrap { width: 100%; height: 16px; background: #e2e8f0; border-radius: 10px; overflow: hidden; margin-bottom: 22px; box-shadow: inset 0 2px 4px rgba(0,0,0,0.1); }
+        .genius-timer-bar { height: 100%; background: linear-gradient(to right, #10b981, var(--warning), var(--danger)); width: 100%; transition: width 0.1s linear; border-radius: 10px; }
+        .genius-hint { text-align: center; margin-top: 15px; color: var(--warning); font-weight: bold; font-size: 1.1rem; display: flex; align-items: center; justify-content: center; gap: 8px; }
+
+        .overlay {
+            position: fixed; top: 0; left: 0; right: 0; bottom: 0;
+            background: rgba(15, 23, 42, 0.8); backdrop-filter: blur(4px);
+            display: flex; justify-content: center; align-items: center;
+            z-index: 1000; opacity: 0; pointer-events: none; transition: opacity 0.3s ease;
+        }
+        .overlay.active { opacity: 1; pointer-events: all; }
+        .modal {
+            background: white; padding: 40px; border-radius: 25px;
+            text-align: center; max-width: 90%; width: 400px;
+            transform: scale(0.7) translateY(50px); transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+            box-shadow: 0 25px 50px -12px rgba(0,0,0,0.25);
+        }
+        .overlay.active .modal { transform: scale(1) translateY(0); }
+        .modal-icon { display: flex; justify-content: center; margin-bottom: 20px; }
+
+        .errors-list::-webkit-scrollbar { width: 8px; }
+        .errors-list::-webkit-scrollbar-track { background: #f1f5f9; border-radius: 8px; }
+        .errors-list::-webkit-scrollbar-thumb { background: #cbd5e1; border-radius: 8px; }
+        .errors-list::-webkit-scrollbar-thumb:hover { background: #94a3b8; }
+
+        .footer-main {
+            background: var(--dark); color: #cbd5e1;
+            text-align: center; padding: 25px 20px; margin-top: auto;
+            border-top: 4px solid var(--primary);
+        }
+        .footer-main p { margin: 5px 0; font-size: 1.1rem; font-weight: 600;}
+        .footer-main .designer { font-size: 1rem; color: #94a3b8; font-weight: 400;}
+
+        .whatsapp-float {
+            position: fixed; bottom: 25px; left: 25px;
+            background: #25d366; color: white;
+            width: 65px; height: 65px; border-radius: 50%;
+            display: flex; justify-content: center; align-items: center;
+            text-decoration: none; box-shadow: 0 8px 15px rgba(37, 211, 102, 0.4);
+            z-index: 100; transition: all 0.3s;
+        }
+        .whatsapp-float:hover { transform: scale(1.15) rotate(-5deg); box-shadow: 0 12px 20px rgba(37, 211, 102, 0.6); }
+        .whatsapp-float svg { width: 35px; height: 35px; fill: currentColor; }
+
+        .send-result-box {
+            margin-top: 25px; background: #f0fdf4; border: 2px dashed #25d366;
+            border-radius: 15px; padding: 20px;
+        }
+        .send-result-box h3 { color: #128c7e; margin-bottom: 12px; font-size: 1.2rem; }
+        .name-input {
+            width: 100%; padding: 14px; border-radius: 10px; border: 2px solid #cbd5e1;
+            font-size: 1.05rem; font-family: 'Cairo', sans-serif; text-align: center; margin-bottom: 12px;
+        }
+        .name-input:focus { outline: none; border-color: #25d366; }
+        .whatsapp-send-btn {
+            width: 100%; background: linear-gradient(to bottom, #25d366, #128c7e);
+            border-bottom: 3px solid #0d6b5f;
+        }
+        .name-warning { color: var(--danger); font-size: 0.9rem; margin-top: 8px; font-weight: bold; }
+
+        .confetti {
+            position: fixed; top: -10px; width: 12px; height: 12px; z-index: 9999;
+            animation: fall linear forwards; border-radius: 3px;
+        }
+        @keyframes fall { to { transform: translateY(110vh) rotate(720deg); opacity: 0; } }
+            .round-badge { display:inline-block; margin-top:12px; padding:5px 14px; border-radius:999px; background:#fff7ed; color:#c2410c; border:1px solid #fdba74; font-weight:800; font-size:.9rem; }
+        .bubble span { line-height:1.35; }
+    </style>
+</head>
+<body>
+
+    <header class="header-main" id="main-header">
+        <div class="header-content">
+            <div style="display: flex; align-items: center; justify-content: center; gap: 40px; flex-wrap: wrap;">
+                <img src="logo.jpg" alt="الأستاذ توفيق كرم الصريحي" style="width: 180px; height: 180px; border-radius: 30px; border: 4px solid #f59e42; box-shadow: 0 8px 16px rgba(0,0,0,0.4); background-color: white; object-fit: cover; object-position: top; flex-shrink: 0;" onerror="this.style.display='none'">
+                <div style="display: flex; flex-direction: column; align-items: center; text-align: center;">
+                    <h1 class="title-line1">
+                        دَرْسٌ
+                        <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="#ffe2c2" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"></circle><circle cx="12" cy="12" r="6"></circle><circle cx="12" cy="12" r="2"></circle></svg>
+                        لُعْبَة
+                    </h1>
+                    <h1 class="title-line2">مَعَ الأُسْتَاذِ تَوْفِيق كَرَم الصَّرِيحِي</h1>
+                    <p class="platform-badge" style="display:inline-block; margin:8px auto 4px; padding:6px 22px; border-radius:999px; background:rgba(255,255,255,0.14); border:2px solid #f59e0b; color:#fde3c4; font-weight:900; font-size:1.3rem; letter-spacing:0.5px;">✒️ المفعول لأجله</p>
+                    <h2>الصَّفُّ الخَامِسُ الابْتِدَائِيُّ - الوحدة الثالثة</h2>
+                    <p style="margin-top: 10px;">القواعد النحوية • 🎲 كل لعبة 20 سؤالًا تتغير عشوائيًّا من بنك 50 سؤالًا</p>
+                </div>
+            </div>
+        </div>
+        <svg class="header-wave" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320">
+            <path fill="#f0f4f8" fill-opacity="1" d="M0,192L48,197.3C96,203,192,213,288,229.3C384,245,480,267,576,250.7C672,235,768,181,864,170.7C960,160,1056,192,1152,208C1248,224,1344,224,1392,224L1440,224L1440,320L1392,320C1344,320,1248,320,1152,320C1056,320,960,320,864,320C768,320,672,320,576,320C480,320,384,320,288,320C192,320,96,320,48,320L0,320Z"></path>
+        </svg>
+    </header>
+
+    <div id="home-screen">
+        <div class="grid-menu" id="menu-grid"></div>
+    </div>
+
+    <div id="game-screen" class="hidden">
+        <div class="game-nav">
+            <button class="btn back-btn" onclick="returnToMenu()">
+                <svg width="20" height="20" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M19 12H5M12 19l-7-7 7-7"/></svg>
+                رجوع
+            </button>
+            <strong id="game-title">عنوان اللعبة</strong>
+            <span id="game-progress">1 / 20</span>
+        </div>
+        <div class="game-container" id="game-container"></div>
+    </div>
+
+    <div class="overlay" id="feedback-modal">
+        <div class="modal">
+            <div class="modal-icon" id="feedback-icon"></div>
+            <h2 id="feedback-title" style="font-size: 2.5rem; font-weight: 900;">إجابة صحيحة!</h2>
+        </div>
+    </div>
+
+    <footer class="footer-main" id="main-footer">
+        <p>جميع الحقوق محفوظة &copy; | الأستاذ توفيق كرم الصريحي</p>
+        <p class="designer">للتواصل: 01039179352</p>
+    </footer>
+
+    <a href="https://wa.me/201039179352" class="whatsapp-float" target="_blank" title="تواصل معنا">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+            <path d="M12.031 0C5.385 0 0 5.385 0 12.031c0 2.656.843 5.12 2.26 7.15L.626 24l5.01-1.61c1.983 1.25 4.27 1.91 6.395 1.91 6.646 0 12.03-5.385 12.03-12.031S18.677 0 12.031 0zm6.544 17.202c-.273.766-1.58 1.464-2.185 1.503-.56.035-1.28.23-4.085-.86-3.39-1.32-5.59-4.78-5.736-4.97-.145-.19-1.37-1.82-1.37-3.475 0-1.655.857-2.47 1.164-2.8.307-.33.67-.413.89-.413.22 0 .44 0 .633.01.205.01.482-.08.736.53.264.634.904 2.203.984 2.366.08.163.133.353.033.553-.1.2-.153.326-.307.506-.154.18-.32.38-.453.506-.153.153-.314.316-.134.626.18.31.8 1.32 1.71 2.13.176.157.363.31.558.45 1.05.76 1.83 1.05 2.13 1.18.3.13.474.11.652-.09.18-.205.766-.893.97-1.2.204-.307.41-.256.69-.153.28.103 1.77.836 2.074.99.304.153.506.23.582.356.076.126.076.73-.197 1.496z"/>
+        </svg>
+    </a>
+
+<script>
+    const LESSON_FULL_NAME = "المفعول لأجله - الوحدة الثالثة - الصف الخامس الابتدائي";
+    const LESSON_KEY = "elserehy-prim5-5";
+    const TEACHER_WHATSAPP = "201039179352";
+    const QUESTIONS_PER_ROUND = 20;
+    const allGamesData = [
+ {
+  "id": "g1_shooting",
+  "title": "التنشين والاصطياد: صوّب المفعول لأجله",
+  "type": "shooting",
+  "desc": "اصطد المفعول لأجله في الجملة",
+  "icon": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 24 24\"><circle cx=\"12\" cy=\"12\" r=\"10\"></circle><circle cx=\"12\" cy=\"12\" r=\"6\"></circle><circle cx=\"12\" cy=\"12\" r=\"2\"></circle></svg>",
+  "questions": [
+   {
+    "q": "«يجتهدُ التلميذُ في دراسته رغبةً في النجاح» المفعول لأجله:",
+    "options": [
+     "دراسته",
+     "النجاح",
+     "التلميذ",
+     "رغبة"
+    ],
+    "ans": 3
+   },
+   {
+    "q": "«أتناولُ الطعامَ الصحيَّ حفاظًا على صحتي» المفعول لأجله:",
+    "options": [
+     "الطعام",
+     "الصحي",
+     "صحتي",
+     "حفاظًا"
+    ],
+    "ans": 3
+   },
+   {
+    "q": "«عاقبَ القاضي المجرمَ تأديبًا له» المفعول لأجله:",
+    "options": [
+     "له",
+     "تأديبًا",
+     "المجرم",
+     "القاضي"
+    ],
+    "ans": 1
+   },
+   {
+    "q": "«زرتُ مهرجانَ الفنون حبًّا في الموسيقى» المفعول لأجله:",
+    "options": [
+     "حبًّا",
+     "مهرجان",
+     "الموسيقى",
+     "الفنون"
+    ],
+    "ans": 0
+   },
+   {
+    "q": "«صفّقَ الجمهورُ للعازفين تشجيعًا لهم» المفعول لأجله:",
+    "options": [
+     "العازفين",
+     "لهم",
+     "تشجيعًا",
+     "الجمهور"
+    ],
+    "ans": 2
+   },
+   {
+    "q": "«يستأذنُ التلاميذُ من معلمهم احترامًا له» المفعول لأجله:",
+    "options": [
+     "له",
+     "معلمهم",
+     "احترامًا",
+     "التلاميذ"
+    ],
+    "ans": 2
+   },
+   {
+    "q": "«انتبهْ إلى إشارات المرور حرصًا على سلامتك» المفعول لأجله:",
+    "options": [
+     "حرصًا",
+     "سلامتك",
+     "إشارات",
+     "المرور"
+    ],
+    "ans": 0
+   },
+   {
+    "q": "«تكرّمُ الدولةُ العلماءَ اعترافًا بجميلهم» المفعول لأجله:",
+    "options": [
+     "الدولة",
+     "اعترافًا",
+     "العلماء",
+     "جميلهم"
+    ],
+    "ans": 1
+   },
+   {
+    "q": "«وقفَ الطلابُ احترامًا للمعلم» المفعول لأجله:",
+    "options": [
+     "الطلاب",
+     "احترامًا",
+     "المعلم",
+     "وقف"
+    ],
+    "ans": 1
+   },
+   {
+    "q": "«تصدّقَ الغنيُّ رحمةً بالفقراء» المفعول لأجله:",
+    "options": [
+     "الفقراء",
+     "الغني",
+     "رحمةً",
+     "تصدق"
+    ],
+    "ans": 2
+   },
+   {
+    "q": "«سافرَ أخي طلبًا للعلم» المفعول لأجله:",
+    "options": [
+     "العلم",
+     "أخي",
+     "سافر",
+     "طلبًا"
+    ],
+    "ans": 3
+   },
+   {
+    "q": "«بكى الطفلُ خوفًا من الظلام» المفعول لأجله:",
+    "options": [
+     "خوفًا",
+     "بكى",
+     "الظلام",
+     "الطفل"
+    ],
+    "ans": 0
+   },
+   {
+    "q": "«ابتسمتُ فرحًا بالنجاح» المفعول لأجله:",
+    "options": [
+     "ابتسمت",
+     "فرحًا",
+     "النجاح",
+     "التاء"
+    ],
+    "ans": 1
+   },
+   {
+    "q": "«يذاكرُ الطالبُ أملًا في التفوق» المفعول لأجله:",
+    "options": [
+     "الطالب",
+     "أملًا",
+     "يذاكر",
+     "التفوق"
+    ],
+    "ans": 1
+   },
+   {
+    "q": "«يحرسُ الجنديُّ الحدودَ حبًّا للوطن» المفعول لأجله:",
+    "options": [
+     "حبًّا",
+     "الحدود",
+     "الجندي",
+     "الوطن"
+    ],
+    "ans": 0
+   },
+   {
+    "q": "«صمتَ التلميذُ أدبًا» المفعول لأجله:",
+    "options": [
+     "أدبًا",
+     "صمت",
+     "التلميذ"
+    ],
+    "ans": 0
+   },
+   {
+    "q": "«يتصدقُ المسلمُ ابتغاءَ مرضاةِ الله» المفعول لأجله:",
+    "options": [
+     "مرضاة",
+     "ابتغاءَ",
+     "المسلم",
+     "الله"
+    ],
+    "ans": 1
+   },
+   {
+    "q": "«ساعدتُ الفقيرَ شفقةً عليه» المفعول لأجله:",
+    "options": [
+     "شفقةً",
+     "ساعدت",
+     "عليه",
+     "الفقير"
+    ],
+    "ans": 0
+   },
+   {
+    "q": "«أطفأتُ المصباحَ توفيرًا للكهرباء» المفعول لأجله:",
+    "options": [
+     "المصباح",
+     "توفيرًا",
+     "الكهرباء",
+     "أطفأت"
+    ],
+    "ans": 1
+   },
+   {
+    "q": "«أغلقتُ الصنبورَ ترشيدًا للمياه» المفعول لأجله:",
+    "options": [
+     "المياه",
+     "ترشيدًا",
+     "أغلقت",
+     "الصنبور"
+    ],
+    "ans": 1
+   },
+   {
+    "q": "«قرأتُ الكتابَ تثقيفًا لنفسي» المفعول لأجله:",
+    "options": [
+     "نفسي",
+     "تثقيفًا",
+     "قرأت",
+     "الكتاب"
+    ],
+    "ans": 1
+   },
+   {
+    "q": "«يمارسُ الرياضةَ حفاظًا على لياقته» المفعول لأجله:",
+    "options": [
+     "حفاظًا",
+     "الرياضة",
+     "لياقته",
+     "يمارس"
+    ],
+    "ans": 0
+   },
+   {
+    "q": "«تهربُ الغزالةُ خوفًا من الأسد» المفعول لأجله:",
+    "options": [
+     "خوفًا",
+     "الغزالة",
+     "تهرب",
+     "الأسد"
+    ],
+    "ans": 0
+   },
+   {
+    "q": "«قمتُ للمعلم تقديرًا له» المفعول لأجله:",
+    "options": [
+     "تقديرًا",
+     "قمت",
+     "المعلم",
+     "له"
+    ],
+    "ans": 0
+   },
+   {
+    "q": "«يعملُ الفلاحُ طلبًا للرزق» المفعول لأجله:",
+    "options": [
+     "يعمل",
+     "طلبًا",
+     "الفلاح",
+     "الرزق"
+    ],
+    "ans": 1
+   },
+   {
+    "q": "«أكرمتُ الضيفَ إكرامًا لأبي» المفعول لأجله:",
+    "options": [
+     "أكرمت",
+     "الضيف",
+     "إكرامًا",
+     "أبي"
+    ],
+    "ans": 2
+   },
+   {
+    "q": "«تبرّعَ الرجلُ بالدم إنقاذًا للمرضى» المفعول لأجله:",
+    "options": [
+     "إنقاذًا",
+     "الرجل",
+     "الدم",
+     "المرضى"
+    ],
+    "ans": 0
+   },
+   {
+    "q": "«يسهرُ الطبيبُ رعايةً للمرضى» المفعول لأجله:",
+    "options": [
+     "المرضى",
+     "يسهر",
+     "الطبيب",
+     "رعايةً"
+    ],
+    "ans": 3
+   },
+   {
+    "q": "«نظّفتُ الفصلَ حبًّا للنظافة» المفعول لأجله:",
+    "options": [
+     "حبًّا",
+     "النظافة",
+     "نظفت",
+     "الفصل"
+    ],
+    "ans": 0
+   },
+   {
+    "q": "«عادَ المسافرُ شوقًا إلى أهله» المفعول لأجله:",
+    "options": [
+     "أهله",
+     "المسافر",
+     "عاد",
+     "شوقًا"
+    ],
+    "ans": 3
+   },
+   {
+    "q": "علامة نصب (رغبةً):",
+    "options": [
+     "الفتحة (تنوين الفتح)",
+     "الكسرة",
+     "الضمة",
+     "الياء"
+    ],
+    "ans": 0
+   },
+   {
+    "q": "حكم المفعول لأجله:",
+    "options": [
+     "منصوب",
+     "مرفوع",
+     "مجرور"
+    ],
+    "ans": 0
+   },
+   {
+    "q": "المفعول لأجله يبيّن:",
+    "options": [
+     "سبب حدوث الفعل",
+     "من قام بالفعل",
+     "مكان الفعل",
+     "زمن الفعل"
+    ],
+    "ans": 0
+   },
+   {
+    "q": "السؤال الذي يُعرف به المفعول لأجله:",
+    "options": [
+     "لماذا؟",
+     "متى؟",
+     "مَن؟",
+     "أين؟"
+    ],
+    "ans": 0
+   },
+   {
+    "q": "«يجتهدُ الطالبُ ........ في النجاح» أكمل بمفعول لأجله:",
+    "options": [
+     "رغبةٌ",
+     "رغبةٍ",
+     "يرغب",
+     "رغبةً"
+    ],
+    "ans": 3
+   },
+   {
+    "q": "«وقفتُ ........ للعلم» أكمل بمفعول لأجله:",
+    "options": [
+     "احترامٍ",
+     "يحترم",
+     "احترامٌ",
+     "احترامًا"
+    ],
+    "ans": 3
+   },
+   {
+    "q": "«ساعدتُ المحتاجَ ........ به» أكمل بمفعول لأجله:",
+    "options": [
+     "رفقًا",
+     "رفقٍ",
+     "رفقٌ",
+     "يرفق"
+    ],
+    "ans": 0
+   },
+   {
+    "q": "«أطيعُ والديَّ ........ لهما» أكمل بمفعول لأجله:",
+    "options": [
+     "برٍّ",
+     "يبرّ",
+     "برًّا",
+     "برٌّ"
+    ],
+    "ans": 2
+   },
+   {
+    "q": "«اختبأَ القطُّ ........ من الكلب» أكمل بمفعول لأجله:",
+    "options": [
+     "خوفٍ",
+     "خوفٌ",
+     "يخاف",
+     "خوفًا"
+    ],
+    "ans": 3
+   },
+   {
+    "q": "«تعلّمتُ اللغاتِ ........ للمعرفة» أكمل بمفعول لأجله:",
+    "options": [
+     "يحب",
+     "حبًّا",
+     "حبٍّ",
+     "حبٌّ"
+    ],
+    "ans": 1
+   },
+   {
+    "q": "«أسرعتُ ........ للوقت» أكمل بمفعول لأجله:",
+    "options": [
+     "يغتنم",
+     "اغتنامًا",
+     "اغتنامٍ",
+     "اغتنامٌ"
+    ],
+    "ans": 1
+   },
+   {
+    "q": "«أهديتُ أمي وردةً ........ بها» أكمل بمفعول لأجله:",
+    "options": [
+     "يحتفي",
+     "احتفاءٍ",
+     "احتفاءً",
+     "احتفاءٌ"
+    ],
+    "ans": 2
+   },
+   {
+    "q": "«تدرّبَ اللاعبُ ........ في الفوز» أكمل بمفعول لأجله:",
+    "options": [
+     "يطمع",
+     "طمعٌ",
+     "طمعًا",
+     "طمعٍ"
+    ],
+    "ans": 2
+   },
+   {
+    "q": "«سامحتُ صديقي ........ على صداقتنا» أكمل بمفعول لأجله:",
+    "options": [
+     "حرصٍ",
+     "حرصٌ",
+     "حرصًا",
+     "يحرص"
+    ],
+    "ans": 2
+   },
+   {
+    "q": "«قاتلَ الجنودُ ........ عن الوطن» أكمل بمفعول لأجله:",
+    "options": [
+     "دفاعٍ",
+     "يدافع",
+     "دفاعًا",
+     "دفاعٌ"
+    ],
+    "ans": 2
+   },
+   {
+    "q": "«نامَ الطفلُ مبكرًا ........ للاستيقاظ» أكمل بمفعول لأجله:",
+    "options": [
+     "يستعد",
+     "استعدادٌ",
+     "استعدادٍ",
+     "استعدادًا"
+    ],
+    "ans": 3
+   },
+   {
+    "q": "«تبرّعتُ بملابسي ........ للفقراء» أكمل بمفعول لأجله:",
+    "options": [
+     "يساعد",
+     "مساعدةٌ",
+     "مساعدةً",
+     "مساعدةٍ"
+    ],
+    "ans": 2
+   },
+   {
+    "q": "«تجنّبتُ الكذبَ ........ من العقاب» أكمل بمفعول لأجله:",
+    "options": [
+     "خشيةٍ",
+     "يخشى",
+     "خشيةً",
+     "خشيةٌ"
+    ],
+    "ans": 2
+   },
+   {
+    "q": "«سكتَ الطالبُ ........ للمعلم» أكمل بمفعول لأجله:",
+    "options": [
+     "إنصاتًا",
+     "إنصاتٌ",
+     "ينصت",
+     "إنصاتٍ"
+    ],
+    "ans": 0
+   },
+   {
+    "q": "«عملتُ بجد ........ لهدفي» أكمل بمفعول لأجله:",
+    "options": [
+     "تحقيقٍ",
+     "تحقيقٌ",
+     "تحقيقًا",
+     "يحقق"
+    ],
+    "ans": 2
+   }
+  ]
+ },
+ {
+  "id": "g2_true_false",
+  "title": "صح أم خطأ",
+  "type": "true_false",
+  "desc": "اختبر فهمك للمفعول لأجله",
+  "icon": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 24 24\"><path d=\"M22 11.08V12a10 10 0 1 1-5.93-9.14\"></path><polyline points=\"22 4 12 14.01 9 11.01\"></polyline></svg>",
+  "questions": [
+   {
+    "q": "المفعول لأجله اسم منصوب يبيّن سبب حدوث الفعل.",
+    "options": [
+     "صح",
+     "خطأ"
+    ],
+    "ans": 0
+   },
+   {
+    "q": "المفعول لأجله يبيّن زمن حدوث الفعل.",
+    "options": [
+     "صح",
+     "خطأ"
+    ],
+    "ans": 1
+   },
+   {
+    "q": "نستطيع تحديد المفعول لأجله بالسؤال بـ(لماذا؟).",
+    "options": [
+     "صح",
+     "خطأ"
+    ],
+    "ans": 0
+   },
+   {
+    "q": "المفعول لأجله مرفوع.",
+    "options": [
+     "صح",
+     "خطأ"
+    ],
+    "ans": 1
+   },
+   {
+    "q": "في «يجتهدُ التلميذُ رغبةً في النجاح» المفعول لأجله (رغبة).",
+    "options": [
+     "صح",
+     "خطأ"
+    ],
+    "ans": 0
+   },
+   {
+    "q": "في «أتناولُ الطعامَ الصحيَّ حفاظًا على صحتي» المفعول لأجله (الطعام).",
+    "options": [
+     "صح",
+     "خطأ"
+    ],
+    "ans": 1
+   },
+   {
+    "q": "في «أتناولُ الطعامَ الصحيَّ حفاظًا على صحتي» (الطعام) مفعول به.",
+    "options": [
+     "صح",
+     "خطأ"
+    ],
+    "ans": 0
+   },
+   {
+    "q": "في «عاقبَ القاضي المجرمَ تأديبًا له» المفعول لأجله (تأديبًا).",
+    "options": [
+     "صح",
+     "خطأ"
+    ],
+    "ans": 0
+   },
+   {
+    "q": "علامة نصب المفعول لأجله في (تأديبًا) الفتحة.",
+    "options": [
+     "صح",
+     "خطأ"
+    ],
+    "ans": 0
+   },
+   {
+    "q": "«زرتُ المهرجانَ حبًّا في الموسيقى» السبب في الزيارة هو الحب.",
+    "options": [
+     "صح",
+     "خطأ"
+    ],
+    "ans": 0
+   },
+   {
+    "q": "«وقفَ الطلابُ احترامًا للمعلم» (احترامًا) مفعول به.",
+    "options": [
+     "صح",
+     "خطأ"
+    ],
+    "ans": 1
+   },
+   {
+    "q": "«وقفَ الطلابُ احترامًا للمعلم» (احترامًا) مفعول لأجله.",
+    "options": [
+     "صح",
+     "خطأ"
+    ],
+    "ans": 0
+   },
+   {
+    "q": "«سافرتُ صباحًا» (صباحًا) مفعول لأجله.",
+    "options": [
+     "صح",
+     "خطأ"
+    ],
+    "ans": 1
+   },
+   {
+    "q": "«بكى الطفلُ خوفًا» (خوفًا) مفعول لأجله.",
+    "options": [
+     "صح",
+     "خطأ"
+    ],
+    "ans": 0
+   },
+   {
+    "q": "المفعول لأجله يأتي غالبًا مصدرًا قلبيًّا يدل على الشعور كالحب والخوف والرغبة.",
+    "options": [
+     "صح",
+     "خطأ"
+    ],
+    "ans": 0
+   },
+   {
+    "q": "«صفّقَ الجمهورُ تشجيعًا للعازفين» الجمهور فاعل.",
+    "options": [
+     "صح",
+     "خطأ"
+    ],
+    "ans": 0
+   },
+   {
+    "q": "«يستأذنُ التلاميذُ احترامًا للمعلم» المفعول لأجله منصوب بالضمة.",
+    "options": [
+     "صح",
+     "خطأ"
+    ],
+    "ans": 1
+   },
+   {
+    "q": "«انتبهْ إلى الإشارات حرصًا على سلامتك» المفعول لأجله (حرصًا).",
+    "options": [
+     "صح",
+     "خطأ"
+    ],
+    "ans": 0
+   },
+   {
+    "q": "«تكرّمُ الدولةُ العلماءَ اعترافًا بجميلهم» (العلماء) مفعول لأجله.",
+    "options": [
+     "صح",
+     "خطأ"
+    ],
+    "ans": 1
+   },
+   {
+    "q": "«تكرّمُ الدولةُ العلماءَ اعترافًا بجميلهم» (العلماء) مفعول به.",
+    "options": [
+     "صح",
+     "خطأ"
+    ],
+    "ans": 0
+   },
+   {
+    "q": "«يعملُ الفلاحُ طلبًا للرزق» المفعول لأجله (الرزق).",
+    "options": [
+     "صح",
+     "خطأ"
+    ],
+    "ans": 1
+   },
+   {
+    "q": "«يعملُ الفلاحُ طلبًا للرزق» (الرزق) اسم مجرور.",
+    "options": [
+     "صح",
+     "خطأ"
+    ],
+    "ans": 0
+   },
+   {
+    "q": "«ابتسمتُ فرحًا بالنجاح» علامة نصب المفعول لأجله تنوين الفتح.",
+    "options": [
+     "صح",
+     "خطأ"
+    ],
+    "ans": 0
+   },
+   {
+    "q": "«تصدّقَ الغنيُّ رحمةً بالفقراء» (رحمة) مفعول لأجله.",
+    "options": [
+     "صح",
+     "خطأ"
+    ],
+    "ans": 0
+   },
+   {
+    "q": "«أكلتُ تفاحةً» (تفاحة) مفعول لأجله.",
+    "options": [
+     "صح",
+     "خطأ"
+    ],
+    "ans": 1
+   },
+   {
+    "q": "«أطفأتُ المصباحَ توفيرًا للكهرباء» (المصباح) مفعول به و(توفيرًا) مفعول لأجله.",
+    "options": [
+     "صح",
+     "خطأ"
+    ],
+    "ans": 0
+   },
+   {
+    "q": "«أطفأتُ المصباحَ توفيرًا للكهرباء» السؤال: لماذا أطفأتُ المصباح؟ جوابه (توفيرًا).",
+    "options": [
+     "صح",
+     "خطأ"
+    ],
+    "ans": 0
+   },
+   {
+    "q": "«يذاكرُ الطالبُ ليلًا» (ليلًا) مفعول لأجله.",
+    "options": [
+     "صح",
+     "خطأ"
+    ],
+    "ans": 1
+   },
+   {
+    "q": "«صمتَ التلميذُ أدبًا» (أدبًا) يبيّن سبب الصمت.",
+    "options": [
+     "صح",
+     "خطأ"
+    ],
+    "ans": 0
+   },
+   {
+    "q": "«يحرسُ الجنديُّ الحدودَ حبًّا للوطن» في الجملة مفعول به ومفعول لأجله.",
+    "options": [
+     "صح",
+     "خطأ"
+    ],
+    "ans": 0
+   },
+   {
+    "q": "«قمتُ للمعلم تقديرًا له» (المعلم) مفعول لأجله.",
+    "options": [
+     "صح",
+     "خطأ"
+    ],
+    "ans": 1
+   },
+   {
+    "q": "«تهربُ الغزالةُ خوفًا من الأسد» (الغزالة) فاعل مرفوع.",
+    "options": [
+     "صح",
+     "خطأ"
+    ],
+    "ans": 0
+   },
+   {
+    "q": "«ساعدتُ الفقيرَ شفقةً عليه» علامة نصب (شفقة) الكسرة.",
+    "options": [
+     "صح",
+     "خطأ"
+    ],
+    "ans": 1
+   },
+   {
+    "q": "المفعول لأجله يُعرب: مفعول لأجله منصوب وعلامة نصبه الفتحة.",
+    "options": [
+     "صح",
+     "خطأ"
+    ],
+    "ans": 0
+   },
+   {
+    "q": "«أغلقتُ الصنبورَ ترشيدًا للمياه» المفعول لأجله (ترشيدًا).",
+    "options": [
+     "صح",
+     "خطأ"
+    ],
+    "ans": 0
+   },
+   {
+    "q": "«يسهرُ الطبيبُ رعايةً للمرضى» (رعايةً) فاعل.",
+    "options": [
+     "صح",
+     "خطأ"
+    ],
+    "ans": 1
+   },
+   {
+    "q": "«عادَ المسافرُ شوقًا إلى أهله» سبب العودة هو الشوق.",
+    "options": [
+     "صح",
+     "خطأ"
+    ],
+    "ans": 0
+   },
+   {
+    "q": "«تبرّعَ الرجلُ بالدم إنقاذًا للمرضى» المفعول لأجله (الدم).",
+    "options": [
+     "صح",
+     "خطأ"
+    ],
+    "ans": 1
+   },
+   {
+    "q": "«تبرّعَ الرجلُ بالدم إنقاذًا للمرضى» المفعول لأجله (إنقاذًا).",
+    "options": [
+     "صح",
+     "خطأ"
+    ],
+    "ans": 0
+   },
+   {
+    "q": "«يتصدّقُ المسلمُ ابتغاءَ مرضاةِ الله» (ابتغاء) مفعول لأجله.",
+    "options": [
+     "صح",
+     "خطأ"
+    ],
+    "ans": 0
+   },
+   {
+    "q": "«نظّفتُ الفصلَ حبًّا للنظافة» (الفصل) مفعول لأجله.",
+    "options": [
+     "صح",
+     "خطأ"
+    ],
+    "ans": 1
+   },
+   {
+    "q": "«أكرمتُ الضيفَ إكرامًا لأبي» (إكرامًا) مفعول لأجله.",
+    "options": [
+     "صح",
+     "خطأ"
+    ],
+    "ans": 0
+   },
+   {
+    "q": "«يمارسُ الرياضةَ حفاظًا على لياقته» عدد المنصوبات اثنان.",
+    "options": [
+     "صح",
+     "خطأ"
+    ],
+    "ans": 0
+   },
+   {
+    "q": "«خرجتُ إلى الحديقة» فيها مفعول لأجله.",
+    "options": [
+     "صح",
+     "خطأ"
+    ],
+    "ans": 1
+   },
+   {
+    "q": "«خرجتُ إلى الحديقة تنزهًا» فيها مفعول لأجله.",
+    "options": [
+     "صح",
+     "خطأ"
+    ],
+    "ans": 0
+   },
+   {
+    "q": "المفعول لأجله والمفعول به كلاهما منصوب.",
+    "options": [
+     "صح",
+     "خطأ"
+    ],
+    "ans": 0
+   },
+   {
+    "q": "المفعول لأجله يجيب عن السؤال (أين؟).",
+    "options": [
+     "صح",
+     "خطأ"
+    ],
+    "ans": 1
+   },
+   {
+    "q": "«سامحتُ صديقي حرصًا على صداقتنا» (صديقي) مفعول به.",
+    "options": [
+     "صح",
+     "خطأ"
+    ],
+    "ans": 0
+   },
+   {
+    "q": "«تدرّبَ اللاعبُ طمعًا في الفوز» (الفوز) مفعول لأجله.",
+    "options": [
+     "صح",
+     "خطأ"
+    ],
+    "ans": 1
+   },
+   {
+    "q": "«قاتلَ الجنودُ دفاعًا عن الوطن» (دفاعًا) مفعول لأجله.",
+    "options": [
+     "صح",
+     "خطأ"
+    ],
+    "ans": 0
+   }
+  ]
+ },
+ {
+  "id": "g3_mcq",
+  "title": "اختيار من متعدد: المفعول لأجله",
+  "type": "mcq",
+  "desc": "اختر الإجابة الصحيحة",
+  "icon": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 24 24\"><path d=\"M2 3h6a4 4 0 0 1 4 4v14a3 3 0 0 0-3-3H2z\"></path><path d=\"M22 3h-6a4 4 0 0 0-4 4v14a3 3 0 0 1 3-3h7z\"></path></svg>",
+  "questions": [
+   {
+    "q": "المفعول لأجله:",
+    "options": [
+     "اسم منصوب يبيّن سبب حدوث الفعل",
+     "اسم مجرور يبيّن المكان",
+     "اسم مرفوع يبيّن الفاعل",
+     "اسم منصوب يبيّن زمن الفعل"
+    ],
+    "ans": 0
+   },
+   {
+    "q": "السؤال المناسب لاستخراج المفعول لأجله:",
+    "options": [
+     "متى؟",
+     "أين؟",
+     "لماذا؟",
+     "ماذا؟"
+    ],
+    "ans": 2
+   },
+   {
+    "q": "حكم المفعول لأجله:",
+    "options": [
+     "مرفوع",
+     "مجرور",
+     "مجزوم",
+     "منصوب"
+    ],
+    "ans": 3
+   },
+   {
+    "q": "المفعول لأجله في «زرتُ مهرجانَ الفنونِ حبًّا في الموسيقى»:",
+    "options": [
+     "مهرجان",
+     "حبًّا",
+     "الفنون",
+     "الموسيقى"
+    ],
+    "ans": 1
+   },
+   {
+    "q": "المفعول لأجله في «صفّقَ الجمهورُ للعازفين تشجيعًا لهم»:",
+    "options": [
+     "تشجيعًا",
+     "العازفين",
+     "صفق",
+     "الجمهور"
+    ],
+    "ans": 0
+   },
+   {
+    "q": "المفعول لأجله في «يستأذنُ التلاميذُ من معلمهم احترامًا له»:",
+    "options": [
+     "يستأذن",
+     "معلمهم",
+     "احترامًا",
+     "التلاميذ"
+    ],
+    "ans": 2
+   },
+   {
+    "q": "المفعول لأجله في «انتبهْ إلى إشارات المرور حرصًا على سلامتك»:",
+    "options": [
+     "المرور",
+     "سلامتك",
+     "إشارات",
+     "حرصًا"
+    ],
+    "ans": 3
+   },
+   {
+    "q": "المفعول لأجله في «تكرّمُ الدولةُ العلماءَ اعترافًا بجميلهم»:",
+    "options": [
+     "جميلهم",
+     "الدولة",
+     "اعترافًا",
+     "العلماء"
+    ],
+    "ans": 2
+   },
+   {
+    "q": "إعراب (رغبةً) في «يجتهدُ التلميذُ رغبةً في النجاح»:",
+    "options": [
+     "فاعل مرفوع",
+     "مفعول لأجله منصوب وعلامة نصبه الفتحة",
+     "حال",
+     "مفعول به منصوب"
+    ],
+    "ans": 1
+   },
+   {
+    "q": "إعراب (الطعامَ) في «أتناولُ الطعامَ حفاظًا على صحتي»:",
+    "options": [
+     "ظرف زمان",
+     "فاعل مرفوع",
+     "مفعول به منصوب",
+     "مفعول لأجله منصوب"
+    ],
+    "ans": 2
+   },
+   {
+    "q": "إعراب (حفاظًا) في «أتناولُ الطعامَ حفاظًا على صحتي»:",
+    "options": [
+     "ظرف مكان",
+     "فاعل",
+     "مفعول لأجله منصوب",
+     "مفعول به منصوب"
+    ],
+    "ans": 2
+   },
+   {
+    "q": "«ذاكرَ الطالبُ ........ في النجاح» أكمل:",
+    "options": [
+     "رغبةً",
+     "صباحًا",
+     "أمامَ",
+     "الدرسَ"
+    ],
+    "ans": 0
+   },
+   {
+    "q": "«تبرّعتُ للمستشفى ........ بالمرضى» أكمل:",
+    "options": [
+     "المالُ",
+     "فوقَ",
+     "رحمةً",
+     "غدًا"
+    ],
+    "ans": 2
+   },
+   {
+    "q": "«وقفَ الحاضرون ........ للسلام الوطني» أكمل:",
+    "options": [
+     "احترامًا",
+     "الآنَ",
+     "الحاضرين",
+     "وقوفٌ"
+    ],
+    "ans": 0
+   },
+   {
+    "q": "«لبستُ المعطفَ ........ من البرد» أكمل:",
+    "options": [
+     "المعطفُ",
+     "اتقاءً",
+     "داخلَ",
+     "شتاءً"
+    ],
+    "ans": 1
+   },
+   {
+    "q": "أي الجمل فيها مفعول لأجله؟",
+    "options": [
+     "ساعدتُ أمي",
+     "ساعدتُ أمي حبًّا لها",
+     "ساعدتُ أمي صباحًا",
+     "ساعدتُ أمي في المطبخ"
+    ],
+    "ans": 1
+   },
+   {
+    "q": "أي الجمل ليس فيها مفعول لأجله؟",
+    "options": [
+     "سافرتُ ليلًا",
+     "سافرتُ شوقًا لأهلي",
+     "سافرتُ رغبةً في التعلم",
+     "سافرتُ طلبًا للعلم"
+    ],
+    "ans": 0
+   },
+   {
+    "q": "الفرق بين المفعول به والمفعول لأجله:",
+    "options": [
+     "الأول وقع عليه الفعل والثاني سبب الفعل",
+     "الأول مرفوع والثاني منصوب",
+     "لا فرق",
+     "كلاهما سبب الفعل"
+    ],
+    "ans": 0
+   },
+   {
+    "q": "«قرأتُ القصةَ استمتاعًا» المفعول به والمفعول لأجله:",
+    "options": [
+     "التاء - القصة",
+     "قرأ - استمتاعًا",
+     "استمتاعًا - القصة",
+     "القصة - استمتاعًا"
+    ],
+    "ans": 3
+   },
+   {
+    "q": "«كتبتُ الرسالةَ شوقًا لصديقي» المفعول لأجله:",
+    "options": [
+     "شوقًا",
+     "صديقي",
+     "الرسالة",
+     "التاء"
+    ],
+    "ans": 0
+   },
+   {
+    "q": "«يغرسُ الفلاحُ الأشجارَ أملًا في الثمار» المفعول لأجله:",
+    "options": [
+     "الثمار",
+     "الفلاح",
+     "أملًا",
+     "الأشجار"
+    ],
+    "ans": 2
+   },
+   {
+    "q": "«يُطفئُ العاقلُ الأنوارَ ترشيدًا للاستهلاك» عدد المنصوبات:",
+    "options": [
+     "لا يوجد",
+     "اثنان",
+     "ثلاثة",
+     "واحد"
+    ],
+    "ans": 1
+   },
+   {
+    "q": "«ركضَ اللصُّ هربًا من الشرطة» المفعول لأجله:",
+    "options": [
+     "الشرطة",
+     "ركض",
+     "هربًا",
+     "اللص"
+    ],
+    "ans": 2
+   },
+   {
+    "q": "علامة نصب (احترامًا):",
+    "options": [
+     "الياء",
+     "تنوين الفتح",
+     "الضمة",
+     "الكسرة"
+    ],
+    "ans": 1
+   },
+   {
+    "q": "السبب في «ابتسمَ الطفلُ سرورًا»:",
+    "options": [
+     "سرورًا",
+     "الطفل",
+     "ابتسم",
+     "لا يوجد"
+    ],
+    "ans": 0
+   },
+   {
+    "q": "«صامَ المسلمُ ........ لله» الأنسب:",
+    "options": [
+     "نهارًا",
+     "رمضانَ",
+     "طاعةً",
+     "الصيامَ"
+    ],
+    "ans": 2
+   },
+   {
+    "q": "«يتعلّمُ الطالبُ ........ في المعرفة» الأنسب:",
+    "options": [
+     "الدرسَ",
+     "رغبةً",
+     "الفصلَ",
+     "يوميًّا"
+    ],
+    "ans": 1
+   },
+   {
+    "q": "الكلمة التي تصلح مفعولًا لأجله:",
+    "options": [
+     "جليلٌ",
+     "الإجلالِ",
+     "يجلّ",
+     "إجلالًا"
+    ],
+    "ans": 3
+   },
+   {
+    "q": "الكلمة التي لا تصلح مفعولًا لأجله:",
+    "options": [
+     "رغبةً",
+     "خوفًا",
+     "حبًّا",
+     "الكرسيَّ"
+    ],
+    "ans": 3
+   },
+   {
+    "q": "«........ الأمُّ ابنَها خوفًا عليه» أكمل بفعل:",
+    "options": [
+     "الحضنُ",
+     "خوفٌ",
+     "أمٌّ",
+     "احتضنتِ"
+    ],
+    "ans": 3
+   },
+   {
+    "q": "«احتضنتِ الأمُّ ........ خوفًا عليه» أكمل بمفعول به:",
+    "options": [
+     "ابنِها",
+     "خوفًا",
+     "ابنَها",
+     "ابنُها"
+    ],
+    "ans": 2
+   },
+   {
+    "q": "«احتضنتِ الأمُّ ابنَها ........ عليه» أكمل بمفعول لأجله:",
+    "options": [
+     "خوفٌ",
+     "خوفًا",
+     "خوفٍ",
+     "الابنَ"
+    ],
+    "ans": 1
+   },
+   {
+    "q": "«عاقبَ المعلمُ التلميذَ ........» أنسب مفعول لأجله:",
+    "options": [
+     "الفصلِ",
+     "صباحًا",
+     "تأديبًا",
+     "عقابٌ"
+    ],
+    "ans": 2
+   },
+   {
+    "q": "«أسرعَ الإسعافُ ........ للمصابين» أنسب:",
+    "options": [
+     "يُنقذُ",
+     "الطريقَ",
+     "إنقاذًا",
+     "سريعٌ"
+    ],
+    "ans": 2
+   },
+   {
+    "q": "«حمدتُ اللهَ ........ بنعمه» أنسب:",
+    "options": [
+     "حمدٌ",
+     "اعترافًا",
+     "نعمةٌ",
+     "اللهَ"
+    ],
+    "ans": 1
+   },
+   {
+    "q": "«يحترمُ الناسُ المعلمَ ........ لدوره» أنسب:",
+    "options": [
+     "تقديرًا",
+     "يومًا",
+     "دورٌ",
+     "المعلمُ"
+    ],
+    "ans": 0
+   },
+   {
+    "q": "المفعول لأجله في «أحبُّ وطني فخرًا به»:",
+    "options": [
+     "أحب",
+     "فخرًا",
+     "به",
+     "وطني"
+    ],
+    "ans": 1
+   },
+   {
+    "q": "«يقرأُ أبي الجريدةَ صباحًا متابعةً للأخبار» المفعول لأجله:",
+    "options": [
+     "الأخبار",
+     "متابعةً",
+     "الجريدة",
+     "صباحًا"
+    ],
+    "ans": 1
+   },
+   {
+    "q": "«يقرأُ أبي الجريدةَ صباحًا متابعةً للأخبار» الكلمة الدالة على الزمن:",
+    "options": [
+     "صباحًا",
+     "الجريدة",
+     "متابعة",
+     "أبي"
+    ],
+    "ans": 0
+   },
+   {
+    "q": "«يقرأُ أبي الجريدةَ صباحًا متابعةً للأخبار» المفعول به:",
+    "options": [
+     "متابعة",
+     "أبي",
+     "الجريدة",
+     "صباحًا"
+    ],
+    "ans": 2
+   },
+   {
+    "q": "الخطأ في «وقفتُ احترامٌ للمعلم»:",
+    "options": [
+     "لا خطأ",
+     "الفاعل",
+     "الفعل",
+     "رفع المفعول لأجله والصواب احترامًا"
+    ],
+    "ans": 3
+   },
+   {
+    "q": "الخطأ في «سافرتُ طلبٍ للعلم»:",
+    "options": [
+     "لا خطأ",
+     "الفعل",
+     "العلم",
+     "جر المفعول لأجله والصواب طلبًا"
+    ],
+    "ans": 3
+   },
+   {
+    "q": "«اجتهدَ الطلابُ ........ في التفوق» الأنسب:",
+    "options": [
+     "الطلابَ",
+     "تفوقٌ",
+     "طمعًا",
+     "صباحًا"
+    ],
+    "ans": 2
+   },
+   {
+    "q": "«يتسابقُ الطلابُ إلى المكتبة حبًّا في القراءة» المفعول لأجله:",
+    "options": [
+     "القراءة",
+     "حبًّا",
+     "المكتبة",
+     "الطلاب"
+    ],
+    "ans": 1
+   },
+   {
+    "q": "«تذهبُ الأسرةُ إلى البحر ........» أنسب مفعول لأجله:",
+    "options": [
+     "استجمامًا",
+     "صيفًا",
+     "البحرُ",
+     "الأسرةَ"
+    ],
+    "ans": 0
+   },
+   {
+    "q": "«بنى المصريون السدَّ العالي حمايةً من الفيضان» المفعول لأجله:",
+    "options": [
+     "السد",
+     "الفيضان",
+     "حمايةً",
+     "العالي"
+    ],
+    "ans": 2
+   },
+   {
+    "q": "«بنى المصريون السدَّ العالي حمايةً من الفيضان» المفعول به:",
+    "options": [
+     "الفيضان",
+     "حماية",
+     "العالي",
+     "السد"
+    ],
+    "ans": 3
+   },
+   {
+    "q": "«ساعدَ الطلابُ زميلَهم المريضَ عطفًا عليه» المفعول لأجله:",
+    "options": [
+     "زميلهم",
+     "الطلاب",
+     "المريض",
+     "عطفًا"
+    ],
+    "ans": 3
+   },
+   {
+    "q": "«أحسنْ إلى جارك ........» أنسب مفعول لأجله:",
+    "options": [
+     "الآنَ",
+     "طلبًا لمرضاة الله",
+     "جارُك",
+     "إحسانٌ"
+    ],
+    "ans": 1
+   },
+   {
+    "q": "«يتجنّبُ العاقلُ الشرَّ خوفًا من عاقبته» المفعول لأجله وعلامته:",
+    "options": [
+     "العاقل - الضمة",
+     "الشر - الفتحة",
+     "خوفًا - تنوين الفتح",
+     "عاقبته - الكسرة"
+    ],
+    "ans": 2
+   }
+  ]
+ },
+ {
+  "id": "g4_genius",
+  "title": "تحدي العباقرة",
+  "type": "genius",
+  "desc": "تطبيقات أعمق على المفعول لأجله - سباق مع الوقت!",
+  "icon": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 24 24\"><polygon points=\"13 2 3 14 12 14 11 22 21 10 12 10 13 2\"></polygon></svg>",
+  "questions": [
+   {
+    "q": "«يجتهدُ التلميذُ رغبةً في النجاح، ويأكلُ الطعامَ حفاظًا على صحته» عدد المفعول لأجله:",
+    "options": [
+     "ثلاثة",
+     "واحد",
+     "لا يوجد",
+     "اثنان"
+    ],
+    "ans": 3
+   },
+   {
+    "q": "«يجتهدُ التلميذُ رغبةً في النجاح، ويأكلُ الطعامَ حفاظًا على صحته» المفعول به:",
+    "options": [
+     "رغبة",
+     "حفاظًا",
+     "النجاح",
+     "الطعام"
+    ],
+    "ans": 3
+   },
+   {
+    "q": "أي الكلمات تبيّن سبب الفعل في «زرتُ جدّي برًّا به يومَ الجمعة»؟",
+    "options": [
+     "يوم",
+     "برًّا",
+     "الجمعة",
+     "جدي"
+    ],
+    "ans": 1
+   },
+   {
+    "q": "في الجملة السابقة الكلمة الدالة على الزمن:",
+    "options": [
+     "برًّا",
+     "جدي",
+     "يومَ",
+     "زرت"
+    ],
+    "ans": 2
+   },
+   {
+    "q": "كوّن جملة فيها مفعول لأجله:",
+    "options": [
+     "قمتُ للمعلم تبجيلًا",
+     "قمتُ إلى المعلم",
+     "قمتُ في الفصل",
+     "قمتُ صباحًا"
+    ],
+    "ans": 0
+   },
+   {
+    "q": "اختر الجملة الصحيحة الضبط:",
+    "options": [
+     "سهرتُ ليلةٍ استعدادٍ للامتحان",
+     "سهرتُ ليلةً استعدادٌ للامتحان",
+     "سهرتُ ليلةٌ استعدادًا",
+     "سهرتُ ليلةً استعدادًا للامتحان"
+    ],
+    "ans": 3
+   },
+   {
+    "q": "«يرفعُ الجنديُّ العلمَ فخرًا ببلاده» المنصوبات وأنواعها:",
+    "options": [
+     "فخرًا فاعل",
+     "العلم مفعول به - فخرًا مفعول لأجله",
+     "الجندي فاعل - العلم مفعول لأجله",
+     "العلم مفعول لأجله - فخرًا مفعول به"
+    ],
+    "ans": 1
+   },
+   {
+    "q": "السؤال الذي جوابه المفعول لأجله في «يحمي الأبُ أولادَه خوفًا عليهم»:",
+    "options": [
+     "من يحمي الأب؟",
+     "متى يحمي الأب أولاده؟",
+     "لماذا يحمي الأب أولاده؟",
+     "من يحمي الأولاد؟"
+    ],
+    "ans": 2
+   },
+   {
+    "q": "«يحبُّ الناسُ الطبيبَ تقديرًا لعمله» لو حذفنا (تقديرًا) فإن الجملة:",
+    "options": [
+     "لا تتغير أبدًا",
+     "تفقد بيان السبب",
+     "تفقد الفاعل",
+     "تفقد الفعل"
+    ],
+    "ans": 1
+   },
+   {
+    "q": "المفعول لأجله يأتي غالبًا:",
+    "options": [
+     "مصدرًا يدل على شعور أو سبب",
+     "اسم علم",
+     "اسم زمان",
+     "اسم مكان"
+    ],
+    "ans": 0
+   },
+   {
+    "q": "الكلمة التي تصلح مفعولًا لأجله في «........ أطعتُ والدي»:",
+    "options": [
+     "والدي",
+     "أمامَ",
+     "برًّا",
+     "غدًا"
+    ],
+    "ans": 2
+   },
+   {
+    "q": "الكلمة التي تصلح ظرف زمان لا مفعولًا لأجله:",
+    "options": [
+     "رغبةً",
+     "خوفًا",
+     "مساءً",
+     "حبًّا"
+    ],
+    "ans": 2
+   },
+   {
+    "q": "«........ تجتهدُ؟ أجتهدُ أملًا في التفوق» الأداة المناسبة:",
+    "options": [
+     "أين",
+     "ماذا",
+     "لماذا",
+     "كيف"
+    ],
+    "ans": 2
+   },
+   {
+    "q": "«أسرعتُ إلى المدرسة خوفًا من التأخر» إعراب (خوفًا):",
+    "options": [
+     "حال",
+     "مفعول به منصوب",
+     "ظرف زمان",
+     "مفعول لأجله منصوب بالفتحة"
+    ],
+    "ans": 3
+   },
+   {
+    "q": "«أسرعتُ إلى المدرسة خوفًا من التأخر» إعراب (المدرسة):",
+    "options": [
+     "فاعل",
+     "مفعول لأجله",
+     "اسم مجرور",
+     "مفعول به"
+    ],
+    "ans": 2
+   },
+   {
+    "q": "«ذاكرتُ دروسي حبًّا في التفوق» المفعولان:",
+    "options": [
+     "التفوق - حبًّا",
+     "حبًّا (به) - دروس (لأجله)",
+     "دروس (به) - حبًّا (لأجله)",
+     "دروس - التفوق"
+    ],
+    "ans": 2
+   },
+   {
+    "q": "«يتبرعُ الأغنياءُ بأموالهم مساعدةً للفقراء» المفعول لأجله ومفرد (الأغنياء):",
+    "options": [
+     "الأغنياء - غني",
+     "مساعدةً - غني",
+     "الفقراء - فقير",
+     "أموالهم - مال"
+    ],
+    "ans": 1
+   },
+   {
+    "q": "«تبتسمُ الأمُّ ........ بقدوم ابنها» أنسب:",
+    "options": [
+     "فرحٍ",
+     "الأمَّ",
+     "فرحًا",
+     "فرحٌ"
+    ],
+    "ans": 2
+   },
+   {
+    "q": "«تُغلقُ الأمُّ النوافذَ ........ من الغبار» أنسب:",
+    "options": [
+     "وقايةً",
+     "الغبارَ",
+     "شتاءً",
+     "النوافذُ"
+    ],
+    "ans": 0
+   },
+   {
+    "q": "«تُغلقُ الأمُّ النوافذَ وقايةً من الغبار» نوع (النوافذ):",
+    "options": [
+     "ظرف",
+     "فاعل",
+     "مفعول به جمع تكسير",
+     "مفعول لأجله"
+    ],
+    "ans": 2
+   },
+   {
+    "q": "اختر الجملة التي تحتوي مفعولًا به ومفعولًا لأجله:",
+    "options": [
+     "أطعمتُ القطةَ رحمةً بها",
+     "أطعمتُ القطةَ صباحًا",
+     "رحمتُ القطةَ",
+     "أطعمتُ القطةَ في البيت"
+    ],
+    "ans": 0
+   },
+   {
+    "q": "اختر الجملة التي تحتوي مفعولًا لأجله فقط دون مفعول به:",
+    "options": [
+     "رأيتُ القمرَ",
+     "وقفتُ احترامًا",
+     "أحببتُ وطني",
+     "أكرمتُ الضيفَ"
+    ],
+    "ans": 1
+   },
+   {
+    "q": "«........ للمعلم قمتُ» أكمل بمفعول لأجله متقدّم:",
+    "options": [
+     "الآنَ",
+     "المعلمَ",
+     "تبجيلًا",
+     "وقوفًا"
+    ],
+    "ans": 2
+   },
+   {
+    "q": "«يحمي الشرطيُّ المواطنينَ ........ للأمن» أنسب:",
+    "options": [
+     "حفظًا",
+     "المواطنونَ",
+     "ليلًا",
+     "الشرطيَّ"
+    ],
+    "ans": 0
+   },
+   {
+    "q": "«يحمي الشرطيُّ المواطنينَ حفظًا للأمن» علامة نصب المفعول به والمفعول لأجله:",
+    "options": [
+     "الكسرة - الفتحة",
+     "الفتحة - الياء",
+     "الياء - الياء",
+     "الياء - الفتحة"
+    ],
+    "ans": 3
+   },
+   {
+    "q": "«تقرأُ البنتُ القصصَ تسليةً» علامة نصب (القصص) و(تسليةً):",
+    "options": [
+     "الفتحة - الضمة",
+     "الياء - الفتحة",
+     "الكسرة - الفتحة",
+     "الفتحة - الفتحة"
+    ],
+    "ans": 3
+   },
+   {
+    "q": "«أطعمتُ الحيواناتِ رحمةً بها» علامة نصب (الحيوانات) و(رحمة):",
+    "options": [
+     "الفتحة - الكسرة",
+     "الكسرة - الفتحة",
+     "الكسرة - الكسرة",
+     "الفتحة - الفتحة"
+    ],
+    "ans": 1
+   },
+   {
+    "q": "«يُصلّي المسلمُ خشوعًا لله» المفعول لأجله:",
+    "options": [
+     "يصلي",
+     "خشوعًا",
+     "المسلم",
+     "الله"
+    ],
+    "ans": 1
+   },
+   {
+    "q": "«ذهبَ المريضُ إلى الطبيب طلبًا للعلاج» السبب:",
+    "options": [
+     "المريض",
+     "طلبًا",
+     "الطبيب",
+     "العلاج"
+    ],
+    "ans": 1
+   },
+   {
+    "q": "الخطأ في «حضرتُ مبكرًا حرصٌ على الوقت»:",
+    "options": [
+     "الوقت",
+     "مبكرًا",
+     "لا خطأ",
+     "رفع المفعول لأجله والصواب حرصًا"
+    ],
+    "ans": 3
+   },
+   {
+    "q": "الخطأ في «أكرمتُ الضيفُ احترامًا»:",
+    "options": [
+     "الفاعل",
+     "لا خطأ",
+     "المفعول لأجله",
+     "رفع المفعول به والصواب الضيفَ"
+    ],
+    "ans": 3
+   },
+   {
+    "q": "«تحتفلُ مصرُ بانتصار أكتوبر فخرًا بأبطالها» المفعول لأجله:",
+    "options": [
+     "أبطالها",
+     "فخرًا",
+     "مصر",
+     "انتصار"
+    ],
+    "ans": 1
+   },
+   {
+    "q": "«يُطيعُ المؤمنُ ربَّه خشيةً منه» المفعول به:",
+    "options": [
+     "رب (ربه)",
+     "منه",
+     "المؤمن",
+     "خشية"
+    ],
+    "ans": 0
+   },
+   {
+    "q": "«يُطيعُ المؤمنُ ربَّه خشيةً منه» المفعول لأجله:",
+    "options": [
+     "المؤمن",
+     "خشيةً",
+     "منه",
+     "رب"
+    ],
+    "ans": 1
+   },
+   {
+    "q": "«يتعاونُ الجيرانُ ........ على الحي» أنسب:",
+    "options": [
+     "الجارُ",
+     "الحيَّ",
+     "مساءً",
+     "حفاظًا"
+    ],
+    "ans": 3
+   },
+   {
+    "q": "الكلمة المختلفة إعرابًا في «سافرتُ شوقًا ورغبةً وفجرًا»:",
+    "options": [
+     "لا يوجد",
+     "رغبةً",
+     "فجرًا",
+     "شوقًا"
+    ],
+    "ans": 2
+   },
+   {
+    "q": "لماذا (فجرًا) ليست مفعولًا لأجله؟",
+    "options": [
+     "لأنها مرفوعة",
+     "لأنها مجرورة",
+     "لأنها تبين الزمن لا السبب",
+     "لأنها فعل"
+    ],
+    "ans": 2
+   },
+   {
+    "q": "«تُشجّعُ المدرسةُ الطلابَ تحفيزًا لهم» نوع (الطلاب) و(تحفيزًا):",
+    "options": [
+     "فاعل - مفعول به",
+     "مفعول لأجله - مفعول به",
+     "مبتدأ - خبر",
+     "مفعول به - مفعول لأجله"
+    ],
+    "ans": 3
+   },
+   {
+    "q": "«أحتفظُ بالكتب حبًّا لها» المفعول لأجله وعلامته:",
+    "options": [
+     "الكتب - الكسرة",
+     "حبًّا - تنوين الفتح",
+     "حبًّا - الضمة",
+     "لها - لا علامة"
+    ],
+    "ans": 1
+   },
+   {
+    "q": "«عاملتُ الناسَ بلطف ........ لهم» أنسب:",
+    "options": [
+     "الناسُ",
+     "غدًا",
+     "احترامًا",
+     "لطفٌ"
+    ],
+    "ans": 2
+   },
+   {
+    "q": "«يعملُ المهندسون ليلَ نهارَ ........ للمشروع» أنسب:",
+    "options": [
+     "المهندسَ",
+     "إنجازًا",
+     "المشروعَ",
+     "يومًا"
+    ],
+    "ans": 1
+   },
+   {
+    "q": "«يحافظُ الطلابُ على الهدوء ........ لزملائهم» أنسب:",
+    "options": [
+     "مراعاةً",
+     "صباحًا",
+     "الهدوءَ",
+     "زملاءَ"
+    ],
+    "ans": 0
+   },
+   {
+    "q": "«يكتبُ الأديبُ ........ في التعبير» أنسب:",
+    "options": [
+     "رغبةً",
+     "كتابةٌ",
+     "ليلًا",
+     "الأدبَ"
+    ],
+    "ans": 0
+   },
+   {
+    "q": "«........ يقرأ الطفل القصص؟ تسليةً» أداة الاستفهام:",
+    "options": [
+     "متى",
+     "لماذا",
+     "أين",
+     "ماذا"
+    ],
+    "ans": 1
+   },
+   {
+    "q": "«ترفعُ الأمُّ صوتَها تحذيرًا لابنها» المفعول لأجله:",
+    "options": [
+     "الأم",
+     "ابنها",
+     "صوت",
+     "تحذيرًا"
+    ],
+    "ans": 3
+   },
+   {
+    "q": "«يحفظُ الطالبُ القرآنَ تقرّبًا إلى الله» المفعول به والمفعول لأجله:",
+    "options": [
+     "تقربًا - القرآن",
+     "القرآن - تقربًا",
+     "الطالب - القرآن",
+     "الله - تقربًا"
+    ],
+    "ans": 1
+   },
+   {
+    "q": "«يقفُ المرورُ في الطريق تنظيمًا للسير» المفعول لأجله:",
+    "options": [
+     "الطريق",
+     "المرور",
+     "تنظيمًا",
+     "السير"
+    ],
+    "ans": 2
+   },
+   {
+    "q": "«تتبرعُ المدرسةُ بالكتب نشرًا للثقافة» السبب في التبرع:",
+    "options": [
+     "نشرًا",
+     "الثقافة",
+     "المدرسة",
+     "الكتب"
+    ],
+    "ans": 0
+   },
+   {
+    "q": "«يتواضعُ العالمُ ........ للناس» أنسب:",
+    "options": [
+     "الناسَ",
+     "ليلًا",
+     "احترامًا",
+     "العلمَ"
+    ],
+    "ans": 2
+   },
+   {
+    "q": "«أزورُ المريضَ ........ عليه» أنسب:",
+    "options": [
+     "غدًا",
+     "المريضُ",
+     "اطمئنانًا",
+     "زيارةٌ"
+    ],
+    "ans": 2
+   }
+  ]
+ },
+ {
+  "id": "g5_bubbles",
+  "title": "الفقاعات المتساقطة: سبب أم لا؟",
+  "type": "bubbles",
+  "desc": "اضغط فقاعة المفعول لأجله قبل أن تسقط",
+  "icon": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 24 24\"><path d=\"M21.21 15.89A10 10 0 1 1 8 2.83\"></path><path d=\"M22 12A10 10 0 0 0 12 2v10z\"></path></svg>",
+  "questions": [
+   {
+    "q": "اختر المفعول لأجله:",
+    "options": [
+     "حبًّا",
+     "صباحًا",
+     "الكتابَ"
+    ],
+    "ans": 0
+   },
+   {
+    "q": "اختر المفعول لأجله:",
+    "options": [
+     "خوفًا",
+     "البابَ",
+     "ليلًا"
+    ],
+    "ans": 0
+   },
+   {
+    "q": "اختر المفعول لأجله:",
+    "options": [
+     "أمامَ",
+     "القلمَ",
+     "رغبةً"
+    ],
+    "ans": 2
+   },
+   {
+    "q": "اختر المفعول لأجله:",
+    "options": [
+     "المعلمَ",
+     "احترامًا",
+     "فوقَ"
+    ],
+    "ans": 1
+   },
+   {
+    "q": "اختر المفعول لأجله:",
+    "options": [
+     "ظهرًا",
+     "تقديرًا",
+     "الهديةَ"
+    ],
+    "ans": 1
+   },
+   {
+    "q": "اختر المفعول لأجله:",
+    "options": [
+     "شوقًا",
+     "الرسالةَ",
+     "غدًا"
+    ],
+    "ans": 0
+   },
+   {
+    "q": "اختر المفعول لأجله:",
+    "options": [
+     "طلبًا",
+     "مساءً",
+     "العلمَ"
+    ],
+    "ans": 0
+   },
+   {
+    "q": "اختر المفعول لأجله:",
+    "options": [
+     "يمينًا",
+     "حرصًا",
+     "الوقتَ"
+    ],
+    "ans": 1
+   },
+   {
+    "q": "اختر المفعول لأجله:",
+    "options": [
+     "شرقًا",
+     "أملًا",
+     "الفوزَ"
+    ],
+    "ans": 1
+   },
+   {
+    "q": "اختر المفعول لأجله:",
+    "options": [
+     "رحمةً",
+     "فجرًا",
+     "الفقيرَ"
+    ],
+    "ans": 0
+   },
+   {
+    "q": "(رغبةً) في «ذاكرتُ رغبةً في النجاح»:",
+    "options": [
+     "مفعول لأجله",
+     "فاعل",
+     "مفعول به"
+    ],
+    "ans": 0
+   },
+   {
+    "q": "(الدرسَ) في «ذاكرتُ الدرسَ»:",
+    "options": [
+     "فاعل",
+     "مفعول لأجله",
+     "مفعول به"
+    ],
+    "ans": 2
+   },
+   {
+    "q": "(احترامًا) في «وقفتُ احترامًا»:",
+    "options": [
+     "مفعول به",
+     "فاعل",
+     "مفعول لأجله"
+    ],
+    "ans": 2
+   },
+   {
+    "q": "(الطلابُ) في «وقفَ الطلابُ»:",
+    "options": [
+     "فاعل",
+     "مفعول لأجله",
+     "مفعول به"
+    ],
+    "ans": 0
+   },
+   {
+    "q": "(خوفًا) في «هربَ اللصُّ خوفًا»:",
+    "options": [
+     "مفعول لأجله",
+     "فاعل",
+     "مفعول به"
+    ],
+    "ans": 0
+   },
+   {
+    "q": "(اللصُّ) في «هربَ اللصُّ خوفًا»:",
+    "options": [
+     "فاعل",
+     "مفعول به",
+     "مفعول لأجله"
+    ],
+    "ans": 0
+   },
+   {
+    "q": "(الفقراءَ) في «ساعدتُ الفقراءَ رحمةً»:",
+    "options": [
+     "فاعل",
+     "مفعول لأجله",
+     "مفعول به"
+    ],
+    "ans": 2
+   },
+   {
+    "q": "(رحمةً) في «ساعدتُ الفقراءَ رحمةً»:",
+    "options": [
+     "مفعول لأجله",
+     "فاعل",
+     "مفعول به"
+    ],
+    "ans": 0
+   },
+   {
+    "q": "(إكرامًا) في «أكرمتُه إكرامًا لأبيه»:",
+    "options": [
+     "مفعول لأجله",
+     "فاعل",
+     "مفعول به"
+    ],
+    "ans": 0
+   },
+   {
+    "q": "(الضيفَ) في «أكرمتُ الضيفَ»:",
+    "options": [
+     "مفعول لأجله",
+     "مفعول به",
+     "فاعل"
+    ],
+    "ans": 1
+   },
+   {
+    "q": "المفعول لأجله يبيّن:",
+    "options": [
+     "السبب",
+     "الزمان",
+     "المكان"
+    ],
+    "ans": 0
+   },
+   {
+    "q": "السؤال عن المفعول لأجله:",
+    "options": [
+     "أين؟",
+     "متى؟",
+     "لماذا؟"
+    ],
+    "ans": 2
+   },
+   {
+    "q": "حكم المفعول لأجله:",
+    "options": [
+     "منصوب",
+     "مجرور",
+     "مرفوع"
+    ],
+    "ans": 0
+   },
+   {
+    "q": "علامة نصب (حبًّا):",
+    "options": [
+     "الكسرة",
+     "الفتحة",
+     "الضمة"
+    ],
+    "ans": 1
+   },
+   {
+    "q": "«وقفتُ ........ للعلم»:",
+    "options": [
+     "احترامٍ",
+     "احترامٌ",
+     "احترامًا"
+    ],
+    "ans": 2
+   },
+   {
+    "q": "«تعلّمتُ ........ في المعرفة»:",
+    "options": [
+     "رغبةٌ",
+     "رغبةٍ",
+     "رغبةً"
+    ],
+    "ans": 2
+   },
+   {
+    "q": "«بكى الطفلُ ........ من الكلب»:",
+    "options": [
+     "خوفٌ",
+     "خوفٍ",
+     "خوفًا"
+    ],
+    "ans": 2
+   },
+   {
+    "q": "«ساعدتُ جدّتي ........ بها»:",
+    "options": [
+     "برًّا",
+     "برٌّ",
+     "برٍّ"
+    ],
+    "ans": 0
+   },
+   {
+    "q": "«ابتسمَ الفائزُ ........»:",
+    "options": [
+     "فرحٍ",
+     "فرحٌ",
+     "فرحًا"
+    ],
+    "ans": 2
+   },
+   {
+    "q": "«أطعمتُ القطَّ ........ به»:",
+    "options": [
+     "رفقًا",
+     "رفقٌ",
+     "رفقٍ"
+    ],
+    "ans": 0
+   },
+   {
+    "q": "«صمتَ الطلابُ ........»:",
+    "options": [
+     "إنصاتٌ",
+     "إنصاتٍ",
+     "إنصاتًا"
+    ],
+    "ans": 2
+   },
+   {
+    "q": "«تصدّقتُ ........ لله»:",
+    "options": [
+     "طاعةً",
+     "طاعةٌ",
+     "طاعةٍ"
+    ],
+    "ans": 0
+   },
+   {
+    "q": "«سافرَ العالمُ ........ للعلم»:",
+    "options": [
+     "طلبٌ",
+     "طلبًا",
+     "طلبٍ"
+    ],
+    "ans": 1
+   },
+   {
+    "q": "«ركضَ اللاعبُ ........ في الفوز»:",
+    "options": [
+     "طمعٍ",
+     "طمعًا",
+     "طمعٌ"
+    ],
+    "ans": 1
+   },
+   {
+    "q": "«أغلقتُ الباب ........ من البرد»:",
+    "options": [
+     "اتقاءٌ",
+     "اتقاءٍ",
+     "اتقاءً"
+    ],
+    "ans": 2
+   },
+   {
+    "q": "(صباحًا) في «خرجتُ صباحًا»:",
+    "options": [
+     "مفعول به",
+     "ظرف زمان",
+     "مفعول لأجله"
+    ],
+    "ans": 1
+   },
+   {
+    "q": "(حبًّا) في «خرجتُ حبًّا في التنزه»:",
+    "options": [
+     "مفعول به",
+     "ظرف زمان",
+     "مفعول لأجله"
+    ],
+    "ans": 2
+   },
+   {
+    "q": "(البيتَ) في «تركتُ البيتَ»:",
+    "options": [
+     "ظرف",
+     "مفعول به",
+     "مفعول لأجله"
+    ],
+    "ans": 1
+   },
+   {
+    "q": "السبب في «سهرتُ استعدادًا»:",
+    "options": [
+     "استعدادًا",
+     "التاء",
+     "سهر"
+    ],
+    "ans": 0
+   },
+   {
+    "q": "السبب في «صفّقنا تشجيعًا»:",
+    "options": [
+     "تشجيعًا",
+     "صفق",
+     "نا"
+    ],
+    "ans": 0
+   },
+   {
+    "q": "السبب في «عملتُ أملًا»:",
+    "options": [
+     "أملًا",
+     "التاء",
+     "عمل"
+    ],
+    "ans": 0
+   },
+   {
+    "q": "السبب في «اعتذرتُ أدبًا»:",
+    "options": [
+     "التاء",
+     "اعتذر",
+     "أدبًا"
+    ],
+    "ans": 2
+   },
+   {
+    "q": "الكلمة الدالة على السبب:",
+    "options": [
+     "جليل",
+     "إجلالًا",
+     "يجلّ"
+    ],
+    "ans": 1
+   },
+   {
+    "q": "الكلمة الدالة على السبب:",
+    "options": [
+     "يشفق",
+     "شفقةً",
+     "شفيق"
+    ],
+    "ans": 1
+   },
+   {
+    "q": "الكلمة الدالة على السبب:",
+    "options": [
+     "يكرم",
+     "كريم",
+     "تكريمًا"
+    ],
+    "ans": 2
+   },
+   {
+    "q": "الكلمة الدالة على السبب:",
+    "options": [
+     "تشجيعًا",
+     "شجاع",
+     "يشجع"
+    ],
+    "ans": 0
+   },
+   {
+    "q": "الكلمة الدالة على السبب:",
+    "options": [
+     "يرجو",
+     "راجٍ",
+     "رجاءً"
+    ],
+    "ans": 2
+   },
+   {
+    "q": "«قرأتُ ........ للمعرفة»:",
+    "options": [
+     "طلبٌ",
+     "طلبًا",
+     "طلبٍ"
+    ],
+    "ans": 1
+   },
+   {
+    "q": "«سكتُّ ........ للكبير»:",
+    "options": [
+     "احترامٍ",
+     "احترامًا",
+     "احترامٌ"
+    ],
+    "ans": 1
+   },
+   {
+    "q": "«حضرتُ ........ على الدرس»:",
+    "options": [
+     "حرصٍ",
+     "حرصٌ",
+     "حرصًا"
+    ],
+    "ans": 2
+   }
+  ]
+ }
+];
+    const AudioContext = window.AudioContext || window.webkitAudioContext;
+    let audioCtx = null;
+
+    function initAudio() {
+        if (!audioCtx) { audioCtx = new AudioContext(); }
+        if (audioCtx.state === 'suspended') { audioCtx.resume(); }
+    }
+
+    function playTone(freq, type, duration, vol = 0.1) {
+        if (!audioCtx) return;
+        const osc = audioCtx.createOscillator();
+        const gain = audioCtx.createGain();
+        osc.type = type;
+        osc.frequency.setValueAtTime(freq, audioCtx.currentTime);
+        gain.gain.setValueAtTime(vol, audioCtx.currentTime);
+        gain.gain.exponentialRampToValueAtTime(0.01, audioCtx.currentTime + duration);
+        osc.connect(gain);
+        gain.connect(audioCtx.destination);
+        osc.start();
+        osc.stop(audioCtx.currentTime + duration);
+    }
+
+    function playCorrect() {
+        initAudio();
+        playTone(523.25, 'sine', 0.15, 0.15);
+        setTimeout(() => playTone(659.25, 'sine', 0.15, 0.15), 100);
+        setTimeout(() => playTone(783.99, 'sine', 0.25, 0.15), 200);
+        spawnConfetti();
+    }
+
+    function playWrong() {
+        initAudio();
+        playTone(200, 'sawtooth', 0.3, 0.1);
+    }
+
+    function spawnConfetti() {
+        const colors = ['#14a394', '#f59e42', '#10b981', '#ef4444', '#0d8a7c', '#f59e0b'];
+        for (let i = 0; i < 25; i++) {
+            const conf = document.createElement('div');
+            conf.className = 'confetti';
+            conf.style.left = Math.random() * 100 + 'vw';
+            conf.style.background = colors[Math.floor(Math.random() * colors.length)];
+            conf.style.animationDuration = (Math.random() * 1.5 + 1.5) + 's';
+            document.body.appendChild(conf);
+            setTimeout(() => conf.remove(), 3000);
+        }
+    }
+
+    function shuffleArray(arr) {
+        return arr.map(a => ({sort: Math.random(), value: a}))
+            .sort((a, b) => a.sort - b.sort)
+            .map(a => a.value);
+    }
+
+    function showFeedback(isCorrect, callback) {
+        const modal = document.getElementById('feedback-modal');
+        const icon = document.getElementById('feedback-icon');
+        const title = document.getElementById('feedback-title');
+        
+        if (isCorrect) {
+            playCorrect();
+            icon.innerHTML = `<svg xmlns="http://www.w3.org/2000/svg" width="80" height="80" viewBox="0 0 24 24" fill="none" stroke="var(--success)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path><polyline points="22 4 12 14.01 9 11.01"></polyline></svg>`;
+            title.textContent = 'إجابة صحيحة، أحسنت!';
+            title.style.color = 'var(--success)';
+        } else {
+            playWrong();
+            icon.innerHTML = `<svg xmlns="http://www.w3.org/2000/svg" width="80" height="80" viewBox="0 0 24 24" fill="none" stroke="var(--danger)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"></circle><line x1="15" y1="9" x2="9" y2="15"></line><line x1="9" y1="9" x2="15" y2="15"></line></svg>`;
+            title.textContent = 'إجابة خاطئة!';
+            title.style.color = 'var(--danger)';
+        }
+
+        modal.classList.add('active');
+        setTimeout(() => {
+            modal.classList.remove('active');
+            if (callback) callback();
+        }, 1300);
+    }
+
+    let currentGame = null;
+    let currentQuestions = [];
+    let qIndex = 0;
+    let animInterval = null;
+    let wrongAnswers = [];
+
+    function initApp() {
+        const menuGrid = document.getElementById('menu-grid');
+        menuGrid.innerHTML = '';
+        allGamesData.forEach(game => {
+            const card = document.createElement('div');
+            card.className = 'menu-card';
+            card.innerHTML = `
+                <div class="icon-container">${game.icon}</div>
+                <h3>${game.title}</h3>
+                <p>${game.desc}</p>
+                <span class="round-badge">🎲 ${Math.min(QUESTIONS_PER_ROUND, game.questions.length)} سؤالًا عشوائيًّا من ${game.questions.length}</span>
+            `;
+            card.onclick = () => startGame(game);
+            menuGrid.appendChild(card);
+        });
+        
+        document.body.addEventListener('touchstart', initAudio, { once: true });
+        document.body.addEventListener('click', initAudio, { once: true });
+    }
+
+    function returnToMenu() {
+        clearInterval(animInterval);
+        document.getElementById('game-screen').classList.add('hidden');
+        document.getElementById('home-screen').classList.remove('hidden');
+        document.getElementById('main-header').classList.remove('hidden');
+        document.getElementById('main-footer').classList.remove('hidden');
+    }
+
+    function updateProgress() {
+        document.getElementById('game-progress').innerText = `${qIndex + 1} / ${currentQuestions.length}`;
+    }
+
+    function sendResultToTeacher(score, total) {
+        const nameInput = document.getElementById('student-name-input');
+        const warning = document.getElementById('name-warning');
+        const name = nameInput.value.trim();
+        if (!name) {
+            warning.style.display = 'block';
+            nameInput.focus();
+            nameInput.classList.add('shake');
+            setTimeout(() => nameInput.classList.remove('shake'), 500);
+            return;
+        }
+        warning.style.display = 'none';
+        const message = "مرحبًا أستاذ توفيق الصريحي 🌟\n" +
+            "الطالب/ـة: " + name + "\n" +
+            "الدرس: " + LESSON_FULL_NAME + "\n" +
+            "اللعبة: " + currentGame.title + "\n" +
+            "النتيجة: " + score + " من " + total;
+        const url = "https://wa.me/" + TEACHER_WHATSAPP + "?text=" + encodeURIComponent(message);
+        window.open(url, '_blank');
+    }
+
+    function gameComplete() {
+        const gc = document.getElementById('game-container');
+        playCorrect();
+        setTimeout(playCorrect, 300);
+
+        let score = currentQuestions.length - wrongAnswers.length;
+        let summaryHTML = '';
+
+        if (wrongAnswers.length > 0) {
+            summaryHTML += `
+            <div style="margin-top: 25px; text-align: right; background: #f8fafc; padding: 20px; border-radius: 15px; border: 2px solid #e2e8f0; max-height: 350px; overflow-y: auto;" class="errors-list">
+                <h3 style="color: var(--danger); margin-bottom: 15px; text-align: center; font-size: 1.4rem;">الأسئلة التي أخطأت فيها 📝</h3>
+                <ul style="list-style: none; padding: 0; display: flex; flex-direction: column; gap: 15px;">`;
+            
+            wrongAnswers.forEach((item, index) => {
+                summaryHTML += `
+                <li style="background: white; padding: 15px; border-radius: 10px; box-shadow: 0 2px 4px rgba(0,0,0,0.05); border-right: 5px solid var(--danger);">
+                    <div style="font-weight: bold; color: var(--primary); margin-bottom: 8px; font-size: 1.1rem;">${index + 1}. ${item.question}</div>
+                    <div style="color: #64748b; font-size: 1rem; margin-bottom: 5px;">إجابتك: <span style="color: var(--danger); text-decoration: line-through;">${item.selected}</span></div>
+                    <div style="color: var(--success); font-weight: bold; font-size: 1.1rem;">الإجابة الصحيحة: ${item.correct}</div>
+                </li>`;
+            });
+            summaryHTML += `</ul></div>`;
+        } else {
+            summaryHTML += `<p style="color: var(--success); font-size: 1.5rem; font-weight: bold; margin-top: 20px;">أداء مثالي! لم تخطئ في أي سؤال 🌟</p>`;
+        }
+
+        gc.innerHTML = `
+            <div style="text-align:center; padding: 40px 20px; background: white; border-radius: 20px; box-shadow: 0 10px 25px rgba(0,0,0,0.1);">
+                <div style="display:flex; justify-content:center; margin-bottom: 20px;">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="100" height="100" viewBox="0 0 24 24" fill="none" stroke="var(--warning)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M7 21h10"/><path d="M12 17v4"/><path d="M12 3v14"/><path d="M5 7h14"/><path d="M12 3l-4 4 4 4 4-4-4-4z"/></svg>
+                </div>
+                <h2 style="color: var(--primary); margin-bottom: 10px; font-size:2rem; font-weight:800;">انتهت اللعبة!</h2>
+                <p style="font-size: 1.4rem; margin-bottom: 10px; color:#64748b; font-weight:bold;">نتيجتك: ${score} من ${currentQuestions.length}</p>
+                ${summaryHTML}
+                <div class="send-result-box">
+                    <h3>📤 أرسل نتيجتك للأستاذ توفيق الصريحي</h3>
+                    <input type="text" id="student-name-input" class="name-input" placeholder="اكتب اسمك هنا ✍️">
+                    <button class="btn whatsapp-send-btn" onclick="sendResultToTeacher(${score}, ${currentQuestions.length})">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="currentColor"><path d="M12.031 0C5.385 0 0 5.385 0 12.031c0 2.656.843 5.12 2.26 7.15L.626 24l5.01-1.61c1.983 1.25 4.27 1.91 6.395 1.91 6.646 0 12.03-5.385 12.03-12.031S18.677 0 12.031 0zm6.544 17.202c-.273.766-1.58 1.464-2.185 1.503-.56.035-1.28.23-4.085-.86-3.39-1.32-5.59-4.78-5.736-4.97-.145-.19-1.37-1.82-1.37-3.475 0-1.655.857-2.47 1.164-2.8.307-.33.67-.413.89-.413.22 0 .44 0 .633.01.205.01.482-.08.736.53.264.634.904 2.203.984 2.366.08.163.133.353.033.553-.1.2-.153.326-.307.506-.154.18-.32.38-.453.506-.153.153-.314.316-.134.626.18.31.8 1.32 1.71 2.13.176.157.363.31.558.45 1.05.76 1.83 1.05 2.13 1.18.3.13.474.11.652-.09.18-.205.766-.893.97-1.2.204-.307.41-.256.69-.153.28.103 1.77.836 2.074.99.304.153.506.23.582.356.076.126.076.73-.197 1.496z"/></svg>
+                        إرسال النتيجة عبر واتساب
+                    </button>
+                    <p id="name-warning" class="name-warning" style="display:none;">من فضلك اكتب اسمك أولاً ✍️</p>
+                </div>
+                <button class="btn" style="font-size:1.2rem; padding:15px 30px; margin-top: 20px;" onclick="returnToMenu()">العودة للقائمة الرئيسية</button>
+            </div>
+        `;
+    }
+
+    // اختيار 20 سؤالًا عشوائيًّا من بنك الأسئلة، مع تفضيل الأسئلة التي لم تظهر في المرة السابقة
+    function pickRound(gameData) {
+        const all = gameData.questions.map((q, i) => ({ q, i }));
+        const n = Math.min(QUESTIONS_PER_ROUND, all.length);
+        const key = LESSON_KEY + '-' + gameData.id;
+        let last = [];
+        try { last = JSON.parse(localStorage.getItem(key) || '[]'); } catch (e) { last = []; }
+        const lastSet = new Set(last);
+        const fresh = shuffleArray(all.filter(x => !lastSet.has(x.i)));
+        const used = shuffleArray(all.filter(x => lastSet.has(x.i)));
+        const chosen = shuffleArray(fresh.concat(used).slice(0, n));
+        try { localStorage.setItem(key, JSON.stringify(chosen.map(x => x.i))); } catch (e) {}
+        return chosen.map(x => x.q);
+    }
+
+    function startGame(gameData) {
+        initAudio();
+        currentGame = gameData;
+        currentQuestions = pickRound(gameData);
+        qIndex = 0;
+        wrongAnswers = [];
+        
+        document.getElementById('home-screen').classList.add('hidden');
+        document.getElementById('main-header').classList.add('hidden');
+        document.getElementById('main-footer').classList.add('hidden');
+        document.getElementById('game-screen').classList.remove('hidden');
+        document.getElementById('game-title').innerText = gameData.title;
+        
+        renderNextState();
+    }
+
+    function renderNextState() {
+        if (qIndex >= currentQuestions.length) {
+            gameComplete();
+            return;
+        }
+
+        const gc = document.getElementById('game-container');
+        gc.innerHTML = '';
+        updateProgress();
+
+        if (currentGame.type === 'mcq') {
+            renderMCQ(gc);
+        } else if (currentGame.type === 'bubbles') {
+            renderBubbles(gc);
+        } else if (currentGame.type === 'shooting') {
+            renderShooting(gc);
+        } else if (currentGame.type === 'true_false') {
+            renderTrueFalse(gc);
+        } else if (currentGame.type === 'genius') {
+            renderGenius(gc);
+        }
+    }
+
+    // 1. اختيارات (MCQ)
+    function renderMCQ(container) {
+        const qData = currentQuestions[qIndex];
+        const correctText = qData.options[qData.ans];
+        const shuffledOptions = shuffleArray([...qData.options]);
+
+        const btnContainer = document.createElement('div');
+        btnContainer.className = 'options-grid';
+        
+        let isAnswered = false;
+
+        shuffledOptions.forEach(opt => {
+            const btn = document.createElement('button');
+            btn.className = 'btn';
+            btn.innerText = opt;
+            btn.onclick = () => {
+                if(isAnswered) return;
+                isAnswered = true;
+
+                if (opt === correctText) {
+                    btn.classList.add('btn-correct');
+                    showFeedback(true, () => { qIndex++; renderNextState(); });
+                } else {
+                    btn.classList.add('btn-wrong');
+                    wrongAnswers.push({ question: qData.q, correct: correctText, selected: opt });
+                    showFeedback(false, () => { qIndex++; renderNextState(); });
+                }
+            };
+            btnContainer.appendChild(btn);
+        });
+
+        const qBox = document.createElement('div');
+        qBox.className = 'question-box';
+        qBox.innerText = qData.q;
+        
+        container.appendChild(qBox);
+        container.appendChild(btnContainer);
+    }
+
+    // 2. صح أم خطأ
+    function renderTrueFalse(container) {
+        const qData = currentQuestions[qIndex];
+        const correctText = qData.options[qData.ans];
+
+        const qBox = document.createElement('div');
+        qBox.className = 'question-box';
+        qBox.innerText = qData.q;
+        
+        const tfContainer = document.createElement('div');
+        tfContainer.className = 'tf-grid';
+        
+        let isAnswered = false;
+
+        const fixedOptions = ["صح", "خطأ"];
+
+        fixedOptions.forEach(opt => {
+            const btn = document.createElement('button');
+            btn.className = 'btn';
+            btn.style.flex = '1';
+            btn.style.minWidth = '200px';
+            btn.style.fontSize = '2rem';
+            btn.style.padding = '30px';
+            btn.style.justifyContent = 'center';
+            
+            if(opt === "صح") {
+                btn.style.background = "linear-gradient(to bottom, #10b981, #059669)";
+                btn.style.borderBottomColor = "#047857";
+            } else {
+                btn.style.background = "linear-gradient(to bottom, #ef4444, #dc2626)";
+                btn.style.borderBottomColor = "#b91c1c";
+            }
+
+            btn.innerText = opt;
+            
+            btn.onclick = () => {
+                if(isAnswered) return;
+                isAnswered = true;
+
+                if (opt === correctText) {
+                    btn.classList.add('btn-correct');
+                    showFeedback(true, () => { qIndex++; renderNextState(); });
+                } else {
+                    btn.classList.add('btn-wrong');
+                    wrongAnswers.push({ question: qData.q, correct: correctText, selected: opt });
+                    showFeedback(false, () => { qIndex++; renderNextState(); });
+                }
+            };
+            tfContainer.appendChild(btn);
+        });
+
+        container.appendChild(qBox);
+        container.appendChild(tfContainer);
+    }
+
+    // 3. الفقاعات المتساقطة
+    function renderBubbles(container) {
+        clearInterval(animInterval);
+        const qData = currentQuestions[qIndex];
+        const correctText = qData.options[qData.ans];
+        const shuffledOptions = shuffleArray([...qData.options]);
+
+        const qBox = document.createElement('div');
+        qBox.className = 'question-box';
+        qBox.innerText = qData.q;
+        
+        const area = document.createElement('div');
+        area.className = 'bubbles-area';
+
+        let bubbles = [];
+        let isAnswered = false;
+
+        shuffledOptions.forEach((opt, index) => {
+            const bubble = document.createElement('div');
+            bubble.className = 'bubble';
+            bubble.innerHTML = `<span>${opt}</span>`;
+            
+            let leftPos = 2 + (index * 24); 
+            bubble.style.left = leftPos + '%';
+            
+            let topPos = -100 - (Math.random() * 80);
+            bubble.style.top = topPos + 'px';
+            
+            /* سرعة سقوط أعلى قليلاً */
+            let speed = 0.55 + Math.random() * 0.45; 
+
+            bubble.onclick = () => {
+                if (isAnswered) return;
+                isAnswered = true;
+                clearInterval(animInterval);
+                if (opt === correctText) {
+                    bubble.style.background = 'var(--success)';
+                    bubble.style.color = 'white';
+                    showFeedback(true, () => { qIndex++; renderNextState(); });
+                } else {
+                    bubble.style.background = 'var(--danger)';
+                    bubble.style.color = 'white';
+                    wrongAnswers.push({ question: qData.q, correct: correctText, selected: opt });
+                    showFeedback(false, () => { qIndex++; renderNextState(); });
+                }
+            };
+
+            area.appendChild(bubble);
+            bubbles.push({ el: bubble, top: topPos, speed: speed, isCorrect: opt === correctText, active: true });
+        });
+
+        container.appendChild(qBox);
+        container.appendChild(area);
+        
+        let hint = document.createElement('div');
+        hint.style.textAlign = 'center';
+        hint.style.marginTop = '15px';
+        hint.style.color = 'var(--primary)';
+        hint.style.fontWeight = 'bold';
+        hint.style.fontSize = '1.1rem';
+        hint.innerHTML = `💡 اضغط على الفقاعة التي تحمل الإجابة الصحيحة قبل أن تسقط!`;
+        container.appendChild(hint);
+
+        let areaHeight = 400;
+
+        animInterval = setInterval(() => {
+            if (isAnswered) return;
+            bubbles.forEach(b => {
+                if (!b.active) return;
+                b.top += b.speed;
+                b.el.style.top = b.top + 'px';
+                b.el.style.transform = `translateX(${Math.sin(b.top / 20) * 5}px)`;
+
+                if (b.top > areaHeight) {
+                    b.active = false;
+                    b.el.style.display = 'none';
+                    if (b.isCorrect && !isAnswered) {
+                        isAnswered = true;
+                        clearInterval(animInterval);
+                        wrongAnswers.push({ question: qData.q, correct: correctText, selected: "سقطت دون اختيار" });
+                        showFeedback(false, () => { qIndex++; renderNextState(); });
+                    }
+                }
+            });
+        }, 20);
+    }
+
+    // 4. التنشين والاصطياد
+    function renderShooting(container) {
+        clearInterval(animInterval);
+        const qData = currentQuestions[qIndex];
+        const correctText = qData.options[qData.ans];
+        const shuffledOptions = shuffleArray([...qData.options]);
+
+        const qBox = document.createElement('div');
+        qBox.className = 'question-box';
+        qBox.innerText = qData.q;
+        
+        const area = document.createElement('div');
+        area.className = 'shooting-area';
+
+        let isAnswered = false;
+        const birds = [];
+
+        shuffledOptions.forEach((opt, index) => {
+            const bird = document.createElement('div');
+            bird.className = 'target-bird';
+            
+            bird.innerHTML = `<svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"></circle><circle cx="12" cy="12" r="6"></circle><circle cx="12" cy="12" r="2"></circle></svg> <span>${opt}</span>`;
+            
+            let topPos = 15 + (index * 20); 
+            bird.style.top = topPos + '%';
+            
+            let pos = (index % 2 === 0) ? -200 : window.innerWidth;
+            let speed = (Math.random() * 2.5 + 1.5) * ((index % 2 === 0) ? 1 : -1);
+            
+            bird.style.left = pos + 'px';
+
+            bird.onclick = () => {
+                if(isAnswered) return;
+                isAnswered = true;
+
+                if (opt === correctText) {
+                    bird.style.background = 'var(--success)';
+                    bird.style.color = 'white';
+                    bird.style.borderColor = 'white';
+                    showFeedback(true, () => { qIndex++; renderNextState(); });
+                } else {
+                    bird.style.background = 'var(--danger)';
+                    bird.style.color = 'white';
+                    bird.style.borderColor = 'white';
+                    wrongAnswers.push({ question: qData.q, correct: correctText, selected: opt });
+                    showFeedback(false, () => { qIndex++; renderNextState(); });
+                }
+            };
+
+            area.appendChild(bird);
+            birds.push({ el: bird, pos: pos, speed: speed });
+        });
+
+        animInterval = setInterval(() => {
+            if (isAnswered) { clearInterval(animInterval); return; }
+            const w = area.clientWidth || window.innerWidth;
+            birds.forEach(b => {
+                b.pos += b.speed;
+                if (b.pos > w + 50) b.pos = -250;
+                if (b.pos < -250) b.pos = w + 50;
+                b.el.style.left = b.pos + 'px';
+            });
+        }, 20);
+
+        container.appendChild(qBox);
+        container.appendChild(area);
+        
+        let hint = document.createElement('div');
+        hint.style.textAlign = 'center';
+        hint.style.marginTop = '15px';
+        hint.style.color = 'var(--primary)';
+        hint.style.fontWeight = 'bold';
+        hint.style.fontSize = '1.1rem';
+        hint.style.display = 'flex';
+        hint.style.alignItems = 'center';
+        hint.style.justifyContent = 'center';
+        hint.style.gap = '8px';
+        hint.innerHTML = `<svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"></circle><circle cx="12" cy="12" r="6"></circle><circle cx="12" cy="12" r="2"></circle></svg> اضغط على الإجابة الصحيحة وهي تتحرك!`;
+        container.appendChild(hint);
+    }
+
+    // 5. تحدي العباقرة (سباق مع الوقت)
+    function renderGenius(container) {
+        clearInterval(animInterval);
+        const qData = currentQuestions[qIndex];
+        const correctText = qData.options[qData.ans];
+        const shuffledOptions = shuffleArray([...qData.options]);
+
+        const qBox = document.createElement('div');
+        qBox.className = 'question-box genius-box';
+        qBox.innerHTML = `⚡ ${qData.q}`;
+
+        const timerWrap = document.createElement('div');
+        timerWrap.className = 'genius-timer-wrap';
+        const timerBar = document.createElement('div');
+        timerBar.className = 'genius-timer-bar';
+        timerWrap.appendChild(timerBar);
+
+        const btnContainer = document.createElement('div');
+        btnContainer.className = 'options-grid';
+
+        let isAnswered = false;
+        let timeLeft = 12000;
+        const totalTime = timeLeft;
+
+        function finish(isCorrect, selectedText) {
+            if (isAnswered) return;
+            isAnswered = true;
+            clearInterval(animInterval);
+            if (isCorrect) {
+                showFeedback(true, () => { qIndex++; renderNextState(); });
+            } else {
+                wrongAnswers.push({ question: qData.q, correct: correctText, selected: selectedText || "انتهى الوقت! ⏱️" });
+                showFeedback(false, () => { qIndex++; renderNextState(); });
+            }
+        }
+
+        shuffledOptions.forEach(opt => {
+            const btn = document.createElement('button');
+            btn.className = 'btn';
+            btn.innerText = opt;
+            btn.onclick = () => {
+                if (isAnswered) return;
+                if (opt === correctText) {
+                    btn.classList.add('btn-correct');
+                    finish(true);
+                } else {
+                    btn.classList.add('btn-wrong');
+                    finish(false, opt);
+                }
+            };
+            btnContainer.appendChild(btn);
+        });
+
+        container.appendChild(qBox);
+        container.appendChild(timerWrap);
+        container.appendChild(btnContainer);
+
+        let hint = document.createElement('div');
+        hint.className = 'genius-hint';
+        hint.innerHTML = `<svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"></polygon></svg> سباق مع الوقت! أجب بسرعة قبل نفاد الثواني`;
+        container.appendChild(hint);
+
+        animInterval = setInterval(() => {
+            if (isAnswered) return;
+            timeLeft -= 100;
+            let pct = Math.max(0, (timeLeft / totalTime) * 100);
+            timerBar.style.width = pct + '%';
+            if (timeLeft <= 0) {
+                clearInterval(animInterval);
+                finish(false, null);
+            }
+        }, 100);
+    }
+
+    window.onload = initApp;
+</script>
+</body>
+</html>
